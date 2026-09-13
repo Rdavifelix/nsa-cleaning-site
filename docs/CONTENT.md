@@ -82,7 +82,7 @@ Form fields (names are fixed — the API validates them): `name`*, `email`*, `ph
 Each field needs a `<label>`, and an error slot `<p class="field-error" data-error-for="name" hidden></p>`; the form needs `data-quote-form`, `action="/api/quote"`, `method="post"`, and a `<p class="form-status" data-form-status aria-live="polite"></p>`.
 
 ## 7. Open questions for the client (do not guess — flagged in README)
-1. Which portrait is Ronie and which is Alex, and their titles (Founder / Co-owner?).
+1. ~~Which portrait is Ronie and which is Alex~~ — **resolved 2026-09-13**: the studio portrait in the dark suit is **Ronie Bublak**; the portrait in the burgundy shirt in front of a bookshelf is **Alex Bublak**. Both are labelled "Co-owner" on /about. The third portrait (seated outdoors) was removed at the client's request. Confirm their exact job titles if they want something other than "Co-owner".
 2. Referral offer exact terms ("50% for referral" — 50% off next cleaning? for whom?).
 3. Residential service days (Mon–Fri? weekends?). Schema currently assumes Mo–Fr 08:00–17:00.
 4. Domain: nsacleaningllc.com is available (recommended). nsacleaning.com is taken.

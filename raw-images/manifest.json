@@ -876,59 +876,72 @@
     },
     {
       "src": "WhatsApp Image 2026-09-12 at 6.59.32 PM (1).jpeg",
-      "slug": "owner-portrait-suit",
-      "alt": "NSA Cleaning owner in a dark suit seated on a chair, studio portrait",
+      "slug": "owner-ronie-bublak",
+      "alt": "Ronie Bublak, co-owner of NSA Cleaning LLC",
       "category": "team",
       "use": "about",
       "widths": [
         480,
+        640,
         800
       ],
       "quality": 82,
       "notes": "Studio portrait 1024x1536. Name NOT confirmed (Ronie or Alex Bublak) - do not caption with a name until the client confirms.",
+      "aspect": 0.6667,
       "generated": [
         {
           "width": 480,
           "height": 720,
-          "file": "/images/owner-portrait-suit-480.webp",
+          "file": "/images/owner-ronie-bublak-480.webp",
           "bytes": 18874
+        },
+        {
+          "width": 640,
+          "height": 960,
+          "file": "/images/owner-ronie-bublak-640.webp",
+          "bytes": 27018
         },
         {
           "width": 800,
           "height": 1200,
-          "file": "/images/owner-portrait-suit-800.webp",
+          "file": "/images/owner-ronie-bublak-800.webp",
           "bytes": 35920
         }
-      ],
-      "aspect": 0.6667
+      ]
     },
     {
-      "src": "WhatsApp Image 2026-09-12 at 6.59.32 PM.jpeg",
-      "slug": "owner-portrait-outdoors",
-      "alt": "NSA Cleaning owner seated on a park bench outdoors in a green tracksuit",
+      "src": "Alex Bublak portrait.jpeg",
+      "slug": "owner-alex-bublak",
+      "alt": "Alex Bublak, co-owner of NSA Cleaning LLC",
       "category": "team",
       "use": "about",
       "widths": [
         480,
+        640,
         800
       ],
-      "quality": 82,
-      "notes": "Outdoor portrait 1024x1536. Name NOT confirmed (Ronie or Alex Bublak) - do not caption with a name until the client confirms.",
+      "quality": 80,
+      "aspect": 0.6416,
       "generated": [
         {
           "width": 480,
-          "height": 720,
-          "file": "/images/owner-portrait-outdoors-480.webp",
-          "bytes": 74014
+          "height": 748,
+          "file": "/images/owner-alex-bublak-480.webp",
+          "bytes": 32322
+        },
+        {
+          "width": 640,
+          "height": 998,
+          "file": "/images/owner-alex-bublak-640.webp",
+          "bytes": 49102
         },
         {
           "width": 800,
-          "height": 1200,
-          "file": "/images/owner-portrait-outdoors-800.webp",
-          "bytes": 153558
+          "height": 1247,
+          "file": "/images/owner-alex-bublak-800.webp",
+          "bytes": 68414
         }
-      ],
-      "aspect": 0.6667
+      ]
     }
   ]
 }
