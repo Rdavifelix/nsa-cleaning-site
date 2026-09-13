@@ -20,6 +20,10 @@ site.gaMeasurementId = process.env.GA_MEASUREMENT_ID ?? site.gaMeasurementId ?? 
 site.turnstileSiteKey = process.env.TURNSTILE_SITE_KEY ?? site.turnstileSiteKey ?? '';
 // Gray "photo coming soon" blocks. On by default; set PHOTO_PLACEHOLDERS=0 to hide them before launch.
 site.photoPlaceholders = process.env.PHOTO_PLACEHOLDERS !== '0';
+// Deploy to a subpath (e.g. GitHub Pages project site): BASE_PATH=/repo-name
+site.basePath = (process.env.BASE_PATH || '').replace(/\/+$/, '');
+// Preview build: noindex everywhere, robots.txt disallows all, quote form shows a notice instead of posting
+site.preview = process.env.PREVIEW === '1';
 site.year = String(new Date().getFullYear());
 site.buildDate = new Date().toISOString().slice(0, 10);
 site.businessSchema = buildBusinessSchema(site);
@@ -192,11 +196,32 @@ function expandSchema(schema, site, page) {
   });
 }
 
+
+// Rewrites root-relative URLs so the site works when served from a subpath.
+function applyBase(html, base) {
+  if (!base) return html;
+  html = html.replace(/\b(href|src|action|poster|data-src)="\/(?!\/)/g, `$1="${base}/`);
+  const fixSet = (v) => v.split(',').map((part) => part.replace(/^(\s*)\/(?!\/)/, `$1${base}/`)).join(',');
+  html = html.replace(/\b(srcset|imagesrcset)="([^"]+)"/g, (_, a, v) => `${a}="${fixSet(v)}"`);
+  html = html.replace(/url\(\/(?!\/)/g, `url(${base}/`);
+  return html;
+}
+
 function build() {
   fs.rmSync(DIST, { recursive: true, force: true });
   fs.mkdirSync(DIST, { recursive: true });
   if (fs.existsSync(PUBLIC)) fs.cpSync(PUBLIC, DIST, { recursive: true });
   if (fs.existsSync(path.join(SRC, 'assets'))) fs.cpSync(path.join(SRC, 'assets'), DIST, { recursive: true }); // page-specific extras
+  fs.writeFileSync(path.join(DIST, '.nojekyll'), ''); // GitHub Pages: serve files as-is
+  if (site.basePath) { // rewrite the web app manifest for a subpath deploy
+    const mf = path.join(DIST, 'manifest.webmanifest');
+    if (fs.existsSync(mf)) {
+      const m = JSON.parse(fs.readFileSync(mf, 'utf8'));
+      m.start_url = site.basePath + '/';
+      m.icons = (m.icons || []).map((i) => ({ ...i, src: i.src.startsWith('/') ? site.basePath + i.src : i.src }));
+      fs.writeFileSync(mf, JSON.stringify(m, null, 2) + '\n');
+    }
+  }
 
   const layout = parse(tokenize(fs.readFileSync(path.join(SRC, 'layout.html'), 'utf8')));
   const css = fs.existsSync(path.join(SRC, 'styles.css')) ? fs.readFileSync(path.join(SRC, 'styles.css'), 'utf8') : '';
@@ -215,6 +240,7 @@ function build() {
       ...meta,
       canonical,
       ogImage: site.siteUrl + (meta.ogImage || site.defaultOgImage),
+      robots: (meta.noindex || site.preview) ? 'noindex, nofollow' : 'index, follow, max-image-preview:large',
       jsonld: expandSchema(meta.schema, site, meta).map((j) => `<script type="application/ld+json">${j}</script>`).join('\n'),
     };
     const ctx = { site, page, isHome: meta.path === '/' };
@@ -225,6 +251,7 @@ function build() {
       // Template tags that render to nothing leave whitespace-only lines; strip trailing spaces.
       // Safe here: the site has no <pre> and no textarea with meaningful content.
       html = html.replace(/[ \t]+$/gm, '');
+      html = applyBase(html, site.basePath);
     } catch (e) {
       if (process.env.BUILD_TOLERANT) { console.warn('  ⚠ skipped', meta.path, '—', e.message); continue; }
       throw new Error(`${meta.path}: ${e.message}`);
@@ -241,7 +268,9 @@ function build() {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
     urls.map((u) => `  <url>\n    <loc>${escapeHtml(u.loc)}</loc>\n    <lastmod>${site.buildDate}</lastmod>\n    <changefreq>${u.changefreq}</changefreq>\n    <priority>${u.priority.toFixed(1)}</priority>\n  </url>`).join('\n') + '\n</urlset>\n';
   fs.writeFileSync(path.join(DIST, 'sitemap.xml'), sitemap);
-  fs.writeFileSync(path.join(DIST, 'robots.txt'), `User-agent: *\nAllow: /\nDisallow: /api/\n\nSitemap: ${site.siteUrl}/sitemap.xml\n`);
+  fs.writeFileSync(path.join(DIST, 'robots.txt'), site.preview
+    ? `# Preview build - not for indexing\nUser-agent: *\nDisallow: /\n`
+    : `User-agent: *\nAllow: /\nDisallow: /api/\n\nSitemap: ${site.siteUrl}/sitemap.xml\n`);
   if (process.env.TURNSTILE_SECRET_KEY && !site.turnstileSiteKey) console.warn('  ⚠ TURNSTILE_SECRET_KEY is set but TURNSTILE_SITE_KEY is empty: the widget will not render and every submission will fail verification. Set both, then redeploy.');
   console.log(`\nBuilt ${pages.length} pages → ${path.relative(ROOT, DIST)}/  (siteUrl: ${site.siteUrl}, GA: ${site.gaMeasurementId ? 'on' : 'off'}, Turnstile: ${site.turnstileSiteKey ? 'on' : 'off'})`);
 }

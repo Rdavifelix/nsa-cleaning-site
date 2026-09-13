@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{page.title}}</title>
   <meta name="description" content="{{page.description}}">
-{{#if page.noindex}}<meta name="robots" content="noindex, nofollow">{{else}}<meta name="robots" content="index, follow, max-image-preview:large">{{/if}}
+<meta name="robots" content="{{page.robots}}">
+{{#if site.preview}}<meta name="preview-mode" content="1">
+{{/if}}
   <link rel="canonical" href="{{page.canonical}}">
   <meta name="theme-color" content="{{site.themeColor}}">
   <meta name="author" content="{{site.business.legalName}}">

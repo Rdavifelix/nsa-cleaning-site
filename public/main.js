@@ -124,6 +124,10 @@
       var ok = true, first = null;
       $$('input, select, textarea', form).forEach(function (el) { if (!validateField(el)) { ok = false; first = first || el; } });
       if (!ok) { if (first) first.focus(); if (status) { status.textContent = 'Please fix the highlighted fields.'; status.className = 'form-status is-error'; } return; }
+      if (d.querySelector('meta[name="preview-mode"]')) {
+        if (status) { status.textContent = 'This is a preview of the new site, so the form is not connected yet. Please call (518) 902-1180 or email Nsacleaningllc@gmail.com.'; status.className = 'form-status is-pending'; }
+        return;
+      }
       var data = {};
       new FormData(form).forEach(function (v, k) { data[k] = v; });
       if (status) { status.textContent = 'Sending your request…'; status.className = 'form-status is-pending'; }
