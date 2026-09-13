@@ -2,13 +2,14 @@
   "name": "nsa-cleaning-site",
   "version": "1.0.0",
   "private": true,
-  "description": "NSA Cleaning LLC — static marketing site (Albany to Lake George, NY)",
+  "description": "NSA Cleaning LLC \u2014 static marketing site (Albany to Lake George, NY)",
   "type": "module",
   "scripts": {
     "build": "node build.mjs",
     "dev": "node build.mjs && node scripts/serve.mjs",
     "serve": "node scripts/serve.mjs",
-    "check": "node scripts/check-links.mjs"
+    "check": "node scripts/check-links.mjs && node scripts/check-copy.mjs src",
+    "lint:copy": "node scripts/check-copy.mjs src"
   },
   "engines": {
     "node": ">=20"
