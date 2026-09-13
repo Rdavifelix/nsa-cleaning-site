@@ -18,6 +18,8 @@ const site = JSON.parse(fs.readFileSync(path.join(ROOT, 'site.config.json'), 'ut
 site.siteUrl = (process.env.SITE_URL || site.siteUrl).replace(/\/+$/, '');
 site.gaMeasurementId = process.env.GA_MEASUREMENT_ID ?? site.gaMeasurementId ?? '';
 site.turnstileSiteKey = process.env.TURNSTILE_SITE_KEY ?? site.turnstileSiteKey ?? '';
+// Gray "photo coming soon" blocks. On by default; set PHOTO_PLACEHOLDERS=0 to hide them before launch.
+site.photoPlaceholders = process.env.PHOTO_PLACEHOLDERS !== '0';
 site.year = String(new Date().getFullYear());
 site.buildDate = new Date().toISOString().slice(0, 10);
 site.businessSchema = buildBusinessSchema(site);
@@ -220,6 +222,9 @@ function build() {
     try {
       content = renderString(body, ctx);
       html = render(layout, { ...ctx, content, styles: css ? `<style>${css}</style>` : '' });
+      // Template tags that render to nothing leave whitespace-only lines; strip trailing spaces.
+      // Safe here: the site has no <pre> and no textarea with meaningful content.
+      html = html.replace(/[ \t]+$/gm, '');
     } catch (e) {
       if (process.env.BUILD_TOLERANT) { console.warn('  ⚠ skipped', meta.path, '—', e.message); continue; }
       throw new Error(`${meta.path}: ${e.message}`);

@@ -38,6 +38,12 @@
 <section class="section" id="included" aria-labelledby="included-title">
   <div class="container">
     <div class="section-head"><p class="eyebrow">What we clean</p><h2 id="included-title">We clean carpets, rugs, stairs and upholstery down to the backing</h2><p>Vacuuming only reaches the surface. Shampoo and extraction pull dirt and old spills out of the pile, then remove the water.</p></div>
+        {{#if site.photoPlaceholders}}
+        <figure class="soon-figure">
+          <div class="media-soon"><span class="photo-soon" aria-hidden="true"><svg class="icon"><use href="#i-camera"/></svg>Photo coming soon</span></div>
+          <figcaption class="soon-caption">Photos of carpet extraction in progress, before and after.</figcaption>
+        </figure>
+        {{/if}}
     <ul class="why-list">
       <li class="why-item"><span class="why-icon"><svg class="icon" aria-hidden="true"><use href="#i-rug"/></svg></span><div><h3>Wall-to-wall carpet</h3><p>Bedrooms, living rooms, hallways and finished basements. We pre-vacuum, pre-treat traffic lanes, shampoo and extract.</p></div></li>
       <li class="why-item"><span class="why-icon"><svg class="icon" aria-hidden="true"><use href="#i-home"/></svg></span><div><h3>Area rugs</h3><p>Cleaned in place on a protected floor, with a colorfastness check in a corner first.</p></div></li>

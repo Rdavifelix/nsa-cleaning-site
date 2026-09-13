@@ -62,6 +62,7 @@ Copy `.env.example` → `.env` locally; on Vercel set them under *Settings → E
 |---|---|---|
 | `SITE_URL` | build | Public URL (canonical, sitemap, OG). Overrides `site.config.json`. |
 | `GA_MEASUREMENT_ID` | build | GA4 id (`G-XXXXXXX`). Empty = analytics off. |
+| `PHOTO_PLACEHOLDERS` | build | `0` hides the gray "Photo coming soon" blocks. Default (unset) shows them. Set it to `0` in Vercel before launch, once the client sends the missing photos listed in [docs/FOTOS-PEDIR.md](docs/FOTOS-PEDIR.md). |
 | `TURNSTILE_SITE_KEY` | build (public) | Renders the Turnstile widget on the form. |
 | `TURNSTILE_SECRET_KEY` | server | If set, every submission must pass Turnstile. Set `TURNSTILE_SITE_KEY` and `TURNSTILE_SECRET_KEY` together, then redeploy — the site key is baked into the HTML at build time, so a secret without a site key makes every submission fail with "Verification failed". |
 | `RESEND_API_KEY` | server | Email provider #1. `QUOTE_FROM_EMAIL` must be on a verified domain. |

@@ -58,7 +58,13 @@
       <h2 id="facilities-title">Commercial cleaning for offices, medical facilities, restaurants and more</h2>
       <p>After a walk-through, your service contract lists what is cleaned on each visit. Here is what a typical scope looks like for the businesses we serve across the Capital Region.</p>
     </div>
-    <div class="cc-types">
+        {{#if site.photoPlaceholders}}
+        <figure class="soon-figure">
+          <div class="media-soon"><span class="photo-soon" aria-hidden="true"><svg class="icon"><use href="#i-camera"/></svg>Photo coming soon</span></div>
+          <figcaption class="soon-caption">Photos of offices, clinics and building common areas we clean.</figcaption>
+        </figure>
+        {{/if}}
+        <div class="cc-types">
       <article class="cc-type">
         <span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#i-building"/></svg></span>
         <h3>Office cleaning</h3>

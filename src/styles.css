@@ -367,3 +367,23 @@ html,body{overflow-x:clip}
 .prose-wrap{padding-block:clamp(40px,6vw,72px)}
 /* ≤359px reflow: drop the header phone button (the sticky bar has Call now) and let button labels wrap */
 @media(max-width:359px){.icon-btn{display:none}.btn{white-space:normal;padding-inline:1em}.btn-lg{padding-inline:1.2em}.mobile-cta .btn{padding-inline:.6em;font-size:.9375rem}}
+
+/* ---- Placeholder de foto (fotos que o cliente ainda nao enviou) -------------
+   Ligado por padrao. Para tirar do ar antes de publicar: PHOTO_PLACEHOLDERS=0 node build.mjs
+   (as paginas voltam a mostrar o tile com icone e os blocos somem).             */
+.tile.tile-soon{background:linear-gradient(180deg,#CBD4E0 0%,#CBD4E0 42%,#E7ECF3 100%);color:var(--navy)}
+.tile.tile-soon .tile-icon{display:none}
+.tile.tile-soon h3{color:var(--navy)}
+.tile.tile-soon p{color:var(--ink-2)}
+.tile.tile-soon .tile-kicker{color:var(--blue-dark)}
+.photo-soon{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:8px;
+  margin:4px auto 22px;text-align:center;
+  color:#484F5B;font-size:.6875rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;line-height:1.4}
+.photo-soon .icon{width:28px;height:28px;opacity:.7}
+.media-soon{position:relative;display:grid;place-items:center;aspect-ratio:4/3;padding:18px;
+  border-radius:var(--r-lg);border:1px dashed #A8B3C2;background:linear-gradient(180deg,#CBD4E0 0%,#E7ECF3 100%)}
+.media-soon .photo-soon{margin:0}
+.soon-caption{margin-top:10px;font-size:.875rem;color:var(--muted)}
+@media(max-width:599px){.photo-soon{margin-bottom:16px}}
+.soon-figure{margin:0 0 26px;max-width:520px}
+@media(min-width:900px){.soon-figure{max-width:420px}}
