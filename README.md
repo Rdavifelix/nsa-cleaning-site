@@ -91,6 +91,19 @@ Honeypot field (`company_website`), minimum 3 s fill time, max 2 links in the me
 ### Analytics
 Create a GA4 property, set `GA_MEASUREMENT_ID`, redeploy. The cookie banner and the footer *Cookie settings* button only render when `GA_MEASUREMENT_ID` is set. GA only loads after the visitor clicks *Accept*; *Decline* keeps the site cookie-free (and, after a previous *Accept*, disables the tag on the current page and expires the `_ga` cookies). Events sent: `click_call`, `click_email`, `cta_quote_*`, `generate_lead` (form success). The `/thank-you` page is the conversion URL.
 
+## Client preview (GitHub Pages)
+
+Live at **https://kauankamil-rgb.github.io/nsa-cleaning-site/** — a preview for showing the client, not the production site.
+
+- Built with `PREVIEW=1`, so every page carries `noindex, nofollow` and `robots.txt` disallows all crawlers. It will not be indexed and cannot compete with the real domain later.
+- `BASE_PATH=/nsa-cleaning-site` rewrites root-relative URLs so the site works from the subpath.
+- The quote form validates fields but does not submit: GitHub Pages cannot run `/api/quote`. It shows a notice pointing to the phone and email instead.
+- Everything else works: navigation and dropdowns, mobile menu, cookie banner, before/after slider, FAQ accordion, custom 404, sitemap.
+
+Redeploy after any change: `GIT_NAME="Your Name" GIT_EMAIL="you@example.com" scripts/deploy-pages.sh` (builds and force-pushes to the `gh-pages` branch).
+
+For production, deploy the plain `node build.mjs` output on Vercel so the form works. See **Deploy (Vercel)** below.
+
 ## Status (2026-09-13)
 
 - 21 pages built and audited. Launch report with Lighthouse table, checks matrix, fixed/open items and the client checklist: [docs/AUDIT.md](docs/AUDIT.md). Page-level integration report: [docs/AUDIT-PAGES.md](docs/AUDIT-PAGES.md).
