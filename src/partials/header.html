@@ -1,0 +1,40 @@
+<div class="topbar on-dark">
+  <div class="container topbar-inner">
+    <a href="mailto:{{site.business.email}}"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>{{site.business.email}}</a>
+    <a href="tel:{{site.business.phoneE164}}"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>{{{site.business.phoneHtml}}}</a>
+    <span class="spacer"></span>
+    <span>Residential {{site.business.hoursResidential}} · Commercial {{site.business.hoursCommercial}}</span>
+    <span><span lang="es">Hablamos español</span> · <span lang="pt">Falamos português</span></span>
+  </div>
+</div>
+<header class="site-header" data-header>
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="{{site.siteName}} — home">
+      <img src="/images/logo-nsa-cleaning-96.webp" srcset="/images/logo-nsa-cleaning-96.webp 96w, /images/logo-nsa-cleaning-144.webp 144w" sizes="48px" width="48" height="48" alt="{{site.siteName}} logo">
+      <span class="brand-name">NSA Cleaning <span class="brand-llc">LLC</span></span>
+    </a>
+    <div class="header-tools">
+      <a class="icon-btn" href="tel:{{site.business.phoneE164}}" aria-label="Call {{site.business.phone}}"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></a>
+      <button class="nav-toggle" type="button" data-nav-toggle="[data-nav]" aria-controls="primary-nav" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+    <nav id="primary-nav" class="primary-nav" data-nav aria-label="Primary">
+      <ul>
+{{#each site.nav}}
+        <li class="{{#if this.children}}has-submenu{{/if}}" {{#if this.children}}data-has-submenu{{/if}}>
+          <a href="{{this.href}}">{{this.label}}</a>
+{{#if this.children}}
+          <button type="button" class="submenu-toggle" data-submenu-toggle aria-label="Open {{this.label}} submenu"></button>
+          <ul class="submenu">
+{{#each this.children}}<li><a href="{{this.href}}">{{this.label}}</a></li>{{/each}}
+          </ul>
+{{/if}}
+        </li>
+{{/each}}
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-ghost nav-phone" href="tel:{{site.business.phoneE164}}"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>{{{site.business.phoneHtml}}}</a>
+        <a class="btn btn-primary" href="{{#if isHome}}#quote{{else}}/contact#quote{{/if}}" data-track="cta_quote_header">Get a Free Quote</a>
+      </div>
+    </nav>
+  </div>
+</header>

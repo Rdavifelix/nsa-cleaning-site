@@ -1,0 +1,130 @@
+<!--@meta
+{ "title": "About NSA Cleaning LLC | Insured Cleaners in Watervliet, NY",
+  "description": "Meet NSA Cleaning LLC: founded in 2016 in Watervliet, NY, with 12+ years of experience and an insured team. Serving Albany to Lake George — get a free quote.",
+  "priority": 0.6,
+  "schema": [
+    { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nsacleaningllc.com/" },
+      { "@type": "ListItem", "position": 2, "name": "About", "item": "https://nsacleaningllc.com/about" } ] },
+    { "@context": "https://schema.org", "@type": "AboutPage", "name": "About NSA Cleaning LLC", "url": "https://nsacleaningllc.com/about",
+      "description": "The story, team and standards of NSA Cleaning LLC, an insured cleaning company based in Watervliet, NY, serving Albany to Lake George.",
+      "about": { "@id": "https://nsacleaningllc.com/#business" } } ] }
+-->
+<style>
+
+.team-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px}
+@media(min-width:600px){.team-grid{gap:16px;max-width:820px}}
+.team-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow)}
+.team-card img{display:block;width:100%;height:auto;aspect-ratio:2/3;object-fit:cover;background:var(--bg)}
+.team-figure{margin:0}
+.team-caption{margin-top:12px;color:var(--muted);font-size:.9375rem}
+.story{max-width:72ch;line-height:1.7;font-size:var(--step-0)}
+.story p{margin-bottom:1.1em}
+</style>
+
+<!-- ===== HERO ===== -->
+<section class="page-hero page-hero--photo" aria-labelledby="page-title">
+  <div class="container">
+    <div>
+      <p class="eyebrow">About us · Watervliet, NY · Since {{site.business.foundingYear}}</p>
+      <h1 id="page-title">About NSA Cleaning LLC — Insured Cleaners Based in <em>Watervliet, NY</em></h1>
+      <p class="lead">We're an owner-run cleaning company from Watervliet with {{site.business.yearsExperience}}+ years of hands-on experience, cleaning homes, offices and clinics from Albany to Lake George. Insured, trained to our own standards, and easy to reach.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary btn-lg" href="/contact#quote" data-track="cta_quote_hero">Get a Free Quote</a>
+        <a class="btn btn-ghost btn-lg" href="tel:{{site.business.phoneE164}}"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call&nbsp;{{{site.business.phoneHtml}}}</a>
+      </div>
+      <p class="hero-note"><b>Insured</b> · Supplies included · Travel included · <span lang="es">Hablamos español</span> · <span lang="pt">Falamos português</span></p>
+    </div>
+    <div class="page-hero-photo"><img src="/images/nsa-cleaning-branded-company-car-1024.webp" srcset="/images/nsa-cleaning-branded-company-car-480.webp 480w, /images/nsa-cleaning-branded-company-car-800.webp 800w, /images/nsa-cleaning-branded-company-car-1024.webp 1024w" sizes="(min-width: 1240px) 520px, (min-width: 900px) 42vw, calc(100vw - 32px)" width="1024" height="1024" alt="NSA Cleaning LLC branded company SUV with logo and phone number" fetchpriority="high" decoding="async"></div>
+  </div>
+</section>
+
+<!-- ===== STATS ===== -->
+<section class="stats on-dark" aria-label="NSA Cleaning at a glance">
+  <div class="container">
+    <ul>
+      <li class="stat"><b>{{site.business.yearsExperience}}<sup>+</sup></b><span>years of cleaning experience</span></li>
+      <li class="stat"><b>{{site.business.yearsInBusiness}}</b><span>years in business, since {{site.business.foundingYear}}</span></li>
+      <li class="stat"><b>3</b><span>languages — English, Portuguese &amp; Spanish</span></li>
+      <li class="stat"><b>1<sup>hr</sup></b><span>max travel from our Watervliet office</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== STORY ===== -->
+<section class="section" id="story" aria-labelledby="story-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Our story</p>
+      <h2 id="story-title">Founded in {{site.business.foundingYear}}, run from Watervliet</h2>
+    </div>
+    <div class="story">
+      <p>NSA Cleaning LLC opened in {{site.business.foundingYear}} and is run by Ronie Bublak and Alex Bublak. Our {{site.business.yearsExperience}}+ years of cleaning experience go back further than the company itself, cleaning homes and businesses across the Capital Region. Today we run the business from our office at {{site.business.address.street}} in Watervliet, NY, a few minutes from Albany, Troy, Cohoes and Latham.</p>
+      <p>Most of our week is recurring residential cleaning — the same homes in Colonie, Delmar, Clifton Park and Saratoga Springs, week after week, so the same cleaners learn how you like things done. The rest is commercial work we enjoy and are set up for: offices, clinics and hospitals, plus residential and commercial painting. Deep cleans, move-outs, Airbnb turnovers, power washing and carpet cleaning round out the list.</p>
+      <p>It's an owner-run company: when you call {{site.business.phone}} you reach the people who run the business and know your job, not a call center.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TEAM ===== -->
+<section class="section section-alt" id="team" aria-labelledby="team-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">The team</p>
+      <h2 id="team-title">In-house staff and vetted subcontractors, trained to NSA standards</h2>
+      <p>Our cleaners are a mix of in-house staff and vetted subcontractors. Every one of them is certified and trained to the same NSA standards, so the result looks the same whoever shows up. You'll recognize us by the gray uniforms.</p>
+    </div>
+    <figure class="team-figure">
+    <div class="team-grid">
+      <div class="team-card"><img src="/images/owner-portrait-suit-800.webp" srcset="/images/owner-portrait-suit-480.webp 480w, /images/owner-portrait-suit-640.webp 640w, /images/owner-portrait-suit-800.webp 800w" sizes="(min-width: 900px) 400px, (min-width: 600px) calc(50vw - 40px), calc(50vw - 23px)" width="800" height="1200" alt="One of the owners of NSA Cleaning LLC, studio portrait in a dark suit" loading="lazy" decoding="async"></div>
+      <div class="team-card"><img src="/images/owner-portrait-outdoors-800.webp" srcset="/images/owner-portrait-outdoors-480.webp 480w, /images/owner-portrait-outdoors-640.webp 640w, /images/owner-portrait-outdoors-800.webp 800w" sizes="(min-width: 900px) 400px, (min-width: 600px) calc(50vw - 40px), calc(50vw - 23px)" width="800" height="1200" alt="One of the owners of NSA Cleaning LLC, seated outdoors on a park bench" loading="lazy" decoding="async"></div>
+    </div>
+    <figcaption class="team-caption">Ronie Bublak and Alex Bublak, owners</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ===== STANDARDS ===== -->
+<section class="section" id="standards" aria-labelledby="standards-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">How we work</p>
+      <h2 id="standards-title">What our service contract covers</h2>
+      <p>These are the standards we work to, the same for a studio apartment in Troy and a clinic in Schenectady. The guarantee and cancellation terms are in your service contract.</p>
+    </div>
+    <ul class="why-list">
+      <li class="why-item"><span class="why-icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span><div><h3>Insured</h3><p>Your home and our team are covered while we work. If something is damaged, we cover it; larger items are covered by our insurance.</p></div></li>
+      <li class="why-item"><span class="why-icon"><svg class="icon" aria-hidden="true"><use href="#i-award"/></svg></span><div><h3>Satisfaction guarantee</h3><p>Backed by our service contract. If a cleaning isn't right, tell us and we'll make it right.</p></div></li>
+      <li class="why-item"><span class="why-icon"><svg class="icon" aria-hidden="true"><use href="#i-bucket"/></svg></span><div><h3>Supplies and equipment included</h3><p>We bring everything unless you ask us to use your products. Pet- and family-friendly options are agreed at the walk-through.</p></div></li>
+      <li class="why-item"><span class="why-icon"><svg class="icon" aria-hidden="true"><use href="#i-car"/></svg></span><div><h3>Travel included</h3><p>No travel fees from Albany to Lake George — up to about an hour from Watervliet. See the full <a href="/service-area">service area</a>.</p></div></li>
+      <li class="why-item"><span class="why-icon"><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg></span><div><h3>Clear cancellation terms</h3><p>24 hours' notice and there's no fee. Less than 24 hours incurs a 30% fee. Details on the <a href="/pricing">pricing page</a>.</p></div></li>
+      <li class="why-item"><span class="why-icon"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg></span><div><h3>Three languages</h3><p>English, Portuguese and Spanish, on the phone and on site. <span lang="es">Hablamos español</span> · <span lang="pt">Falamos português</span>.</p></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== WHAT WE DO MOST ===== -->
+<section class="section" id="preferred" aria-labelledby="preferred-title">
+  <div class="container">
+    <div class="section-head split-head">
+      <div>
+        <p class="eyebrow">What we do most</p>
+        <h2 id="preferred-title">Recurring homes, offices and clinics, painting</h2>
+      </div>
+      <a class="link-arrow" href="/services">All services <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+    <ul class="why-list">
+      <li class="why-item"><span class="why-icon"><svg class="icon" aria-hidden="true"><use href="#i-refresh"/></svg></span><div><h3><a href="/recurring-cleaning">Recurring home cleaning</a></h3><p>Weekly, bi-weekly or monthly, from ${{site.business.priceApartmentFrom}} for apartments and ${{site.business.priceHouseFrom}} for houses.</p></div></li>
+      <li class="why-item"><span class="why-icon"><svg class="icon" aria-hidden="true"><use href="#i-building"/></svg></span><div><h3><a href="/commercial-cleaning">Offices, clinics and hospitals</a></h3><p>Commercial cleaning available 24/7, scheduled around your staff and patients.</p></div></li>
+      <li class="why-item"><span class="why-icon"><svg class="icon" aria-hidden="true"><use href="#i-roller"/></svg></span><div><h3><a href="/painting">Residential and commercial painting</a></h3><p>Painting for homes and businesses across the Capital Region, quoted for free.</p></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="section cta-band on-dark" aria-labelledby="cta-title"><div class="container">
+  <h2 id="cta-title">Start with a free quote</h2>
+  <p>Tell us about your home or business and we'll reply by phone or email — no obligation, travel included.</p>
+  <div class="cta-actions"><a class="btn btn-white btn-lg" href="/contact#quote" data-track="cta_quote_final">Get a Free Quote</a><a class="btn btn-ghost btn-lg" href="tel:{{site.business.phoneE164}}"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call&nbsp;{{{site.business.phoneHtml}}}</a></div>
+  <p class="cta-meta">{{site.business.address.city}}, {{site.business.address.region}} · Residential {{site.business.hoursResidential}} · Commercial {{site.business.hoursCommercial}} · <a href="mailto:{{site.business.email}}">{{site.business.email}}</a></p>
+</div></section>

@@ -1,0 +1,105 @@
+<form class="quote-form" data-quote-form action="/api/quote" method="post" novalidate>
+  <input type="hidden" name="_ts" value="">
+  <input type="hidden" name="_page" value="{{page.path}}">
+  <div class="visually-hidden" aria-hidden="true">
+    <label for="q-company">Company website (leave this blank)</label>
+    <input id="q-company" name="company_website" type="text" tabindex="-1" autocomplete="off">
+  </div>
+  <div class="form-grid">
+    <div class="field">
+      <label for="q-name">Full name <span class="req" aria-hidden="true">*</span></label>
+      <input id="q-name" name="name" type="text" autocomplete="name" required aria-required="true" aria-describedby="q-name-error" placeholder="Your name">
+      <p class="field-error" id="q-name-error" data-error-for="name" hidden></p>
+    </div>
+    <div class="field">
+      <label for="q-phone">Phone <span class="req" aria-hidden="true">*</span></label>
+      <input id="q-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required aria-required="true" aria-describedby="q-phone-error" placeholder="(518) 000-0000">
+      <p class="field-error" id="q-phone-error" data-error-for="phone" hidden></p>
+    </div>
+    <div class="field">
+      <label for="q-email">Email <span class="req" aria-hidden="true">*</span></label>
+      <input id="q-email" name="email" type="email" inputmode="email" autocomplete="email" required aria-required="true" aria-describedby="q-email-error" placeholder="you@example.com">
+      <p class="field-error" id="q-email-error" data-error-for="email" hidden></p>
+    </div>
+    <div class="field">
+      <label for="q-service">Service <span class="req" aria-hidden="true">*</span></label>
+      <select id="q-service" name="service" required aria-required="true" aria-describedby="q-service-error">
+        <option value="">Choose a service…</option>
+        <option value="recurring">Recurring cleaning (weekly / bi-weekly / monthly)</option>
+        <option value="regular">Regular cleaning</option>
+        <option value="deep">Deep cleaning</option>
+        <option value="full-deep">Full deep cleaning</option>
+        <option value="move">Move-in / move-out cleaning</option>
+        <option value="airbnb">Airbnb &amp; short-term rental turnover</option>
+        <option value="post-construction">Post-construction cleaning</option>
+        <option value="commercial">Commercial cleaning</option>
+        <option value="power-washing">Deck &amp; siding power washing</option>
+        <option value="carpet">Carpet &amp; upholstery cleaning</option>
+        <option value="painting">Painting</option>
+        <option value="other">Something else / not sure</option>
+      </select>
+      <p class="field-error" id="q-service-error" data-error-for="service" hidden></p>
+    </div>
+    <div class="field">
+      <label for="q-frequency">How often <span class="opt">(optional)</span></label>
+      <select id="q-frequency" name="frequency" aria-describedby="q-frequency-error">
+        <option value="">Select…</option>
+        <option value="one-time">One time</option>
+        <option value="weekly">Weekly</option>
+        <option value="biweekly">Bi-weekly</option>
+        <option value="monthly">Monthly</option>
+        <option value="not-sure">Not sure yet</option>
+      </select>
+      <p class="field-error" id="q-frequency-error" data-error-for="frequency" hidden></p>
+    </div>
+    <div class="field">
+      <label for="q-property">Property type <span class="opt">(optional)</span></label>
+      <select id="q-property" name="property_type" aria-describedby="q-property-error">
+        <option value="">Select…</option>
+        <option value="apartment">Apartment / condo</option>
+        <option value="house">House</option>
+        <option value="office">Office</option>
+        <option value="clinic">Clinic / medical</option>
+        <option value="restaurant">Restaurant</option>
+        <option value="other">Other</option>
+      </select>
+      <p class="field-error" id="q-property-error" data-error-for="property_type" hidden></p>
+    </div>
+    <div class="field field-full">
+      <label for="q-address">Street address <span class="opt">(optional)</span></label>
+      <input id="q-address" name="address" type="text" autocomplete="address-line1" aria-describedby="q-address-error" placeholder="123 Main St">
+      <p class="field-error" id="q-address-error" data-error-for="address" hidden></p>
+    </div>
+    <div class="field">
+      <label for="q-city">City <span class="opt">(optional)</span></label>
+      <input id="q-city" name="city" type="text" autocomplete="address-level2" aria-describedby="q-city-error" placeholder="Albany, Troy, Saratoga Springs…">
+      <p class="field-error" id="q-city-error" data-error-for="city" hidden></p>
+    </div>
+    <div class="field">
+      <label for="q-date">Preferred date <span class="opt">(optional)</span></label>
+      <input id="q-date" name="preferred_date" type="date" autocomplete="off" aria-describedby="q-date-error">
+      <p class="field-error" id="q-date-error" data-error-for="preferred_date" hidden></p>
+    </div>
+    <div class="field field-full">
+      <label for="q-message">Tell us about the space <span class="opt">(optional)</span></label>
+      <textarea id="q-message" name="message" rows="3" autocomplete="off" aria-describedby="q-message-error" placeholder="Bedrooms, bathrooms, pets, anything we should know…"></textarea>
+      <p class="field-error" id="q-message-error" data-error-for="message" hidden></p>
+    </div>
+    <div class="field field-full">
+      <div class="check-row">
+        <input id="q-consent" name="consent" type="checkbox" value="yes" required aria-required="true" aria-describedby="q-consent-error">
+        <label for="q-consent">I agree to the <a href="/terms-and-conditions">Terms &amp; Conditions</a> and <a href="/privacy-policy">Privacy Policy</a>, and I'm okay with NSA Cleaning contacting me by phone or email about my request. <span class="req" aria-hidden="true">*</span></label>
+      </div>
+      <p class="field-error" id="q-consent-error" data-error-for="consent" hidden></p>
+    </div>
+{{#if site.turnstileSiteKey}}
+    <div class="field field-full"><div class="cf-turnstile" data-sitekey="{{site.turnstileSiteKey}}"></div></div>
+{{/if}}
+    <div class="field field-full form-submit">
+      <button type="submit" class="btn btn-primary btn-lg" data-track="cta_quote_submit">Get a Free Quote<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+    </div>
+  </div>
+  <noscript><p class="form-status is-error">This form needs JavaScript. Call <a href="tel:{{site.business.phoneE164}}">{{{site.business.phoneHtml}}}</a> or email <a href="mailto:{{site.business.email}}">{{site.business.email}}</a> instead.</p></noscript>
+  <p class="form-status" data-form-status aria-live="polite"></p>
+  <p class="form-fine">No obligation. We reply by phone or email. Prefer to talk? Call <a href="tel:{{site.business.phoneE164}}">{{{site.business.phoneHtml}}}</a> · Residential {{site.business.hoursResidential}} · Commercial {{site.business.hoursCommercial}} · English, <span lang="pt">Português</span>, <span lang="es">Español</span>.</p>
+</form>

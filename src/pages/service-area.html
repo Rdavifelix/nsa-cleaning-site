@@ -1,0 +1,97 @@
+<!--@meta
+{ "title": "Service Area: Albany to Lake George, NY | NSA Cleaning LLC",
+  "description": "NSA Cleaning LLC serves Albany, Troy, Schenectady, Clifton Park, Saratoga Springs and Lake George, NY, about 1 hour from Watervliet. Get a free quote today.",
+  "priority": 0.7,
+  "schema": [ "@business",
+    { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nsacleaningllc.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Service Area", "item": "https://nsacleaningllc.com/service-area" } ] },
+    { "@context": "https://schema.org", "@type": "Service", "name": "Residential and Commercial Cleaning", "serviceType": "Cleaning service",
+      "url": "https://nsacleaningllc.com/service-area",
+      "description": "Recurring home cleaning, deep cleaning, move-in/move-out, Airbnb turnovers, post-construction cleanup, commercial cleaning, power washing, carpet cleaning and painting across the Capital Region and the I-87 corridor to Lake George, NY.",
+      "provider": { "@id": "https://nsacleaningllc.com/#business" },
+      "areaServed": [
+        { "@type": "City", "name": "Albany, NY" }, { "@type": "City", "name": "Watervliet, NY" }, { "@type": "City", "name": "Troy, NY" }, { "@type": "City", "name": "Cohoes, NY" }, { "@type": "City", "name": "Latham, NY" }, { "@type": "City", "name": "Colonie, NY" }, { "@type": "City", "name": "Schenectady, NY" }, { "@type": "City", "name": "Rensselaer, NY" }, { "@type": "City", "name": "East Greenbush, NY" }, { "@type": "City", "name": "Delmar, NY" }, { "@type": "City", "name": "Guilderland, NY" }, { "@type": "City", "name": "Clifton Park, NY" }, { "@type": "City", "name": "Halfmoon, NY" }, { "@type": "City", "name": "Mechanicville, NY" }, { "@type": "City", "name": "Ballston Spa, NY" }, { "@type": "City", "name": "Malta, NY" }, { "@type": "City", "name": "Saratoga Springs, NY" }, { "@type": "City", "name": "Wilton, NY" }, { "@type": "City", "name": "Glens Falls, NY" }, { "@type": "City", "name": "Queensbury, NY" }, { "@type": "City", "name": "Lake George, NY" } ] } ] }
+-->
+<style>
+.zones{display:grid;gap:14px}
+@media(min-width:900px){.zones{grid-template-columns:repeat(3,1fr)}}
+.zone{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:26px 22px;box-shadow:var(--shadow)}
+.zone .why-icon{margin-bottom:12px}
+.zone h3{font-size:1.25rem;margin:0 0 4px}
+.zone .zone-sub{color:var(--blue-dark);font-weight:700;font-size:.875rem;margin:0 0 12px}
+.zone p{color:var(--ink-2);font-size:.95rem;margin:0 0 14px}
+.zone .city-chips{margin:0}
+.area-map img{margin-top:0}
+</style>
+
+<!-- ===== HERO ===== -->
+<section class="page-hero" aria-labelledby="page-title"><div class="container">
+  <div>
+    <p class="eyebrow">Service area · Capital Region &amp; I-87 corridor</p>
+    <h1 id="page-title">Cleaning Services from <em>Albany to Lake George</em> — Our Service Area</h1>
+    <p class="lead">We're based at {{site.business.address.street}}, {{site.business.address.city}}, {{site.business.address.region}} {{site.business.address.postal}} and travel up to about one hour in any direction — the whole Capital Region and the Northway up to Glens Falls and Lake George. Travel is included in every plan.</p>
+    <div class="hero-cta"><a class="btn btn-primary btn-lg" href="/contact#quote" data-track="cta_quote_hero">Get a Free Quote</a><a class="btn btn-ghost btn-lg" href="tel:{{site.business.phoneE164}}"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call&nbsp;{{{site.business.phoneHtml}}}</a></div>
+    <p class="hero-note"><b>Insured</b> · Supplies included · No travel fees within about 1 hour of Watervliet · <span lang="es">Hablamos español</span></p>
+  </div>
+</div></section>
+
+<!-- ===== MAP + CITY LIST ===== -->
+<section class="section" id="map" aria-labelledby="map-title">
+  <div class="container area-grid">
+    <div>
+      <div class="section-head">
+        <p class="eyebrow">Where we work</p>
+        <h2 id="map-title">21 cities and towns, about one hour from our Watervliet office</h2>
+        <p>Watervliet sits right in the middle of the Capital Region, a few minutes from Albany, Troy, Cohoes and Latham. From there, I-87 takes us north through Clifton Park and Saratoga Springs to Glens Falls and Lake George, and I-90 west to Schenectady and east to Rensselaer and East Greenbush. Every address on this list is within our travel range, and travel is already included in your price — see <a href="/pricing">how pricing works</a>. Town not listed? If it's within about an hour of Watervliet, send it with the quote form and we'll confirm.</p>
+      </div>
+      <ul class="city-chips" aria-label="Cities we serve">
+        <li class="is-hq">Watervliet (HQ)</li><li>Albany</li><li>Troy</li><li>Cohoes</li><li>Latham</li><li>Colonie</li><li>Schenectady</li><li>Rensselaer</li><li>East Greenbush</li><li>Delmar</li><li>Guilderland</li><li>Clifton Park</li><li>Halfmoon</li><li>Mechanicville</li><li>Ballston Spa</li><li>Malta</li><li>Saratoga Springs</li><li>Wilton</li><li>Glens Falls</li><li>Queensbury</li><li>Lake George</li>
+      </ul>
+      <div class="actions">
+        <a class="btn btn-primary" href="/contact#quote" data-track="cta_quote_area">Check my address</a>
+        <a class="link-arrow" href="/services">See all services <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+    <div class="area-map"><img src="/images/service-area-map-albany-to-lake-george-1024.webp" srcset="/images/service-area-map-albany-to-lake-george-800.webp 800w, /images/service-area-map-albany-to-lake-george-1024.webp 1024w" sizes="(min-width: 1240px) 480px, (min-width: 900px) 40vw, calc(100vw - 32px)" width="1024" height="1536" alt="Map of the NSA Cleaning service area from Albany and Watervliet north along I-87 through Saratoga Springs to Glens Falls and Lake George, NY" fetchpriority="high" decoding="async"></div>
+  </div>
+</section>
+
+<!-- ===== ZONES ===== -->
+<section class="section section-alt" id="zones" aria-labelledby="zones-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Zones</p>
+      <h2 id="zones-title">Capital Region core, the Northway corridor and the North</h2>
+      <p>The same crews, supplies and standards everywhere we go. Every service we offer is available in all three zones, travel included.</p>
+    </div>
+    <div class="zones">
+      <article class="zone">
+        <span class="why-icon"><svg class="icon" aria-hidden="true"><use href="#i-building"/></svg></span>
+        <h3>Capital Region core</h3>
+        <p class="zone-sub">Home base</p>
+        <p>Minutes from our Watervliet office: Albany, Troy, Cohoes, Latham, Colonie, Schenectady, Rensselaer, East Greenbush, Delmar and Guilderland.</p>
+      </article>
+      <article class="zone">
+        <span class="why-icon"><svg class="icon" aria-hidden="true"><use href="#i-home"/></svg></span>
+        <h3>Northway corridor</h3>
+        <p class="zone-sub">I-87 north</p>
+        <p>North along I-87 (the Northway): Clifton Park, Halfmoon, Mechanicville, Ballston Spa, Malta, Saratoga Springs and Wilton.</p>
+      </article>
+      <article class="zone">
+        <span class="why-icon"><svg class="icon" aria-hidden="true"><use href="#i-key"/></svg></span>
+        <h3>North — Glens Falls to Lake George</h3>
+        <p class="zone-sub">Up to about 1 hour from Watervliet</p>
+        <p>Glens Falls, Queensbury and Lake George — the far end of our one-hour travel range, travel included.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="section cta-band on-dark" aria-labelledby="cta-title"><div class="container">
+  <h2 id="cta-title">Get a free quote anywhere from Albany to Lake George</h2>
+  <p>Tell us your town and what you need — we'll reply with a free quote. Travel and supplies included.</p>
+  <div class="cta-actions"><a class="btn btn-white btn-lg" href="/contact#quote" data-track="cta_quote_final">Get a Free Quote</a><a class="btn btn-ghost btn-lg" href="tel:{{site.business.phoneE164}}"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call&nbsp;{{{site.business.phoneHtml}}}</a></div>
+  <p class="cta-meta">{{site.business.address.city}}, {{site.business.address.region}} · Residential {{site.business.hoursResidential}} · Commercial {{site.business.hoursCommercial}} · <a href="mailto:{{site.business.email}}">{{site.business.email}}</a></p>
+</div></section>

@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.vercel/
+.env
+.env.*
+!.env.example
+.DS_Store
+*.log
+.lighthouse/
+
+# generated previews / audit artefacts
+variants/
+docs/shots/
+docs/*.report.json
+docs/*.report.html
+preview/

@@ -1,0 +1,49 @@
+<footer class="site-footer on-dark">
+  <div class="container footer-grid">
+    <div class="footer-about">
+      <a class="footer-brand" href="/"><img src="/images/logo-nsa-cleaning-96.webp" srcset="/images/logo-nsa-cleaning-96.webp 96w, /images/logo-nsa-cleaning-144.webp 144w" sizes="56px" width="56" height="56" alt="" loading="lazy" decoding="async"><span>{{site.business.legalName}}</span></a>
+      <p>{{site.tagline}}.</p>
+      <p>Insured · {{site.business.yearsExperience}}+ years of experience · In business since {{site.business.foundingYear}} · Satisfaction guarantee backed by our service contract</p>
+      <p>English · <span lang="pt">Português</span> · <span lang="es">Español</span></p>
+    </div>
+    <div>
+      <h2 class="footer-heading">Contact</h2>
+      <address>
+        <a href="tel:{{site.business.phoneE164}}">{{{site.business.phoneHtml}}}</a><br>
+        <a href="tel:{{site.business.phone2E164}}">{{{site.business.phone2Html}}}</a><br>
+        <a href="mailto:{{site.business.email}}">{{site.business.email}}</a><br>
+{{site.business.address.street}}<br>{{site.business.address.city}}, {{site.business.address.region}} {{site.business.address.postal}}
+      </address>
+      <p>Residential: {{site.business.hoursResidential}}<br>Commercial: {{site.business.hoursCommercial}}</p>
+      <a href="{{site.business.facebook}}" rel="noopener" target="_blank">Facebook {{site.business.facebookHandle}}</a>
+    </div>
+    <div>
+      <h2 class="footer-heading">Services</h2>
+      <ul class="footer-links">
+        <li><a href="/residential-cleaning">Residential Cleaning</a></li>
+{{#each site.nav}}{{#each this.children}}<li><a href="{{this.href}}">{{this.label}}</a></li>{{/each}}{{/each}}
+        <li><a href="/commercial-cleaning">Commercial Cleaning</a></li>
+        <li><a href="/services">All services</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="footer-heading">Company</h2>
+      <ul class="footer-links">
+        <li><a href="/pricing">Pricing</a></li>
+        <li><a href="/service-area">Service Area</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/faq">FAQ</a></li>
+{{#each site.footerNav}}<li><a href="{{this.href}}">{{this.label}}</a></li>{{/each}}
+{{#if site.gaMeasurementId}}          <li><button type="button" data-open-cookie-settings>Cookie settings</button></li>
+{{/if}}      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>© {{site.year}} {{site.business.legalName}}. All rights reserved.</p>
+    <p>Serving Albany to Lake George, NY · Based in {{site.business.address.city}}, {{site.business.address.region}}</p>
+  </div>
+</footer>
+<nav class="mobile-cta" aria-label="Quick actions">
+  <a href="tel:{{site.business.phoneE164}}" class="btn btn-ghost"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call&nbsp;now</a>
+  <a href="{{#if isHome}}#quote{{else}}/contact#quote{{/if}}" class="btn btn-primary" data-track="cta_quote_sticky">Get a Free Quote</a>
+</nav>

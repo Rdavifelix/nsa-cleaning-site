@@ -1,0 +1,934 @@
+{
+  "images": [
+    {
+      "src": "WhatsApp Image 2026-09-12 at 6.59.17 PM (1).jpeg",
+      "slug": "dock-power-washing-in-progress",
+      "alt": "Technician power washing a floating boat dock beside a moored pontoon boat",
+      "category": "exterior",
+      "use": "gallery",
+      "widths": [
+        480,
+        800,
+        1200
+      ],
+      "quality": 70,
+      "notes": "Portrait 768x1024. Only action shot of power washing; worker shown waist-down, no face.",
+      "generated": [
+        {
+          "width": 480,
+          "height": 640,
+          "file": "/images/dock-power-washing-in-progress-480.webp",
+          "bytes": 41606
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "file": "/images/dock-power-washing-in-progress-768.webp",
+          "bytes": 77666
+        }
+      ],
+      "aspect": 0.75
+    },
+    {
+      "src": "WhatsApp Image 2026-09-12 at 6.59.17 PM (2).jpeg",
+      "slug": "log-cabin-siding-after-power-washing",
+      "alt": "Brown log cabin siding and windows freshly power washed, gravel driveway",
+      "category": "exterior",
+      "use": "service-card",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "quality": 70,
+      "notes": "Landscape 1024x768. Best siding shot for the deck-and-siding power-washing card.",
+      "generated": [
+        {
+          "width": 480,
+          "height": 360,
+          "file": "/images/log-cabin-siding-after-power-washing-480.webp",
+          "bytes": 33812
+        },
+        {
+          "width": 800,
+          "height": 600,
+          "file": "/images/log-cabin-siding-after-power-washing-800.webp",
+          "bytes": 78520
+        },
+        {
+          "width": 1024,
+          "height": 768,
+          "file": "/images/log-cabin-siding-after-power-washing-1024.webp",
+          "bytes": 115060
+        }
+      ],
+      "aspect": 1.3333
+    },
+    {
+      "src": "WhatsApp Image 2026-09-12 at 6.59.17 PM.jpeg",
+      "slug": "lakeside-cabin-deck-lounge-after-power-washing",
+      "alt": "Composite deck with wicker seating and fire tables after power washing, lakeside cabin",
+      "category": "exterior",
+      "use": "gallery",
+      "widths": [
+        480,
+        800,
+        1200
+      ],
+      "quality": 70,
+      "notes": "Portrait. Wet, freshly washed boards; same deck as the fire-table shot.",
+      "generated": [
+        {
+          "width": 480,
+          "height": 640,
+          "file": "/images/lakeside-cabin-deck-lounge-after-power-washing-480.webp",
+          "bytes": 47714
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "file": "/images/lakeside-cabin-deck-lounge-after-power-washing-768.webp",
+          "bytes": 94728
+        }
+      ],
+      "aspect": 0.75
+    },
+    {
+      "src": "WhatsApp Image 2026-09-12 at 6.59.18 PM (1).jpeg",
+      "slug": "lakeside-cabin-deck-after-power-washing",
+      "alt": "Freshly power washed deck with patio furniture at a lakeside log cabin",
+      "category": "exterior",
+      "use": "hero",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "quality": 70,
+      "notes": "PRIMARY HERO: landscape, lake and green metal roof visible, real completed job. Source is only 1024 wide so the largest rendition is 1024.",
+      "generated": [
+        {
+          "width": 480,
+          "height": 360,
+          "file": "/images/lakeside-cabin-deck-after-power-washing-480.webp",
+          "bytes": 35872
+        },
+        {
+          "width": 800,
+          "height": 600,
+          "file": "/images/lakeside-cabin-deck-after-power-washing-800.webp",
+          "bytes": 81924
+        },
+        {
+          "width": 1024,
+          "height": 768,
+          "file": "/images/lakeside-cabin-deck-after-power-washing-1024.webp",
+          "bytes": 117494
+        }
+      ],
+      "aspect": 1.3333
+    },
+    {
+      "src": "WhatsApp Image 2026-09-12 at 6.59.20 PM (1).jpeg",
+      "slug": "nsa-cleaning-branded-company-car",
+      "alt": "NSA Cleaning LLC branded company SUV with logo and phone number",
+      "category": "vehicle",
+      "use": "about",
+      "widths": [
+        480,
+        800,
+        1200
+      ],
+      "quality": 82,
+      "notes": "Square 1024 mockup-style render on a flat gray studio background (not a street photo). Alternate hero visual or contact/about accent.",
+      "generated": [
+        {
+          "width": 480,
+          "height": 480,
+          "file": "/images/nsa-cleaning-branded-company-car-480.webp",
+          "bytes": 15466
+        },
+        {
+          "width": 800,
+          "height": 800,
+          "file": "/images/nsa-cleaning-branded-company-car-800.webp",
+          "bytes": 32296
+        },
+        {
+          "width": 1024,
+          "height": 1024,
+          "file": "/images/nsa-cleaning-branded-company-car-1024.webp",
+          "bytes": 45158
+        }
+      ],
+      "aspect": 1.0
+    },
+    {
+      "src": "WhatsApp Image 2026-09-12 at 6.59.20 PM (2).jpeg",
+      "slug": "bathtub-wide-before-deep-cleaning",
+      "alt": "Stained fiberglass tub and shower surround before deep cleaning",
+      "category": "before",
+      "use": "before-after",
+      "widths": [
+        480,
+        800,
+        1200
+      ],
+      "quality": 80,
+      "crop": [
+        0,
+        0,
+        774,
+        719
+      ],
+      "notes": "Top-left panel of the 2x2 tub grid (divider at x=775/776, y=719/720). Pairs with bathtub-wide-after-deep-cleaning.",
+      "generated": [
+        {
+          "width": 480,
+          "height": 446,
+          "file": "/images/bathtub-wide-before-deep-cleaning-480.webp",
+          "bytes": 8812
+        },
+        {
+          "width": 774,
+          "height": 719,
+          "file": "/images/bathtub-wide-before-deep-cleaning-774.webp",
+          "bytes": 18912
+        }
+      ],
+      "aspect": 1.0765
+    },
+    {
+      "src": "WhatsApp Image 2026-09-12 at 6.59.20 PM (2).jpeg",
+      "slug": "bathtub-wide-after-deep-cleaning",
+      "alt": "Same tub and shower surround gleaming white after deep cleaning",
+      "category": "after",
+      "use": "before-after",
+      "widths": [
+        480,
+        800,
+        1200
+      ],
+      "quality": 80,
+      "crop": [
+        0,
+        721,
+        774,
+        1440
+      ],
+      "notes": "Bottom-left panel of the 2x2 tub grid; same framing as the wide before.",
+      "generated": [
+        {
+          "width": 480,
+          "height": 446,
+          "file": "/images/bathtub-wide-after-deep-cleaning-480.webp",
+          "bytes": 6510
+        },
+        {
+          "width": 774,
+          "height": 719,
+          "file": "/images/bathtub-wide-after-deep-cleaning-774.webp",
+          "bytes": 12160
+        }
+      ],
+      "aspect": 1.0765
+    },
+    {
+      "src": "WhatsApp Image 2026-09-12 at 6.59.20 PM (3).jpeg",
+      "slug": "service-area-map-albany-to-lake-george",
+      "alt": "Service area map from Albany to Lake George, NY along I-87",
+      "category": "map",
+      "use": "service-area",
+      "widths": [
+        800,
+        1200
+      ],
+      "quality": 82,
+      "notes": "Portrait 1024x1536, text-heavy; keep quality high. Renders 800 and 1024.",
+      "generated": [
+        {
+          "width": 800,
+          "height": 1200,
+          "file": "/images/service-area-map-albany-to-lake-george-800.webp",
+          "bytes": 95350
+        },
+        {
+          "width": 1024,
+          "height": 1536,
+          "file": "/images/service-area-map-albany-to-lake-george-1024.webp",
+          "bytes": 135872
+        }
+      ],
+      "aspect": 0.6667
+    },
+    {
+      "src": "WhatsApp Image 2026-09-12 at 6.59.21 PM (1).jpeg",
+      "slug": "bathtub-shower-before-deep-cleaning",
+      "alt": "Dirty fiberglass bathtub and shower walls before a deep clean",
+      "category": "before",
+      "use": "before-after",
+      "widths": [
+        480,
+        800,
+        1200
+      ],
+      "quality": 80,
+      "notes": "Portrait 768x1024. Pairs with bathtub-shower-after-deep-cleaning (same tub, same framing).",
+      "generated": [
+        {
+          "width": 480,
+          "height": 640,
+          "file": "/images/bathtub-shower-before-deep-cleaning-480.webp",
+          "bytes": 14762
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "file": "/images/bathtub-shower-before-deep-cleaning-768.webp",
+          "bytes": 27904
+        }
+      ],
+      "aspect": 0.75
+    },
+    {
+      "src": "WhatsApp Image 2026-09-12 at 6.59.21 PM (2).jpeg",
+      "slug": "bathtub-shower-after-deep-cleaning",
+      "alt": "Bathtub and shower walls restored to bright white after deep cleaning",
+      "category": "after",
+      "use": "before-after",
+      "widths": [
+        480,
+        800,
+        1200
+      ],
+      "quality": 80,
+      "notes": "Portrait 768x1024. After shot for bathtub-shower-before-deep-cleaning.",
+      "generated": [
+        {
+          "width": 480,
+          "height": 640,
+          "file": "/images/bathtub-shower-after-deep-cleaning-480.webp",
+          "bytes": 9972
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "file": "/images/bathtub-shower-after-deep-cleaning-768.webp",
+          "bytes": 18322
+        }
+      ],
+      "aspect": 0.75
+    },
+    {
+      "src": "WhatsApp Image 2026-09-12 at 6.59.21 PM (3).jpeg",
+      "slug": "guest-bedroom-towel-animals-airbnb-turnover",
+      "alt": "Guest bedroom made up with folded towel animals after Airbnb turnover cleaning",
+      "category": "interior",
+      "use": "service-card",
+      "widths": [
+        480,
+        800,
+        1200
+      ],
+      "quality": 80,
+      "notes": "Landscape. Warm pink throw is slightly off the blue/gray palette but a strong Airbnb card.",
+      "generated": [
+        {
+          "width": 480,
+          "height": 360,
+          "file": "/images/guest-bedroom-towel-animals-airbnb-turnover-480.webp",
+          "bytes": 19248
+        },
+        {
+          "width": 800,
+          "height": 600,
+          "file": "/images/guest-bedroom-towel-animals-airbnb-turnover-800.webp",
+          "bytes": 44912
+        },
+        {
+          "width": 1024,
+          "height": 768,
+          "file": "/images/guest-bedroom-towel-animals-airbnb-turnover-1024.webp",
+          "bytes": 65704
+        }
+      ],
+      "aspect": 1.3333
+    },
+    {
+      "src": "WhatsApp Image 2026-09-12 at 6.59.21 PM (4).jpeg",
+      "slug": "white-kitchen-quartz-island-after-cleaning",
+      "alt": "Spotless white kitchen with quartz island and stainless appliances after cleaning",
+      "category": "interior",
+      "use": "service-card",
+      "widths": [
+        480,
+        800,
+        1200
+      ],
+      "quality": 82,
+      "notes": "Best residential / deep-cleaning card. Landscape; white and gray palette matches the brand.",
+      "generated": [
+        {
+          "width": 480,
+          "height": 360,
+          "file": "/images/white-kitchen-quartz-island-after-cleaning-480.webp",
+          "bytes": 21632
+        },
+        {
+          "width": 800,
+          "height": 600,
+          "file": "/images/white-kitchen-quartz-island-after-cleaning-800.webp",
+          "bytes": 44602
+        },
+        {
+          "width": 1024,
+          "height": 768,
+          "file": "/images/white-kitchen-quartz-island-after-cleaning-1024.webp",
+          "bytes": 61794
+        }
+      ],
+      "aspect": 1.3333
+    },
+    {
+      "src": "WhatsApp Image 2026-09-12 at 6.59.22 PM (1).jpeg",
+      "slug": "interior-painting-prep-crew",
+      "alt": "Painting crew prepping an apartment with plastic sheeting and blue tape",
+      "category": "painting",
+      "use": "service-card",
+      "widths": [
+        480,
+        800,
+        1200
+      ],
+      "quality": 80,
+      "notes": "Portrait. Two workers at a distance (faces small, one in a respirator). Best painting card because it shows real prep work.",
+      "generated": [
+        {
+          "width": 480,
+          "height": 640,
+          "file": "/images/interior-painting-prep-crew-480.webp",
+          "bytes": 33698
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "file": "/images/interior-painting-prep-crew-768.webp",
+          "bytes": 61836
+        }
+      ],
+      "aspect": 0.75
+    },
+    {
+      "src": "WhatsApp Image 2026-09-12 at 6.59.22 PM (2).jpeg",
+      "slug": "kitchen-masked-for-interior-painting",
+      "alt": "Kitchen cabinets and appliances masked with plastic before interior painting",
+      "category": "painting",
+      "use": "gallery",
+      "widths": [
+        480,
+        800,
+        1200
+      ],
+      "quality": 80,
+      "notes": "Portrait, no people.",
+      "generated": [
+        {
+          "width": 480,
+          "height": 640,
+          "file": "/images/kitchen-masked-for-interior-painting-480.webp",
+          "bytes": 28840
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "file": "/images/kitchen-masked-for-interior-painting-768.webp",
+          "bytes": 53680
+        }
+      ],
+      "aspect": 0.75
+    },
+    {
+      "src": "WhatsApp Image 2026-09-12 at 6.59.22 PM (3).jpeg",
+      "slug": "small-bedroom-gray-bedding-airbnb-turnover",
+      "alt": "Compact guest bedroom with gray bedding and towel animals after turnover cleaning",
+      "category": "interior",
+      "use": "gallery",
+      "widths": [
+        480,
+        800,
+        1200
+      ],
+      "quality": 80,
+      "notes": "Portrait version of the blue-curtain room (landscape version: guest-bedroom-blue-curtains-airbnb-turnover).",
+      "generated": [
+        {
+          "width": 480,
+          "height": 640,
+          "file": "/images/small-bedroom-gray-bedding-airbnb-turnover-480.webp",
+          "bytes": 20236
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "file": "/images/small-bedroom-gray-bedding-airbnb-turnover-768.webp",
+          "bytes": 35982
+        }
+      ],
+      "aspect": 0.75
+    },
+    {
+      "src": "WhatsApp Image 2026-09-12 at 6.59.22 PM (4).jpeg",
+      "slug": "bedroom-navy-bedding-airbnb-turnover",
+      "alt": "Guest bedroom with navy bedding and folded towel swan after cleaning",
+      "category": "interior",
+      "use": "gallery",
+      "widths": [
+        480,
+        800,
+        1200
+      ],
+      "quality": 80,
+      "crop": [
+        0,
+        330,
+        768,
+        1024
+      ],
+      "notes": "Cropped to remove a finger over the lens in the top-right of the original; result 768x694.",
+      "generated": [
+        {
+          "width": 480,
+          "height": 434,
+          "file": "/images/bedroom-navy-bedding-airbnb-turnover-480.webp",
+          "bytes": 15106
+        },
+        {
+          "width": 768,
+          "height": 694,
+          "file": "/images/bedroom-navy-bedding-airbnb-turnover-768.webp",
+          "bytes": 26856
+        }
+      ],
+      "aspect": 1.1066
+    },
+    {
+      "src": "WhatsApp Image 2026-09-12 at 6.59.22 PM (5).jpeg",
+      "slug": "bedroom-white-bedding-towel-animals-airbnb",
+      "alt": "Bright bedroom with crisp white bedding and towel animals after cleaning",
+      "category": "interior",
+      "use": "service-card",
+      "widths": [
+        480,
+        800,
+        1200
+      ],
+      "quality": 82,
+      "notes": "Landscape, bright window light. Strong residential / Airbnb card.",
+      "generated": [
+        {
+          "width": 480,
+          "height": 360,
+          "file": "/images/bedroom-white-bedding-towel-animals-airbnb-480.webp",
+          "bytes": 20008
+        },
+        {
+          "width": 800,
+          "height": 600,
+          "file": "/images/bedroom-white-bedding-towel-animals-airbnb-800.webp",
+          "bytes": 50386
+        },
+        {
+          "width": 1024,
+          "height": 768,
+          "file": "/images/bedroom-white-bedding-towel-animals-airbnb-1024.webp",
+          "bytes": 76376
+        }
+      ],
+      "aspect": 1.3333
+    },
+    {
+      "src": "WhatsApp Image 2026-09-12 at 6.59.22 PM.jpeg",
+      "slug": "master-bedroom-swan-towels-after-cleaning",
+      "alt": "Master bedroom with swan-folded towels and vacuumed carpet after cleaning",
+      "category": "interior",
+      "use": "service-card",
+      "widths": [
+        480,
+        800,
+        1200
+      ],
+      "quality": 80,
+      "notes": "Landscape. Wall-to-wall carpet visible, so it also works on the carpet-cleaning page.",
+      "generated": [
+        {
+          "width": 480,
+          "height": 360,
+          "file": "/images/master-bedroom-swan-towels-after-cleaning-480.webp",
+          "bytes": 29402
+        },
+        {
+          "width": 800,
+          "height": 600,
+          "file": "/images/master-bedroom-swan-towels-after-cleaning-800.webp",
+          "bytes": 79164
+        },
+        {
+          "width": 1024,
+          "height": 768,
+          "file": "/images/master-bedroom-swan-towels-after-cleaning-1024.webp",
+          "bytes": 119582
+        }
+      ],
+      "aspect": 1.3333
+    },
+    {
+      "src": "WhatsApp Image 2026-09-12 at 6.59.23 PM (2).jpeg",
+      "slug": "lakeside-deck-fire-table-after-power-washing",
+      "alt": "Power washed lakeside deck with fire table, palms and boats on the water",
+      "category": "exterior",
+      "use": "service-card",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "quality": 70,
+      "notes": "Second-best hero and the natural power-washing page header: landscape with lake, dock and boats.",
+      "generated": [
+        {
+          "width": 480,
+          "height": 360,
+          "file": "/images/lakeside-deck-fire-table-after-power-washing-480.webp",
+          "bytes": 35146
+        },
+        {
+          "width": 800,
+          "height": 600,
+          "file": "/images/lakeside-deck-fire-table-after-power-washing-800.webp",
+          "bytes": 82534
+        },
+        {
+          "width": 1024,
+          "height": 768,
+          "file": "/images/lakeside-deck-fire-table-after-power-washing-1024.webp",
+          "bytes": 119718
+        }
+      ],
+      "aspect": 1.3333
+    },
+    {
+      "src": "WhatsApp Image 2026-09-12 at 6.59.23 PM (3).jpeg",
+      "slug": "cabin-deck-stairs-after-power-washing",
+      "alt": "Deck stairs, railing and lattice skirting cleaned by power washing",
+      "category": "exterior",
+      "use": "gallery",
+      "widths": [
+        480,
+        800,
+        1200
+      ],
+      "quality": 70,
+      "notes": "Portrait.",
+      "generated": [
+        {
+          "width": 480,
+          "height": 640,
+          "file": "/images/cabin-deck-stairs-after-power-washing-480.webp",
+          "bytes": 55250
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "file": "/images/cabin-deck-stairs-after-power-washing-768.webp",
+          "bytes": 109236
+        }
+      ],
+      "aspect": 0.75
+    },
+    {
+      "src": "WhatsApp Image 2026-09-12 at 6.59.23 PM.jpeg",
+      "slug": "bedroom-hardwood-floor-after-cleaning",
+      "alt": "Tidy bedroom with polished hardwood floor and made bed after cleaning",
+      "category": "interior",
+      "use": "gallery",
+      "widths": [
+        480,
+        800,
+        1200
+      ],
+      "quality": 80,
+      "notes": "Landscape. Box fan on the floor is slight clutter; same room as bedroom-white-bedding-towel-animals-airbnb.",
+      "generated": [
+        {
+          "width": 480,
+          "height": 360,
+          "file": "/images/bedroom-hardwood-floor-after-cleaning-480.webp",
+          "bytes": 16216
+        },
+        {
+          "width": 800,
+          "height": 600,
+          "file": "/images/bedroom-hardwood-floor-after-cleaning-800.webp",
+          "bytes": 36516
+        },
+        {
+          "width": 1024,
+          "height": 768,
+          "file": "/images/bedroom-hardwood-floor-after-cleaning-1024.webp",
+          "bytes": 51938
+        }
+      ],
+      "aspect": 1.3333
+    },
+    {
+      "src": "WhatsApp Image 2026-09-12 at 6.59.24 PM (1).jpeg",
+      "slug": "living-room-sectional-after-cleaning",
+      "alt": "Clean living room with gray sectional, area rug and ceiling fan",
+      "category": "interior",
+      "use": "service-card",
+      "widths": [
+        480,
+        800,
+        1200
+      ],
+      "quality": 80,
+      "notes": "Landscape. Good recurring / regular-cleaning card.",
+      "generated": [
+        {
+          "width": 480,
+          "height": 360,
+          "file": "/images/living-room-sectional-after-cleaning-480.webp",
+          "bytes": 18810
+        },
+        {
+          "width": 800,
+          "height": 600,
+          "file": "/images/living-room-sectional-after-cleaning-800.webp",
+          "bytes": 41062
+        },
+        {
+          "width": 1024,
+          "height": 768,
+          "file": "/images/living-room-sectional-after-cleaning-1024.webp",
+          "bytes": 58116
+        }
+      ],
+      "aspect": 1.3333
+    },
+    {
+      "src": "WhatsApp Image 2026-09-12 at 6.59.24 PM (2).jpeg",
+      "slug": "living-room-slat-wall-tv-after-cleaning",
+      "alt": "Living room with wood slat accent wall and TV after cleaning",
+      "category": "interior",
+      "use": "gallery",
+      "widths": [
+        480,
+        800,
+        1200
+      ],
+      "quality": 80,
+      "notes": "Same room, alternate angle, evening lighting.",
+      "generated": [
+        {
+          "width": 480,
+          "height": 360,
+          "file": "/images/living-room-slat-wall-tv-after-cleaning-480.webp",
+          "bytes": 18178
+        },
+        {
+          "width": 800,
+          "height": 600,
+          "file": "/images/living-room-slat-wall-tv-after-cleaning-800.webp",
+          "bytes": 39972
+        },
+        {
+          "width": 1024,
+          "height": 768,
+          "file": "/images/living-room-slat-wall-tv-after-cleaning-1024.webp",
+          "bytes": 57074
+        }
+      ],
+      "aspect": 1.3333
+    },
+    {
+      "src": "WhatsApp Image 2026-09-12 at 6.59.24 PM (3).jpeg",
+      "slug": "guest-bedroom-blue-curtains-airbnb-turnover",
+      "alt": "Guest bedroom with gray bedding, blue curtains and folded towels after turnover",
+      "category": "interior",
+      "use": "service-card",
+      "widths": [
+        480,
+        800,
+        1200
+      ],
+      "quality": 80,
+      "notes": "Landscape. Airbnb card alternate; blue/gray palette matches the brand.",
+      "generated": [
+        {
+          "width": 480,
+          "height": 360,
+          "file": "/images/guest-bedroom-blue-curtains-airbnb-turnover-480.webp",
+          "bytes": 15990
+        },
+        {
+          "width": 800,
+          "height": 600,
+          "file": "/images/guest-bedroom-blue-curtains-airbnb-turnover-800.webp",
+          "bytes": 31840
+        },
+        {
+          "width": 1024,
+          "height": 768,
+          "file": "/images/guest-bedroom-blue-curtains-airbnb-turnover-1024.webp",
+          "bytes": 43578
+        }
+      ],
+      "aspect": 1.3333
+    },
+    {
+      "src": "WhatsApp Image 2026-09-12 at 6.59.24 PM (4).jpeg",
+      "slug": "bathroom-hex-tile-after-deep-cleaning",
+      "alt": "Small bathroom with hex tile floor, LED mirror and fresh bath mats after cleaning",
+      "category": "interior",
+      "use": "service-card",
+      "widths": [
+        480,
+        800,
+        1200
+      ],
+      "quality": 80,
+      "notes": "Portrait. Deep-cleaning or move-in card; a trash bag peeks into the bottom-right corner.",
+      "generated": [
+        {
+          "width": 480,
+          "height": 640,
+          "file": "/images/bathroom-hex-tile-after-deep-cleaning-480.webp",
+          "bytes": 26554
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "file": "/images/bathroom-hex-tile-after-deep-cleaning-768.webp",
+          "bytes": 47922
+        }
+      ],
+      "aspect": 0.75
+    },
+    {
+      "src": "WhatsApp Image 2026-09-12 at 6.59.24 PM.jpeg",
+      "slug": "lakeside-dock-steps-after-power-washing",
+      "alt": "Composite steps leading down to a lake dock after power washing",
+      "category": "exterior",
+      "use": "gallery",
+      "widths": [
+        480,
+        800,
+        1200
+      ],
+      "quality": 70,
+      "notes": "Portrait, very photogenic; could anchor a Lake George / service-area section.",
+      "generated": [
+        {
+          "width": 480,
+          "height": 640,
+          "file": "/images/lakeside-dock-steps-after-power-washing-480.webp",
+          "bytes": 55628
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "file": "/images/lakeside-dock-steps-after-power-washing-768.webp",
+          "bytes": 114464
+        }
+      ],
+      "aspect": 0.75
+    },
+    {
+      "src": "WhatsApp Image 2026-09-12 at 6.59.25 PM.jpeg",
+      "slug": "hallway-wall-trim-fresh-paint",
+      "alt": "Hallway wall with freshly painted picture-frame trim molding",
+      "category": "painting",
+      "use": "gallery",
+      "widths": [
+        480,
+        800
+      ],
+      "quality": 80,
+      "notes": "Only 576x1024 (low resolution); renders 480 and 576. Painting finish shot, no people.",
+      "generated": [
+        {
+          "width": 480,
+          "height": 853,
+          "file": "/images/hallway-wall-trim-fresh-paint-480.webp",
+          "bytes": 14044
+        },
+        {
+          "width": 576,
+          "height": 1024,
+          "file": "/images/hallway-wall-trim-fresh-paint-576.webp",
+          "bytes": 18114
+        }
+      ],
+      "aspect": 0.5625
+    },
+    {
+      "src": "WhatsApp Image 2026-09-12 at 6.59.32 PM (1).jpeg",
+      "slug": "owner-portrait-suit",
+      "alt": "NSA Cleaning owner in a dark suit seated on a chair, studio portrait",
+      "category": "team",
+      "use": "about",
+      "widths": [
+        480,
+        800
+      ],
+      "quality": 82,
+      "notes": "Studio portrait 1024x1536. Name NOT confirmed (Ronie or Alex Bublak) - do not caption with a name until the client confirms.",
+      "generated": [
+        {
+          "width": 480,
+          "height": 720,
+          "file": "/images/owner-portrait-suit-480.webp",
+          "bytes": 18874
+        },
+        {
+          "width": 800,
+          "height": 1200,
+          "file": "/images/owner-portrait-suit-800.webp",
+          "bytes": 35920
+        }
+      ],
+      "aspect": 0.6667
+    },
+    {
+      "src": "WhatsApp Image 2026-09-12 at 6.59.32 PM.jpeg",
+      "slug": "owner-portrait-outdoors",
+      "alt": "NSA Cleaning owner seated on a park bench outdoors in a green tracksuit",
+      "category": "team",
+      "use": "about",
+      "widths": [
+        480,
+        800
+      ],
+      "quality": 82,
+      "notes": "Outdoor portrait 1024x1536. Name NOT confirmed (Ronie or Alex Bublak) - do not caption with a name until the client confirms.",
+      "generated": [
+        {
+          "width": 480,
+          "height": 720,
+          "file": "/images/owner-portrait-outdoors-480.webp",
+          "bytes": 74014
+        },
+        {
+          "width": 800,
+          "height": 1200,
+          "file": "/images/owner-portrait-outdoors-800.webp",
+          "bytes": 153558
+        }
+      ],
+      "aspect": 0.6667
+    }
+  ]
+}

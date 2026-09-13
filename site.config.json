@@ -1,0 +1,162 @@
+{
+  "siteUrl": "https://nsacleaningllc.com",
+  "siteName": "NSA Cleaning LLC",
+  "shortName": "NSA Cleaning",
+  "tagline": "Residential & Commercial Cleaning from Albany to Lake George, NY",
+  "defaultOgImage": "/og-image.jpg",
+  "locale": "en_US",
+  "themeColor": "#0B70E0",
+  "gaMeasurementId": "",
+  "turnstileSiteKey": "",
+  "business": {
+    "legalName": "NSA Cleaning LLC",
+    "phone": "(518) 902-1180",
+    "phoneE164": "+15189021180",
+    "phone2": "(407) 728-0523",
+    "phone2E164": "+14077280523",
+    "email": "Nsacleaningllc@gmail.com",
+    "address": {
+      "street": "321 25th St",
+      "city": "Watervliet",
+      "region": "NY",
+      "postal": "12189",
+      "country": "US"
+    },
+    "geo": {
+      "lat": 42.7301,
+      "lng": -73.7015
+    },
+    "facebook": "https://www.facebook.com/nsacleaning",
+    "facebookHandle": "@nsacleaning",
+    "hoursResidential": "8:00 AM – 5:00 PM",
+    "hoursCommercial": "24/7",
+    "openingHours": [
+      "Mo-Fr 08:00-17:00"
+    ],
+    "languages": [
+      "English",
+      "Portuguese",
+      "Spanish"
+    ],
+    "yearsExperience": 12,
+    "yearsInBusiness": 10,
+    "foundingYear": 2016,
+    "priceRange": "$$",
+    "priceApartmentFrom": 160,
+    "priceHouseFrom": 195,
+    "maxTravelMinutes": 60,
+    "owners": [
+      "Ronie Bublak",
+      "Alex Bublak"
+    ],
+    "serviceArea": [
+      "Albany",
+      "Watervliet",
+      "Troy",
+      "Cohoes",
+      "Latham",
+      "Colonie",
+      "Schenectady",
+      "Rensselaer",
+      "East Greenbush",
+      "Delmar",
+      "Guilderland",
+      "Clifton Park",
+      "Halfmoon",
+      "Mechanicville",
+      "Ballston Spa",
+      "Malta",
+      "Saratoga Springs",
+      "Wilton",
+      "Glens Falls",
+      "Queensbury",
+      "Lake George"
+    ],
+    "phoneHtml": "(518)&nbsp;902&#8209;1180",
+    "phone2Html": "(407)&nbsp;728&#8209;0523"
+  },
+  "nav": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Residential",
+      "href": "/residential-cleaning",
+      "children": [
+        {
+          "label": "Recurring Cleaning",
+          "href": "/recurring-cleaning"
+        },
+        {
+          "label": "Deep Cleaning",
+          "href": "/deep-cleaning"
+        },
+        {
+          "label": "Move In / Move Out",
+          "href": "/move-in-move-out-cleaning"
+        },
+        {
+          "label": "Airbnb & Rental Turnover",
+          "href": "/airbnb-cleaning"
+        },
+        {
+          "label": "Post-Construction",
+          "href": "/post-construction-cleaning"
+        }
+      ]
+    },
+    {
+      "label": "Commercial",
+      "href": "/commercial-cleaning"
+    },
+    {
+      "label": "More Services",
+      "href": "/services",
+      "children": [
+        {
+          "label": "Power Washing",
+          "href": "/power-washing"
+        },
+        {
+          "label": "Carpet Cleaning",
+          "href": "/carpet-cleaning"
+        },
+        {
+          "label": "Painting",
+          "href": "/painting"
+        }
+      ]
+    },
+    {
+      "label": "Pricing",
+      "href": "/pricing"
+    },
+    {
+      "label": "Service Area",
+      "href": "/service-area"
+    },
+    {
+      "label": "About",
+      "href": "/about"
+    },
+    {
+      "label": "FAQ",
+      "href": "/faq"
+    }
+  ],
+  "footerNav": [
+    {
+      "label": "Contact / Free Quote",
+      "href": "/contact"
+    },
+    {
+      "label": "Privacy Policy",
+      "href": "/privacy-policy"
+    },
+    {
+      "label": "Terms & Conditions",
+      "href": "/terms-and-conditions"
+    }
+  ]
+}
