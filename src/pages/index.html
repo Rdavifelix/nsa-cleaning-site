@@ -16,6 +16,13 @@
 @media(min-width:1120px){
   .steps{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px 32px}
 }
+
+/* Services bento: the home grid now shows five photo tiles, so it runs on three
+   columns from 1000px up. tile-wide-lg spans two of them only at that width. */
+@media(min-width:1000px){
+  #services .bento{grid-template-columns:repeat(3,minmax(0,1fr))}
+  #services .bento .tile-wide-lg{grid-column:span 2}
+}
 </style>
 <!-- ===== HERO ===== -->
 <section class="hero" aria-labelledby="hero-title">
@@ -76,69 +83,33 @@
       <div>
         <p class="eyebrow">What we do</p>
         <h2 id="services-title">Residential and commercial cleaning services, Albany to Lake George</h2>
-        <p>Seven residential services, three specialty services and full commercial cleaning. One insured team, supplies and travel included.</p>
+        <p>Below are the services we highlight. The full catalog, seven residential services, three specialty services and commercial cleaning, is listed under All services. One insured team, supplies and travel included.</p>
       </div>
       <a class="link-arrow" href="/services">All services <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
     </div>
     <div class="bento">
       <a class="tile tile-photo tile-lg tile-wide" href="/recurring-cleaning">
-        <img src="/images/white-kitchen-quartz-island-after-cleaning-1024.webp" srcset="/images/white-kitchen-quartz-island-after-cleaning-480.webp 480w, /images/white-kitchen-quartz-island-after-cleaning-800.webp 800w, /images/white-kitchen-quartz-island-after-cleaning-1024.webp 1024w" sizes="(min-width: 1240px) 600px, (min-width: 600px) 50vw, calc(100vw - 32px)" width="1024" height="768" alt="Spotless white kitchen with quartz island and stainless appliances after cleaning" loading="lazy" decoding="async">
+        <img src="/images/white-kitchen-quartz-island-after-cleaning-1024.webp" srcset="/images/white-kitchen-quartz-island-after-cleaning-480.webp 480w, /images/white-kitchen-quartz-island-after-cleaning-800.webp 800w, /images/white-kitchen-quartz-island-after-cleaning-1024.webp 1024w" sizes="(min-width: 1240px) 780px, (min-width: 1000px) 63vw, (min-width: 600px) calc(100vw - 64px), calc(100vw - 32px)" width="1024" height="768" alt="Spotless white kitchen with quartz island and stainless appliances after cleaning" loading="lazy" decoding="async">
         <span class="tile-arrow" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-arrow-ne"/></svg></span>
         <div class="tile-body"><h3>Recurring cleaning</h3><p>Weekly, bi-weekly or monthly visits that keep your home consistently clean. From ${{site.business.priceApartmentFrom}} for apartments and ${{site.business.priceHouseFrom}} for houses.</p></div>
       </a>
       <a class="tile tile-photo" href="/deep-cleaning">
-        <img src="/images/bathroom-hex-tile-after-deep-cleaning-768.webp" srcset="/images/bathroom-hex-tile-after-deep-cleaning-480.webp 480w, /images/bathroom-hex-tile-after-deep-cleaning-768.webp 768w" sizes="(min-width: 1240px) 300px, (min-width: 600px) 50vw, calc(100vw - 32px)" width="768" height="1024" alt="Small bathroom with hex tile floor, LED mirror and fresh bath mats after cleaning" loading="lazy" decoding="async">
+        <img src="/images/bathroom-hex-tile-after-deep-cleaning-768.webp" srcset="/images/bathroom-hex-tile-after-deep-cleaning-480.webp 480w, /images/bathroom-hex-tile-after-deep-cleaning-768.webp 768w" sizes="(min-width: 1240px) 390px, (min-width: 1000px) 31vw, (min-width: 600px) 50vw, calc(100vw - 32px)" width="768" height="1024" alt="Small bathroom with hex tile floor, LED mirror and fresh bath mats after cleaning" loading="lazy" decoding="async">
         <span class="tile-arrow" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-arrow-ne"/></svg></span>
         <div class="tile-body"><h3>Deep cleaning</h3><p>A detailed clean that reaches the build-up a regular visit doesn't.</p></div>
       </a>
-      <a class="tile{{#if site.photoPlaceholders}} tile-soon{{/if}}" href="/residential-cleaning">
-        {{#if site.photoPlaceholders}}<span class="photo-soon" aria-hidden="true"><svg class="icon"><use href="#i-camera"/></svg>Photo coming soon</span>{{/if}}
-        <span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#i-home"/></svg></span>
-        <span class="tile-arrow" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-arrow-ne"/></svg></span>
-        <div class="tile-body"><h3>Regular cleaning</h3><p>A standard maintenance clean for kitchens, bathrooms, floors and living areas.</p></div>
-      </a>
-      <a class="tile tile-solid{{#if site.photoPlaceholders}} tile-soon{{/if}}" href="/deep-cleaning">
-        {{#if site.photoPlaceholders}}<span class="photo-soon" aria-hidden="true"><svg class="icon"><use href="#i-camera"/></svg>Photo coming soon</span>{{/if}}
-        <span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#i-sparkle"/></svg></span>
-        <span class="tile-arrow" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-arrow-ne"/></svg></span>
-        <div class="tile-body"><h3>Full deep cleaning</h3><p>Top to bottom, every room, every corner. Our most detailed clean.</p></div>
-      </a>
-      <a class="tile{{#if site.photoPlaceholders}} tile-soon{{/if}}" href="/move-in-move-out-cleaning">
-        {{#if site.photoPlaceholders}}<span class="photo-soon" aria-hidden="true"><svg class="icon"><use href="#i-camera"/></svg>Photo coming soon</span>{{/if}}
-        <span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#i-box"/></svg></span>
-        <span class="tile-arrow" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-arrow-ne"/></svg></span>
-        <div class="tile-body"><h3>Move-in / move-out</h3><p>Empty-home cleaning for tenants, landlords and new owners.</p></div>
-      </a>
       <a class="tile tile-photo" href="/airbnb-cleaning">
-        <img src="/images/guest-bedroom-towel-animals-airbnb-turnover-1024.webp" srcset="/images/guest-bedroom-towel-animals-airbnb-turnover-480.webp 480w, /images/guest-bedroom-towel-animals-airbnb-turnover-800.webp 800w, /images/guest-bedroom-towel-animals-airbnb-turnover-1024.webp 1024w" sizes="(min-width: 1240px) 300px, (min-width: 600px) 50vw, calc(100vw - 32px)" width="1024" height="768" alt="Guest bedroom made up with folded towel animals after Airbnb turnover cleaning" loading="lazy" decoding="async">
+        <img src="/images/guest-bedroom-towel-animals-airbnb-turnover-1024.webp" srcset="/images/guest-bedroom-towel-animals-airbnb-turnover-480.webp 480w, /images/guest-bedroom-towel-animals-airbnb-turnover-800.webp 800w, /images/guest-bedroom-towel-animals-airbnb-turnover-1024.webp 1024w" sizes="(min-width: 1240px) 390px, (min-width: 1000px) 31vw, (min-width: 600px) 50vw, calc(100vw - 32px)" width="1024" height="768" alt="Guest bedroom made up with folded towel animals after Airbnb turnover cleaning" loading="lazy" decoding="async">
         <span class="tile-arrow" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-arrow-ne"/></svg></span>
         <div class="tile-body"><h3>Airbnb &amp; rental turnover</h3><p>Guest-ready turnovers between stays, from Saratoga to Lake George.</p></div>
       </a>
-      <a class="tile{{#if site.photoPlaceholders}} tile-soon{{/if}}" href="/post-construction-cleaning">
-        {{#if site.photoPlaceholders}}<span class="photo-soon" aria-hidden="true"><svg class="icon"><use href="#i-camera"/></svg>Photo coming soon</span>{{/if}}
-        <span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#i-tool"/></svg></span>
-        <span class="tile-arrow" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-arrow-ne"/></svg></span>
-        <div class="tile-body"><h3>Post-construction</h3><p>Dust, debris and residue removed after a renovation or new build.</p></div>
-      </a>
-      <a class="tile tile-navy tile-wide{{#if site.photoPlaceholders}} tile-soon{{/if}}" href="/commercial-cleaning">
-        {{#if site.photoPlaceholders}}<span class="photo-soon" aria-hidden="true"><svg class="icon"><use href="#i-camera"/></svg>Photo coming soon</span>{{/if}}
-        <span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#i-building"/></svg></span>
-        <span class="tile-arrow" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-arrow-ne"/></svg></span>
-        <div class="tile-body"><span class="tile-kicker">Commercial · available 24/7</span><h3>Commercial cleaning</h3><p>Offices, restaurants, car dealerships, clinics, hospitals, gyms and building common areas.</p></div>
-      </a>
-      <a class="tile tile-photo tile-wide" href="/power-washing">
-        <img src="/images/lakeside-deck-fire-table-after-power-washing-1024.webp" srcset="/images/lakeside-deck-fire-table-after-power-washing-480.webp 480w, /images/lakeside-deck-fire-table-after-power-washing-800.webp 800w, /images/lakeside-deck-fire-table-after-power-washing-1024.webp 1024w" sizes="(min-width: 1240px) 600px, (min-width: 600px) 50vw, calc(100vw - 32px)" width="1024" height="768" alt="Power washed lakeside deck with fire table, palms and boats on the water" loading="lazy" decoding="async">
+      <a class="tile tile-photo tile-wide-lg" href="/power-washing">
+        <img src="/images/lakeside-deck-fire-table-after-power-washing-1024.webp" srcset="/images/lakeside-deck-fire-table-after-power-washing-480.webp 480w, /images/lakeside-deck-fire-table-after-power-washing-800.webp 800w, /images/lakeside-deck-fire-table-after-power-washing-1024.webp 1024w" sizes="(min-width: 1240px) 780px, (min-width: 1000px) 63vw, (min-width: 600px) 50vw, calc(100vw - 32px)" width="1024" height="768" alt="Power washed lakeside deck with fire table, palms and boats on the water" loading="lazy" decoding="async">
         <span class="tile-arrow" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-arrow-ne"/></svg></span>
         <div class="tile-body"><h3>Deck &amp; siding power washing</h3><p>Decks, siding and docks power washed.</p></div>
       </a>
-      <a class="tile tile-solid{{#if site.photoPlaceholders}} tile-soon{{/if}}" href="/carpet-cleaning">
-        {{#if site.photoPlaceholders}}<span class="photo-soon" aria-hidden="true"><svg class="icon"><use href="#i-camera"/></svg>Photo coming soon</span>{{/if}}
-        <span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#i-rug"/></svg></span>
-        <span class="tile-arrow" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-arrow-ne"/></svg></span>
-        <div class="tile-body"><h3>Carpet cleaning</h3><p>Carpet shampoo and upholstery cleaning.</p></div>
-      </a>
       <a class="tile tile-photo" href="/painting">
-        <img src="/images/interior-painting-prep-crew-768.webp" srcset="/images/interior-painting-prep-crew-480.webp 480w, /images/interior-painting-prep-crew-768.webp 768w" sizes="(min-width: 1240px) 300px, (min-width: 600px) 50vw, calc(100vw - 32px)" width="768" height="1024" alt="Painting crew prepping an apartment with plastic sheeting and blue tape" loading="lazy" decoding="async">
+        <img src="/images/interior-painting-prep-crew-768.webp" srcset="/images/interior-painting-prep-crew-480.webp 480w, /images/interior-painting-prep-crew-768.webp 768w" sizes="(min-width: 1240px) 390px, (min-width: 1000px) 31vw, (min-width: 600px) 50vw, calc(100vw - 32px)" width="768" height="1024" alt="Painting crew prepping an apartment with plastic sheeting and blue tape" loading="lazy" decoding="async">
         <span class="tile-arrow" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-arrow-ne"/></svg></span>
         <div class="tile-body"><h3>Painting</h3><p>Residential and commercial painting with careful prep and masking.</p></div>
       </a>

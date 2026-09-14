@@ -22,7 +22,7 @@ Build: `node build.mjs` → `dist/`. Pages start with `<!--@meta { ...json... } 
 | `--bg` / `--bg-2` | `#F3F4F6` / `#F8FAFC` | placeholders / alt section background |
 | `--red` / `--green` | `#B91C1C` / `#166534` | form errors / success |
 | `--font` | Plus Jakarta Sans + system stack | already applied to `body` |
-| `--r` / `--r-lg` / `--r-xl` | `2px` / `3px` / `4px` | radii (buttons, inputs, chips, badges / cards / photos and hero). **Client direction: the site is deliberately square.** Never use `999px` pills, `50%` on a UI element, or a hard-coded radius of 8px or more. The only round things left are the circular logo mark and the 8px status dot in `.photo-tag`; the arrow badges, step numbers, FAQ toggles and the slider handle are all squared off. `node build.mjs` prints a warning if a page introduces an inline radius above the scale. |
+| `--r` / `--r-lg` / `--r-xl` | `2px` / `3px` / `4px` | radii (buttons, inputs, chips, badges / cards / photos and hero). **Client direction: the site is deliberately square.** Never use `999px` pills, `50%` on a UI element, or a hard-coded radius of 8px or more. Nothing in the interface is round any more: `border-radius:50%` appears zero times in the stylesheet. The arrow badges, step numbers, FAQ toggles and the slider handle are squared off, and the status dot was removed from `.photo-tag`. The only circle on the site is the logo image itself, which is drawn that way. `node build.mjs` prints a warning if a page introduces an inline radius above the scale. |
 | `--shadow` / `--shadow-lg` | soft navy shadows | cards / floating cards |
 | `--container` | `1240px` | `.container` max width |
 | `--gutter` | `clamp(16px,4vw,32px)` | side padding |

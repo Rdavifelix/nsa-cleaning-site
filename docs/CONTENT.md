@@ -46,7 +46,7 @@ Commercial cleaning for: offices, restaurants, car dealerships, clinics, hospita
 - **Contrast:** all text must meet WCAG AA (≥ 4.5:1 normal, ≥ 3:1 large). White on `#0B70E0` = 4.76:1 (OK for buttons/large). Prefer `#0757B5`/navy for small blue text on white.
 - **Logo:** `/images/logo-nsa-cleaning-640.webp` (+ `-320.webp`, `-640.png`) — circular, transparent background. Works on white and on navy.
 - **Typography:** Plus Jakarta Sans (self-hosted variable font: `/fonts/PlusJakartaSans-Variable.woff2` 400–800, italic `/fonts/PlusJakartaSans-Italic.woff2`). Fallback: `system-ui, -apple-system, "Segoe UI", Roboto, sans-serif`. Use `font-display: swap`.
-- **Shape:** the design is deliberately square. Radius tokens are 2/3/4px, no pills, no circles except the logo. Run `node build.mjs` and check for radius warnings.
+- **Shape:** the design is deliberately square. Radius tokens are 2/3/4px. No pills and no circles at all: the only circle on the site is the logo image. Run `node build.mjs` and check for radius warnings.
 - **Punctuation:** no em-dashes (—), no exclamation marks, no rhetorical-question headings. Split the sentence or use a comma. Run `npm run lint:copy`.
 - **Tone:** friendly, confident, local, plain English. Short sentences. "We" voice. No hype, no fake numbers.
 
