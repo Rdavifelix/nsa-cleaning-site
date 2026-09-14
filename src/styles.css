@@ -415,3 +415,11 @@ html.modal-open{overflow:hidden}
 @media(max-width:599px){
   .quote-modal{width:100vw;height:100dvh;max-height:none;border:0;border-radius:0}
 }
+
+@media(max-width:599px){
+  /* Prices read as a pair of display numbers on phones, so centre them as a group.
+     The paragraph under them stays left aligned, which is easier to read. */
+  .price-note{gap:14px 24px;padding:22px 20px}
+  .price-note .prices{width:100%;justify-content:center;gap:32px}
+  .price-note .prices>div{text-align:center}
+}
