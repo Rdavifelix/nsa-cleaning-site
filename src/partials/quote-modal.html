@@ -1,0 +1,19 @@
+{{#if site.ghlFormUrl}}
+<dialog class="quote-modal" data-quote-modal aria-labelledby="quote-modal-title">
+  <div class="quote-modal-head">
+    <p class="quote-modal-title" id="quote-modal-title">Get a free quote</p>
+    <button type="button" class="quote-modal-close" data-quote-close aria-label="Close the quote form">
+      <svg class="icon" aria-hidden="true"><use href="#i-close"/></svg>
+    </button>
+  </div>
+  <div class="quote-modal-body">
+    <p class="quote-modal-loading" data-quote-loading>Loading the form…</p>
+    <iframe data-quote-frame title="Free cleaning quote request form" src="about:blank" data-src="{{site.ghlFormUrl}}" allow="clipboard-write"></iframe>
+  </div>
+  <p class="quote-modal-foot">
+    Prefer to talk? Call <a href="tel:{{site.business.phoneE164}}">{{{site.business.phoneHtml}}}</a>
+    or email <a href="mailto:{{site.business.email}}">{{site.business.email}}</a>.
+    Residential {{site.business.hoursResidential}} · Commercial {{site.business.hoursCommercial}}.
+  </p>
+</dialog>
+{{/if}}

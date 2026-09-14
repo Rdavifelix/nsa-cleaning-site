@@ -7,7 +7,7 @@
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nsacleaningllc.com/" },
       { "@type": "ListItem", "position": 2, "name": "FAQ", "item": "https://nsacleaningllc.com/faq" } ] },
     { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
-      { "@type": "Question", "name": "How do I get a quote?", "acceptedAnswer": { "@type": "Answer", "text": "Send the quote form on our contact page or call (518) 902-1180. Tell us the service, the property type and the city, and we reply by phone or email. Quotes are free and there is no obligation." } },
+      { "@type": "Question", "name": "How do I get a quote?", "acceptedAnswer": { "@type": "Answer", "text": "Ask for a free quote through the contact page or call (518) 902-1180. Tell us the service, the property type and the city, and we reply by phone or email. Quotes are free and there is no obligation." } },
       { "@type": "Question", "name": "Do you need to see the property first?", "acceptedAnswer": { "@type": "Answer", "text": "For recurring cleaning and larger jobs we like to do a short walk-through first. It is how we agree on the scope, the products we will use and any house rules. For simple jobs a phone call is often enough." } },
       { "@type": "Question", "name": "How much notice do you need to book?", "acceptedAnswer": { "@type": "Answer", "text": "The sooner the better. Send your request with a preferred date and we will confirm the earliest slot we have." } },
       { "@type": "Question", "name": "What do your prices start at?", "acceptedAnswer": { "@type": "Answer", "text": "Recurring residential cleaning starts at $160 for apartments and $195 for houses, depending on size and needs. Deep cleaning, move-in/move-out, Airbnb turnovers, post-construction, commercial cleaning, power washing, carpet cleaning and painting are quoted individually for free." } },
@@ -42,7 +42,7 @@
       <h1 id="page-title">Frequently Asked Questions about <em>Cleaning Services in Albany, NY</em></h1>
       <p class="lead">Straight answers about quotes, prices, scheduling, pets, supplies and our guarantee. If your question isn't here, call {{site.business.phone}} or send the form and we'll reply by phone or email.</p>
       <div class="hero-cta">
-        <a class="btn btn-primary btn-lg" href="/contact#quote" data-track="cta_quote_hero">Get a Free Quote</a>
+        <a class="btn btn-primary btn-lg" href="{{site.quoteHref}}" data-quote-open data-track="cta_quote_hero">Get a Free Quote</a>
         <a class="btn btn-ghost btn-lg" href="tel:{{site.business.phoneE164}}"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call&nbsp;{{{site.business.phoneHtml}}}</a>
       </div>
     </div>
@@ -64,7 +64,7 @@
     <div class="faq-group" id="booking">
       <h2>Booking &amp; quotes</h2>
       <div class="faq">
-        <details><summary>How do I get a quote?</summary><p>Send the quote form on our <a href="/contact#quote">contact page</a> or call {{site.business.phone}}. Tell us the service, the property type and the city, and we reply by phone or email. Quotes are free and there is no obligation.</p></details>
+        <details><summary>How do I get a quote?</summary><p>Ask for a free quote through the <a href="{{site.quoteHref}}" data-quote-open>contact page</a> or call {{site.business.phone}}. Tell us the service, the property type and the city, and we reply by phone or email. Quotes are free and there is no obligation.</p></details>
         <details><summary>Do you need to see the property first?</summary><p>For <a href="/recurring-cleaning">recurring cleaning</a> and larger jobs we like to do a short walk-through first. It is how we agree on the scope, the products we will use and any house rules. For simple jobs a phone call is often enough.</p></details>
         <details><summary>How much notice do you need to book?</summary><p>The sooner the better. Send your request with a preferred date and we will confirm the earliest slot we have.</p></details>
       </div>
@@ -126,6 +126,6 @@
 <section class="section cta-band on-dark" aria-labelledby="cta-title"><div class="container">
   <h2 id="cta-title">Ask anything else with your free quote</h2>
   <p>Tell us what you need and we'll reply by phone or email. No obligation, travel included.</p>
-  <div class="cta-actions"><a class="btn btn-white btn-lg" href="/contact#quote" data-track="cta_quote_final">Get a Free Quote</a><a class="btn btn-ghost btn-lg" href="tel:{{site.business.phoneE164}}"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call&nbsp;{{{site.business.phoneHtml}}}</a></div>
+  <div class="cta-actions"><a class="btn btn-white btn-lg" href="{{site.quoteHref}}" data-quote-open data-track="cta_quote_final">Get a Free Quote</a><a class="btn btn-ghost btn-lg" href="tel:{{site.business.phoneE164}}"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call&nbsp;{{{site.business.phoneHtml}}}</a></div>
   <p class="cta-meta">{{site.business.address.city}}, {{site.business.address.region}} · Residential {{site.business.hoursResidential}} · Commercial {{site.business.hoursCommercial}} · <a href="mailto:{{site.business.email}}">{{site.business.email}}</a></p>
 </div></section>

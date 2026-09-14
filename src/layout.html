@@ -51,6 +51,7 @@
   </main>
 {{> footer}}
 {{#if site.gaMeasurementId}}{{> cookie-banner}}{{/if}}
+{{> quote-modal}}
   <script src="/main.js" defer></script>
 {{#if page.turnstile}}{{#if site.turnstileSiteKey}}<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>{{/if}}{{/if}}
 </body>

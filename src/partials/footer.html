@@ -45,5 +45,5 @@
 </footer>
 <nav class="mobile-cta" aria-label="Quick actions">
   <a href="tel:{{site.business.phoneE164}}" class="btn btn-ghost"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call&nbsp;now</a>
-  <a href="{{#if isHome}}#quote{{else}}/contact#quote{{/if}}" class="btn btn-primary" data-track="cta_quote_sticky">Get a Free Quote</a>
+  <a href="{{site.quoteHref}}" data-quote-open class="btn btn-primary" data-track="cta_quote_sticky">Get a Free Quote</a>
 </nav>

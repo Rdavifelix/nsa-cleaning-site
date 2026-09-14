@@ -31,7 +31,7 @@
     <p class="eyebrow">Service area · Capital Region &amp; I-87 corridor</p>
     <h1 id="page-title">Cleaning Services from <em>Albany to Lake George</em></h1>
     <p class="lead">We're based at {{site.business.address.street}}, {{site.business.address.city}}, {{site.business.address.region}} {{site.business.address.postal}} and travel up to about one hour in any direction. That covers the whole Capital Region and the Northway up to Glens Falls and Lake George. Travel is included in every plan.</p>
-    <div class="hero-cta"><a class="btn btn-primary btn-lg" href="/contact#quote" data-track="cta_quote_hero">Get a Free Quote</a><a class="btn btn-ghost btn-lg" href="tel:{{site.business.phoneE164}}"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call&nbsp;{{{site.business.phoneHtml}}}</a></div>
+    <div class="hero-cta"><a class="btn btn-primary btn-lg" href="{{site.quoteHref}}" data-quote-open data-track="cta_quote_hero">Get a Free Quote</a><a class="btn btn-ghost btn-lg" href="tel:{{site.business.phoneE164}}"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call&nbsp;{{{site.business.phoneHtml}}}</a></div>
     <p class="hero-note"><b>Insured</b> · Supplies included · No travel fees within about 1 hour of Watervliet · <span lang="es">Hablamos español</span></p>
   </div>
 </div></section>
@@ -43,13 +43,13 @@
       <div class="section-head">
         <p class="eyebrow">Where we work</p>
         <h2 id="map-title">21 cities and towns, about one hour from our Watervliet office</h2>
-        <p>Watervliet sits right in the middle of the Capital Region, a few minutes from Albany, Troy, Cohoes and Latham. From there, I-87 takes us north through Clifton Park and Saratoga Springs to Glens Falls and Lake George, and I-90 west to Schenectady and east to Rensselaer and East Greenbush. Every address on this list is within our travel range, and travel is already included in your price. See <a href="/pricing">how pricing works</a>. Town not listed? If it's within about an hour of Watervliet, send it with the quote form and we'll confirm.</p>
+        <p>Watervliet sits right in the middle of the Capital Region, a few minutes from Albany, Troy, Cohoes and Latham. From there, I-87 takes us north through Clifton Park and Saratoga Springs to Glens Falls and Lake George, and I-90 west to Schenectady and east to Rensselaer and East Greenbush. Every address on this list is within our travel range, and travel is already included in your price. See <a href="/pricing">how pricing works</a>. Town not listed? If it's within about an hour of Watervliet, ask for a free quote and we'll confirm.</p>
       </div>
       <ul class="city-chips" aria-label="Cities we serve">
         <li class="is-hq">Watervliet (HQ)</li><li>Albany</li><li>Troy</li><li>Cohoes</li><li>Latham</li><li>Colonie</li><li>Schenectady</li><li>Rensselaer</li><li>East Greenbush</li><li>Delmar</li><li>Guilderland</li><li>Clifton Park</li><li>Halfmoon</li><li>Mechanicville</li><li>Ballston Spa</li><li>Malta</li><li>Saratoga Springs</li><li>Wilton</li><li>Glens Falls</li><li>Queensbury</li><li>Lake George</li>
       </ul>
       <div class="actions">
-        <a class="btn btn-primary" href="/contact#quote" data-track="cta_quote_area">Check my address</a>
+        <a class="btn btn-primary" href="{{site.quoteHref}}" data-quote-open data-track="cta_quote_area">Get a Free Quote</a>
         <a class="link-arrow" href="/services">See all services <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </div>
     </div>
@@ -92,6 +92,6 @@
 <section class="section cta-band on-dark" aria-labelledby="cta-title"><div class="container">
   <h2 id="cta-title">Get a free quote anywhere from Albany to Lake George</h2>
   <p>Tell us your town and what you need. We'll reply with a free quote. Travel and supplies included.</p>
-  <div class="cta-actions"><a class="btn btn-white btn-lg" href="/contact#quote" data-track="cta_quote_final">Get a Free Quote</a><a class="btn btn-ghost btn-lg" href="tel:{{site.business.phoneE164}}"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call&nbsp;{{{site.business.phoneHtml}}}</a></div>
+  <div class="cta-actions"><a class="btn btn-white btn-lg" href="{{site.quoteHref}}" data-quote-open data-track="cta_quote_final">Get a Free Quote</a><a class="btn btn-ghost btn-lg" href="tel:{{site.business.phoneE164}}"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call&nbsp;{{{site.business.phoneHtml}}}</a></div>
   <p class="cta-meta">{{site.business.address.city}}, {{site.business.address.region}} · Residential {{site.business.hoursResidential}} · Commercial {{site.business.hoursCommercial}} · <a href="mailto:{{site.business.email}}">{{site.business.email}}</a></p>
 </div></section>

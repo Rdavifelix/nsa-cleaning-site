@@ -19,6 +19,10 @@ site.siteUrl = (process.env.SITE_URL || site.siteUrl).replace(/\/+$/, '');
 site.gaMeasurementId = process.env.GA_MEASUREMENT_ID ?? site.gaMeasurementId ?? '';
 site.turnstileSiteKey = process.env.TURNSTILE_SITE_KEY ?? site.turnstileSiteKey ?? '';
 // Gray "photo coming soon" blocks. On by default; set PHOTO_PLACEHOLDERS=0 to hide them before launch.
+// GoHighLevel quote form. When set, every "Get a Free Quote" button opens it in a modal;
+// without JavaScript the same button is a plain link to the hosted form.
+site.ghlFormUrl = (process.env.GHL_FORM_URL ?? site.ghlFormUrl ?? '').trim();
+site.quoteHref = site.ghlFormUrl || '/contact';
 site.photoPlaceholders = process.env.PHOTO_PLACEHOLDERS !== '0';
 // Deploy to a subpath (e.g. GitHub Pages project site): BASE_PATH=/repo-name
 site.basePath = (process.env.BASE_PATH || '').replace(/\/+$/, '');

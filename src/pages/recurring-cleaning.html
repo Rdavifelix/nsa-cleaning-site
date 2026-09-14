@@ -21,7 +21,7 @@
     <p class="eyebrow">Residential · Our specialty</p>
     <h1 id="page-title">Weekly, Bi-weekly and Monthly House Cleaning in <em>Albany, NY</em></h1>
     <p class="lead">Recurring cleaning is what we do most. Pick a rhythm and we build a plan around your home at a walk-through, then keep it clean visit after visit. We cover Albany, Colonie and Troy up to Clifton Park, Saratoga Springs and Lake George.</p>
-    <div class="hero-cta"><a class="btn btn-primary btn-lg" href="/contact#quote" data-track="cta_quote_hero">Get a Free Quote</a><a class="btn btn-ghost btn-lg" href="tel:{{site.business.phoneE164}}"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call&nbsp;{{{site.business.phoneHtml}}}</a></div>
+    <div class="hero-cta"><a class="btn btn-primary btn-lg" href="{{site.quoteHref}}" data-quote-open data-track="cta_quote_hero">Get a Free Quote</a><a class="btn btn-ghost btn-lg" href="tel:{{site.business.phoneE164}}"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call&nbsp;{{{site.business.phoneHtml}}}</a></div>
     <p class="hero-note"><b>From ${{site.business.priceApartmentFrom}}</b> apartments · <b>${{site.business.priceHouseFrom}}</b> houses · Supplies and travel included · <span lang="pt">Falamos português</span></p>
   </div>
   <div class="page-hero-photo"><img src="/images/living-room-sectional-after-cleaning-1024.webp" srcset="/images/living-room-sectional-after-cleaning-480.webp 480w, /images/living-room-sectional-after-cleaning-800.webp 800w, /images/living-room-sectional-after-cleaning-1024.webp 1024w" sizes="(min-width: 1240px) 520px, (min-width: 900px) 42vw, calc(100vw - 32px)" width="1024" height="768" alt="Clean living room with gray sectional, area rug and ceiling fan after a recurring house cleaning visit" fetchpriority="high" decoding="async"></div>
@@ -43,7 +43,7 @@
           <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Shortest visits, so nothing has time to build up</li>
           <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>A fixed day each week</li>
         </ul>
-        <div class="plan-actions"><a class="btn btn-primary" href="/contact#quote" data-track="cta_quote_plan_weekly">Get a Free Quote</a><a class="plan-link" href="/pricing">How pricing works</a></div>
+        <div class="plan-actions"><a class="btn btn-primary" href="{{site.quoteHref}}" data-quote-open data-track="cta_quote_plan_weekly">Get a Free Quote</a><a class="plan-link" href="/pricing">How pricing works</a></div>
       </article>
       <article class="plan plan-featured on-dark">
         <p class="plan-cad">Every two weeks</p><h3>Bi-weekly</h3>
@@ -52,7 +52,7 @@
           <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Good balance of cost and upkeep</li>
           <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>The same day every two weeks</li>
         </ul>
-        <div class="plan-actions"><a class="btn btn-white" href="/contact#quote" data-track="cta_quote_plan_biweekly">Get a Free Quote</a><a class="plan-link" href="/pricing">How pricing works</a></div>
+        <div class="plan-actions"><a class="btn btn-white" href="{{site.quoteHref}}" data-quote-open data-track="cta_quote_plan_biweekly">Get a Free Quote</a><a class="plan-link" href="/pricing">How pricing works</a></div>
       </article>
       <article class="plan">
         <p class="plan-cad">Every four weeks</p><h3>Monthly</h3>
@@ -61,7 +61,7 @@
           <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Longer visits, with more detail each time</li>
           <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Great after a first deep clean</li>
         </ul>
-        <div class="plan-actions"><a class="btn btn-primary" href="/contact#quote" data-track="cta_quote_plan_monthly">Get a Free Quote</a><a class="plan-link" href="/pricing">How pricing works</a></div>
+        <div class="plan-actions"><a class="btn btn-primary" href="{{site.quoteHref}}" data-quote-open data-track="cta_quote_plan_monthly">Get a Free Quote</a><a class="plan-link" href="/pricing">How pricing works</a></div>
       </article>
     </div>
     <div class="price-note">
@@ -107,7 +107,7 @@
         <li class="why-item"><span class="why-icon"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></span><div><h3>Same team where possible</h3><p>We do our best to send the same cleaners every visit so they know your home and you know them. Gray uniforms, insured, trained to NSA standards.</p></div></li>
         <li class="why-item"><span class="why-icon"><svg class="icon" aria-hidden="true"><use href="#i-bucket"/></svg></span><div><h3>Supplies included, pet-friendly on request</h3><p>We bring products and equipment. If you'd rather we use yours, or want pet- and family-friendly options, we agree it at the walk-through.</p></div></li>
       </ul>
-      <div class="why-actions actions"><a class="btn btn-primary" href="/contact#quote" data-track="cta_quote_how">Get a Free Quote</a><a class="btn btn-ghost" href="/deep-cleaning">Start with a deep clean</a></div>
+      <div class="why-actions actions"><a class="btn btn-primary" href="{{site.quoteHref}}" data-quote-open data-track="cta_quote_how">Get a Free Quote</a><a class="btn btn-ghost" href="/deep-cleaning">Start with a deep clean</a></div>
     </div>
   </div>
 </section>
@@ -143,6 +143,6 @@
 <section class="section cta-band on-dark" aria-labelledby="cta-title"><div class="container">
   <h2 id="cta-title">Get a free quote for a weekly, bi-weekly or monthly plan</h2>
   <p>Tell us whether you want weekly, bi-weekly or monthly, and we'll reply with a free quote. No obligation.</p>
-  <div class="cta-actions"><a class="btn btn-white btn-lg" href="/contact#quote" data-track="cta_quote_final">Get a Free Quote</a><a class="btn btn-ghost btn-lg" href="tel:{{site.business.phoneE164}}"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call&nbsp;{{{site.business.phoneHtml}}}</a></div>
+  <div class="cta-actions"><a class="btn btn-white btn-lg" href="{{site.quoteHref}}" data-quote-open data-track="cta_quote_final">Get a Free Quote</a><a class="btn btn-ghost btn-lg" href="tel:{{site.business.phoneE164}}"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call&nbsp;{{{site.business.phoneHtml}}}</a></div>
   <p class="cta-meta">{{site.business.address.city}}, {{site.business.address.region}} · Residential {{site.business.hoursResidential}} · Commercial {{site.business.hoursCommercial}} · <a href="mailto:{{site.business.email}}">{{site.business.email}}</a></p>
 </div></section>

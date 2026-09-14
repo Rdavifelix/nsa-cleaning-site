@@ -1,7 +1,7 @@
 <!--@meta
 { "title": "Contact & Free Quote in Albany, NY | NSA Cleaning LLC",
-  "description": "Request a free cleaning quote from NSA Cleaning LLC in Watervliet, NY. Call (518) 902-1180 or send the form. We reply by phone or email, Albany to Lake George.",
-  "turnstile": true, "priority": 0.9,
+  "description": "Contact NSA Cleaning LLC in Watervliet, NY. Call (518) 902-1180, email us, or request a free quote online. We reply by phone or email, Albany to Lake George.",
+  "priority": 0.9,
   "schema": [ "@business",
     { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nsacleaningllc.com/" },
@@ -9,73 +9,86 @@
     { "@context": "https://schema.org", "@type": "ContactPage", "name": "Contact NSA Cleaning LLC", "url": "https://nsacleaningllc.com/contact", "about": { "@id": "https://nsacleaningllc.com/#business" } } ] }
 -->
 <style>
-.contact-grid{display:grid;gap:36px}
-@media(min-width:900px){.contact-grid{grid-template-columns:1.1fr .9fr;gap:56px;align-items:start}.contact-grid>div:first-child{position:sticky;top:96px}}
-.contact-side{display:grid;gap:22px;align-content:start}
-.contact-side h2{font-size:1.375rem;margin-bottom:12px}
-.contact-side address{font-style:normal}
-.contact-side .why-item a{font-weight:700;text-decoration:none}
-.contact-side .why-item a:hover{text-decoration:underline}
-.contact-side .why-item p+p{margin-top:4px}
-@media(min-width:1100px){.contact-side .why-list{grid-template-columns:1fr}.contact-side .why-item:last-child{grid-column:auto}}
-.contact-map{margin-top:8px;max-width:420px}
+.contact-list address{font-style:normal}
+.contact-list .why-item a{font-weight:700;text-decoration:none}
+.contact-list .why-item a:hover{text-decoration:underline}
+.contact-list .why-item p+p{margin-top:4px}
+@media(min-width:700px){.contact-list{grid-template-columns:1fr 1fr}}
+@media(min-width:1100px){.contact-list{grid-template-columns:repeat(3,1fr)}.contact-list .why-item:last-child:nth-child(odd){grid-column:auto}}
+.next-steps{gap:20px}
+@media(min-width:800px){.next-steps{grid-template-columns:repeat(3,1fr);gap:28px}}
+.contact-map{max-width:460px}
+@media(min-width:900px){.contact-map{max-width:none}}
 </style>
 
 <!-- ===== HERO ===== -->
-<section class="page-hero" aria-labelledby="page-title"><div class="container">
+<section class="page-hero page-hero--photo" aria-labelledby="page-title"><div class="container">
   <div>
     <p class="eyebrow">Contact · Albany to Lake George</p>
     <h1 id="page-title">Get a Free Cleaning Quote in <em>Albany, NY</em></h1>
-    <p class="lead">Send the form or call us. Tell us the service, the property and roughly when you need it. We'll reply by phone or email with a clear price, no obligation. Supplies and travel are included.</p>
+    <p class="lead">Open the quote request and tell us the service, the property and roughly when you need it. If you would rather talk first, call or email us. Either way we reply with a clear price, no obligation, supplies and travel included.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary btn-lg" href="{{site.quoteHref}}" data-quote-open data-track="cta_quote_hero">Get a Free Quote</a>
+      <a class="btn btn-ghost btn-lg" href="tel:{{site.business.phoneE164}}"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call&nbsp;{{{site.business.phoneHtml}}}</a>
+    </div>
+    <p class="hero-note"><b>Insured</b> · {{site.business.yearsExperience}}+ years of experience · Supplies included · Travel included · <span lang="es">Hablamos español</span> · <span lang="pt">Falamos português</span></p>
   </div>
+  <div class="page-hero-photo"><img src="/images/nsa-cleaning-branded-company-car-1024.webp" srcset="/images/nsa-cleaning-branded-company-car-480.webp 480w, /images/nsa-cleaning-branded-company-car-800.webp 800w, /images/nsa-cleaning-branded-company-car-1024.webp 1024w" sizes="(min-width: 1240px) 520px, (min-width: 900px) 42vw, calc(100vw - 32px)" width="1024" height="1024" alt="NSA Cleaning LLC branded company SUV with the logo and the phone number (518) 902-1180" fetchpriority="high" decoding="async"></div>
 </div></section>
 
-<!-- ===== QUOTE FORM + DETAILS ===== -->
-<section class="section" aria-label="Quote form and contact details">
-  <div class="container contact-grid">
+<!-- ===== CONTACT DETAILS ===== -->
+<section class="section" aria-labelledby="details-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Contact details</p>
+      <h2 id="details-title">Reach us by quote request, phone or email</h2>
+      <p>The <b>Get a Free Quote</b> button opens our request form in a window on this page. It asks for your name, phone, email and the service you want. If you would rather talk it through, both lines below reach us directly.</p>
+    </div>
+    <ul class="why-list contact-list" aria-labelledby="details-title">
+      <li class="why-item"><span class="why-icon"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span><div><h3>Phone</h3><p>Main line: <a href="tel:{{site.business.phoneE164}}">{{{site.business.phoneHtml}}}</a></p><p>Second line: <a href="tel:{{site.business.phone2E164}}">{{{site.business.phone2Html}}}</a></p></div></li>
+      <li class="why-item"><span class="why-icon"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></span><div><h3>Email</h3><p><a href="mailto:{{site.business.email}}">{{site.business.email}}</a></p><p>Photos of the space help us quote faster. Attach a few if you like.</p></div></li>
+      <li class="why-item"><span class="why-icon"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span><div><h3>Office</h3><address><p>{{site.business.legalName}}<br>{{site.business.address.street}}<br>{{site.business.address.city}}, {{site.business.address.region}} {{site.business.address.postal}}</p></address><p>We work at your home or business. No need to visit the office.</p></div></li>
+      <li class="why-item"><span class="why-icon"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg></span><div><h3>Hours</h3><p>Residential cleaning: {{site.business.hoursResidential}}</p><p>Commercial cleaning: available {{site.business.hoursCommercial}}. Nights and weekends for offices, clinics, restaurants and dealerships.</p></div></li>
+      <li class="why-item"><span class="why-icon"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg></span><div><h3>Languages</h3><p>English, Portuguese and Spanish. <span lang="es">Hablamos español</span> · <span lang="pt">Falamos português</span></p></div></li>
+      <li class="why-item"><span class="why-icon"><svg class="icon" aria-hidden="true"><use href="#i-thumb"/></svg></span><div><h3>Facebook</h3><p><a href="{{site.business.facebook}}" rel="noopener" target="_blank">{{site.business.facebookHandle}}</a></p></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== WHAT HAPPENS NEXT ===== -->
+<section class="section section-alt" aria-labelledby="next-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">What happens next</p>
+      <h2 id="next-title">From your request to the first cleaning</h2>
+      <p>Three steps, and none of them commit you to anything. The quote is free and there are no travel fees inside our service area.</p>
+    </div>
+    <ol class="steps next-steps" aria-labelledby="next-title">
+      <li class="step"><span class="step-num" aria-hidden="true">1</span><p><strong>You send the request or call.</strong> Service, property type, city and roughly when. That's all we need to start.</p></li>
+      <li class="step"><span class="step-num" aria-hidden="true">2</span><p><strong>We reply by phone or email.</strong> During business hours we get back to you as soon as we can, confirm the details and give you a clear price. Larger homes and commercial spaces get a quick walk-through first.</p></li>
+      <li class="step"><span class="step-num" aria-hidden="true">3</span><p><strong>We show up and clean.</strong> Insured team in gray uniforms with all supplies and equipment. Travel is included in your plan. To reschedule, give us 24 hours' notice.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===== WHERE WE WORK ===== -->
+<section class="section" aria-labelledby="area-title">
+  <div class="container area-grid">
     <div>
-      <div class="quote-card" id="quote">
-        <div class="quote-head">
-          <div class="quote-badge" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg></div>
-          <div>
-            <h2>Get a free quote</h2>
-            <p>Takes about two minutes. We only need your name, phone, email and the service you want, and we reply by phone or email.</p>
-          </div>
-        </div>
-        <p class="quote-trust"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><span><b>Insured</b> · {{site.business.yearsExperience}}+ years of experience · Supplies included · Travel included</span></p>
-{{> quote-form}}
+      <div class="section-head">
+        <p class="eyebrow">Where we work</p>
+        <h2 id="area-title">Albany to Lake George, about an hour from Watervliet</h2>
+        <p>These are the cities and towns we drive to from our Watervliet office. If yours is not on the list, send it with your quote request or call us and we'll confirm it. Travel is included in the plan either way.</p>
       </div>
-    </div>
-
-    <div class="contact-side">
-      <div>
-        <h2 id="details-title">Contact details</h2>
-        <ul class="why-list" aria-labelledby="details-title">
-          <li class="why-item"><span class="why-icon"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span><div><h3>Phone</h3><p>Main line: <a href="tel:{{site.business.phoneE164}}">{{{site.business.phoneHtml}}}</a></p><p>Second line: <a href="tel:{{site.business.phone2E164}}">{{{site.business.phone2Html}}}</a></p></div></li>
-          <li class="why-item"><span class="why-icon"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></span><div><h3>Email</h3><p><a href="mailto:{{site.business.email}}">{{site.business.email}}</a></p><p>Photos of the space help us quote faster. Attach a few if you like.</p></div></li>
-          <li class="why-item"><span class="why-icon"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span><div><h3>Office</h3><address><p>{{site.business.legalName}}<br>{{site.business.address.street}}<br>{{site.business.address.city}}, {{site.business.address.region}} {{site.business.address.postal}}</p></address><p>We work at your home or business. No need to visit the office.</p></div></li>
-          <li class="why-item"><span class="why-icon"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg></span><div><h3>Hours</h3><p>Residential cleaning: {{site.business.hoursResidential}}</p><p>Commercial cleaning: available {{site.business.hoursCommercial}}. Nights and weekends for offices, clinics, restaurants and dealerships.</p></div></li>
-          <li class="why-item"><span class="why-icon"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg></span><div><h3>Languages</h3><p>English, Portuguese and Spanish. <span lang="es">Hablamos español</span> · <span lang="pt">Falamos português</span></p></div></li>
-          <li class="why-item"><span class="why-icon"><svg class="icon" aria-hidden="true"><use href="#i-thumb"/></svg></span><div><h3>Facebook</h3><p><a href="{{site.business.facebook}}" rel="noopener" target="_blank">{{site.business.facebookHandle}}</a></p></div></li>
-        </ul>
-      </div>
-
-      <div>
-        <h2 id="next-title">What happens next</h2>
-        <ol class="steps" aria-labelledby="next-title">
-          <li class="step"><span class="step-num" aria-hidden="true">1</span><p><strong>You send the form or call.</strong> Service, property type, city and roughly when. That's all we need to start.</p></li>
-          <li class="step"><span class="step-num" aria-hidden="true">2</span><p><strong>We reply by phone or email.</strong> During business hours we get back to you as soon as we can, confirm the details and give you a clear price. Larger homes and commercial spaces get a quick walk-through first.</p></li>
-          <li class="step"><span class="step-num" aria-hidden="true">3</span><p><strong>We show up and clean.</strong> Insured team in gray uniforms with all supplies and equipment. Travel is included in your plan. Need to reschedule? Just give us 24 hours' notice.</p></li>
-        </ol>
-      </div>
-
-      <div>
-        <h2 id="area-title">Where we work</h2>
-        <p>We serve Albany to Lake George, about 1 hour from our Watervliet office. That covers Troy, Cohoes, Latham, Colonie, Schenectady, Clifton Park, Saratoga Springs, Glens Falls, Queensbury and the towns in between. Not sure if you're inside the area? Send the form with your city and we'll tell you.</p>
+      <ul class="city-chips" aria-label="Cities we serve">
+{{#each site.business.serviceArea}}<li>{{this}}</li>{{/each}}
+      </ul>
+      <div class="actions">
+        <a class="btn btn-primary" href="{{site.quoteHref}}" data-quote-open data-track="cta_quote_area">Get a Free Quote</a>
         <a class="link-arrow" href="/service-area">See the full service area <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-        <div class="area-map contact-map"><img src="/images/service-area-map-albany-to-lake-george-1024.webp" srcset="/images/service-area-map-albany-to-lake-george-800.webp 800w, /images/service-area-map-albany-to-lake-george-1024.webp 1024w" sizes="(min-width: 1240px) 480px, (min-width: 900px) 40vw, calc(100vw - 32px)" width="1024" height="1536" alt="Service area map from Albany to Lake George, NY along I-87" loading="lazy" decoding="async"></div>
       </div>
     </div>
+    <div class="area-map contact-map"><img src="/images/service-area-map-albany-to-lake-george-1024.webp" srcset="/images/service-area-map-albany-to-lake-george-800.webp 800w, /images/service-area-map-albany-to-lake-george-1024.webp 1024w" sizes="(min-width: 1240px) 480px, (min-width: 900px) 40vw, calc(100vw - 32px)" width="1024" height="1536" alt="Service area map from Albany to Lake George, NY along I-87" loading="lazy" decoding="async"></div>
   </div>
 </section>
 
@@ -83,8 +96,9 @@
 <section class="section cta-band on-dark" aria-labelledby="cta-title">
   <div class="container">
     <h2 id="cta-title">Get a free quote for your home or business</h2>
-    <p>Fill in the form above or call. We'll reply with a free quote, no obligation and no travel fees. <span lang="es">Hablamos español</span> · <span lang="pt">Falamos português</span>.</p>
+    <p>Open the quote request or call us. We'll reply with a free quote, no obligation and no travel fees. <span lang="es">Hablamos español</span> · <span lang="pt">Falamos português</span>.</p>
     <div class="cta-actions">
+      <a class="btn btn-white btn-lg" href="{{site.quoteHref}}" data-quote-open data-track="cta_quote_final">Get a Free Quote</a>
       <a class="btn btn-ghost btn-lg" href="tel:{{site.business.phoneE164}}"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call&nbsp;{{{site.business.phoneHtml}}}</a>
     </div>
     <p class="cta-meta">{{site.business.address.city}}, {{site.business.address.region}} · Residential {{site.business.hoursResidential}} · Commercial {{site.business.hoursCommercial}} · <a href="mailto:{{site.business.email}}">{{site.business.email}}</a></p>

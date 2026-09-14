@@ -387,3 +387,31 @@ html,body{overflow-x:clip}
 @media(max-width:599px){.photo-soon{margin-bottom:16px}}
 .soon-figure{margin:0 0 26px;max-width:520px}
 @media(min-width:900px){.soon-figure{max-width:420px}}
+
+/* ---- Modal do formulario (GoHighLevel) -------------------------------------
+   O botao "Get a Free Quote" abre este dialog. Sem JavaScript o mesmo botao e
+   um link normal para o formulario hospedado. O iframe so carrega ao abrir.   */
+.quote-modal{width:min(560px,calc(100vw - 24px));max-width:none;height:min(760px,calc(100dvh - 48px));
+  padding:0;border:1px solid var(--line);border-radius:var(--r-lg);background:#fff;color:var(--ink);
+  box-shadow:0 24px 60px rgba(10,31,68,.28);overflow:hidden}
+.quote-modal::backdrop{background:rgba(10,31,68,.62)}
+.quote-modal[open]{display:flex;flex-direction:column}
+.quote-modal-head{display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:14px 16px;border-bottom:1px solid var(--line);background:var(--bg-2)}
+.quote-modal-title{margin:0;font-size:1.0625rem;font-weight:800;color:var(--navy)}
+.quote-modal-close{display:grid;place-items:center;width:40px;height:40px;flex:none;padding:0;
+  border:1px solid var(--line);border-radius:var(--r);background:#fff;color:var(--navy);cursor:pointer}
+.quote-modal-close:hover{background:var(--tint);border-color:var(--tint-2)}
+.quote-modal-close .icon{width:20px;height:20px}
+.quote-modal-body{position:relative;flex:1;min-height:0;background:#fff}
+.quote-modal-body iframe{display:block;width:100%;height:100%;border:0}
+.quote-modal-loading{position:absolute;inset:0;display:grid;place-items:center;margin:0;
+  color:var(--muted);font-size:.9375rem;pointer-events:none}
+.quote-modal-loading[hidden]{display:none}
+.quote-modal-foot{margin:0;padding:12px 16px;border-top:1px solid var(--line);background:var(--bg-2);
+  font-size:.8125rem;line-height:1.5;color:var(--muted)}
+.quote-modal-foot a{color:var(--blue-dark);font-weight:700}
+html.modal-open{overflow:hidden}
+@media(max-width:599px){
+  .quote-modal{width:100vw;height:100dvh;max-height:none;border:0;border-radius:0}
+}

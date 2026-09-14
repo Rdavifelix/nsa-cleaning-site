@@ -33,7 +33,7 @@
       </ul>
       <div class="nav-actions">
         <a class="btn btn-ghost nav-phone" href="tel:{{site.business.phoneE164}}"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>{{{site.business.phoneHtml}}}</a>
-        <a class="btn btn-primary" href="{{#if isHome}}#quote{{else}}/contact#quote{{/if}}" data-track="cta_quote_header">Get a Free Quote</a>
+        <a class="btn btn-primary" href="{{site.quoteHref}}" data-quote-open data-track="cta_quote_header">Get a Free Quote</a>
       </div>
     </nav>
   </div>

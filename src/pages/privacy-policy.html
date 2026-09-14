@@ -1,6 +1,6 @@
 <!--@meta
 { "title": "Privacy Policy | NSA Cleaning LLC",
-  "description": "How NSA Cleaning LLC in Watervliet, NY handles the details you send through our quote form and how cookies are used. Questions? Call (518) 902-1180.",
+  "description": "How NSA Cleaning LLC in Watervliet, NY handles the details you send through the quote form on this site, and how cookies are used. Call (518) 902-1180.",
   "priority": 0.3, "changefreq": "yearly",
   "schema": [
     { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
@@ -32,20 +32,19 @@
     </nav>
 
     <h2 id="collect">1. What we collect</h2>
-    <p>The only place this website asks you for information is the quote form on our <a href="/contact#quote">contact page</a> and home page. You can browse every other page without telling us anything.</p>
-    <p>When you send a quote request we receive:</p>
+    <p>You can browse this website without telling us anything. The only place that asks you for information is the <a href="{{site.quoteHref}}" data-quote-open>quote form</a>. When you click a "Get a Free Quote" button, a window opens on the page with a form hosted by GoHighLevel, the software our office uses to handle new requests.</p>
+    <p>That form does not run on our server. What you type goes from your browser straight to GoHighLevel, and it is stored in our account there. We read it to prepare your quote and get back to you. What GoHighLevel does with the data on its side is covered by its own privacy policy.</p>
+    <p>The form asks for details like these:</p>
     <table>
-      <thead><tr><th>Information</th><th>Why we need it</th></tr></thead>
+      <thead><tr><th>Information</th><th>Why it is asked</th></tr></thead>
       <tbody>
         <tr><td>Name, email address and phone number</td><td>To reply to you by phone or email with your quote.</td></tr>
         <tr><td>Service, frequency and property type</td><td>To understand what kind of cleaning you are asking about.</td></tr>
-        <tr><td>Street address and city (optional)</td><td>To confirm you are inside our service area and plan travel.</td></tr>
-        <tr><td>Preferred date and message (optional)</td><td>To schedule the walk-through or visit and note anything specific about your home or business.</td></tr>
-        <tr><td>The page you sent the form from</td><td>To see which service page you were reading, so we reply with the right details.</td></tr>
-        <tr><td>Your IP address and the time of submission</td><td>Spam prevention only. Our form rejects bots and limits repeated submissions from the same connection.</td></tr>
+        <tr><td>Street address and city</td><td>To confirm you are inside our service area and plan travel.</td></tr>
+        <tr><td>Preferred date and message</td><td>To schedule the walk-through or visit and note anything specific about your home or business.</td></tr>
       </tbody>
     </table>
-    <p>The form also includes a hidden field that real visitors never see. Bots that fill it in are ignored. We do not ask for payment details, Social Security numbers or any other sensitive information on this website.</p>
+    <p>The exact fields can change when we adjust the form. GoHighLevel collects and stores all of it. It may also record technical details of its own, such as your IP address and the time you sent the form, to run the form and screen out bots. We do not ask for payment details, Social Security numbers or any other sensitive information to give you a quote.</p>
 
     <h2 id="use">2. How we use it</h2>
     <p>We use what you send us for one purpose: to respond to your request and, if you hire us, to provide the cleaning, power washing, painting or carpet cleaning service you asked for. That includes calling or emailing you back, scheduling a walk-through, preparing your quote and service contract, and keeping a record of the job.</p>
@@ -54,31 +53,30 @@
     <h2 id="providers">3. Who helps us process it</h2>
     <p>We are a small local company, so a few service providers handle the technical side of the website. Each one only sees what it needs to do its job.</p>
     <ul>
-      <li><strong>Email delivery.</strong> When you submit the quote form, a transactional email provider (Resend or Web3Forms) delivers the message to our business inbox, <a href="mailto:{{site.business.email}}">{{site.business.email}}</a>. The provider processes the form contents in order to deliver that email.</li>
-      <li><strong>Hosting.</strong> The website is hosted on Vercel. Like any web host, Vercel keeps short-lived server logs that can include your IP address, browser type and the pages you requested. These logs are used for security and to keep the site running.</li>
-      <li><strong>Spam protection.</strong> When enabled, the quote form uses Cloudflare Turnstile to tell people from bots. Turnstile may process your IP address and some browser information to make that decision. It does not show you puzzles or track you across other sites.</li>
+      <li><strong>Quote form.</strong> The form is hosted and run by GoHighLevel. Your request goes to GoHighLevel and is stored in our account there, where our office reads it and replies to you. GoHighLevel handles that data under its own privacy policy. Because the form sits inside a frame on our page, it can also set its own cookies or store data in your browser, and any spam protection on the form is theirs, not ours.</li>
+      <li><strong>Hosting.</strong> The website is hosted on Vercel. Like any web host, Vercel keeps short-lived server logs that can include your IP address, browser type and the pages you requested. These logs are used for security and to keep the site running. The details you type into the quote form do not pass through this server.</li>
       <li><strong>Analytics.</strong> Google Analytics 4, only if you accept the cookie banner. See the next section.</li>
     </ul>
     <p>Beyond these providers, we only disclose information when the law requires it, to protect our team or property, or with your permission.</p>
 
     <h2 id="cookies">4. Cookies and analytics</h2>
-    <p>This site works without cookies. The first time you visit, a small banner asks whether you accept analytics cookies. Nothing analytics-related loads until you choose "Accept".</p>
-    <h3>What we store</h3>
+    <p>This site works without cookies. The first time you visit, a small banner asks whether you accept analytics cookies. Nothing analytics-related loads until you choose "Accept". The quote form is loaded only when you open it, and it can store data of its own once it does.</p>
+    <h3>What gets stored</h3>
     <table>
       <thead><tr><th>Item</th><th>Type</th><th>Purpose</th></tr></thead>
       <tbody>
         <tr><td><code>nsa_cookie_<wbr>consent</code></td><td>Browser local storage</td><td>Remembers whether you accepted or declined analytics so the banner does not reappear on every page.</td></tr>
         <tr><td><code>_ga</code>, <code>_ga_*</code></td><td>Google Analytics cookies</td><td>Set only after you accept. They let us count visits and see which pages and cities bring people to the site. IP addresses are anonymized and advertising features are switched off (Google Consent Mode).</td></tr>
+        <tr><td>Storage set by the quote form</td><td>Cookies and browser storage from GoHighLevel</td><td>The form is hosted by GoHighLevel and loads only when you click a quote button. GoHighLevel decides what it stores there and why. Our cookie banner does not control it.</td></tr>
       </tbody>
     </table>
     <h3>Changing your mind</h3>
-    <p>Click <strong>Cookie settings</strong> in the footer of any page to reopen the banner and change your choice. If you decline, Google Analytics does not load and no <code>_ga</code> cookies are set. You can also clear cookies and site data in your browser at any time.</p>
+    <p>Click <strong>Cookie settings</strong> in the footer of any page to reopen the banner and change your choice. If you decline, Google Analytics does not load and no <code>_ga</code> cookies are set. You can also clear cookies and site data in your browser at any time. If you would rather not open the hosted form at all, call or email us and we will take your request that way.</p>
     <p>Google may process analytics data on servers outside New York and the United States. You can read how Google handles this data at policies.google.com/technologies/partner-sites.</p>
 
     <h2 id="retention">5. How long we keep it</h2>
     <ul>
-      <li><strong>Quote emails</strong> stay in our business inbox as a record of the request and of any job that follows. We keep them as ordinary business records, for as long as we need them for scheduling, billing, insurance and tax purposes.</li>
-      <li><strong>Spam-prevention data</strong> (IP address and timestamp) is only held briefly in memory while the form checks for repeated submissions, and appears in the quote email we receive.</li>
+      <li><strong>Quote requests</strong> stay in our GoHighLevel account, and in any email or notes that follow, as a record of the request and of any job that comes from it. We keep them as ordinary business records, for as long as we need them for scheduling, billing, insurance and tax purposes. GoHighLevel stores them for us and follows its own policy for the copies on its systems.</li>
       <li><strong>Hosting logs</strong> are kept by Vercel for a short period under its own retention policy.</li>
       <li><strong>Analytics data</strong> is kept by Google Analytics under the retention setting we choose in that tool.</li>
     </ul>
@@ -88,7 +86,7 @@
     <ul>
       <li>tell you what information we hold about you;</li>
       <li>correct something that is wrong, such as a phone number or address;</li>
-      <li>delete your quote request and related emails, unless we need to keep them for an active job, a dispute, insurance or a legal requirement.</li>
+      <li>delete your quote request, including the record in our GoHighLevel account and any related emails, unless we need to keep it for an active job, a dispute, insurance or a legal requirement.</li>
     </ul>
     <p>Email <a href="mailto:{{site.business.email}}">{{site.business.email}}</a> from the address you used on the form, or call <a href="tel:{{site.business.phoneE164}}">{{{site.business.phoneHtml}}}</a>. We will confirm your identity in a simple way, for example by replying to the same email address, and respond within a reasonable time. There is no charge for these requests.</p>
 
@@ -97,12 +95,13 @@
 
     <h2 id="links">8. Links to other sites</h2>
     <p>Some pages link to our Facebook page and to other websites we do not control. Once you leave nsacleaningllc.com, this policy no longer applies. Facebook and any other site you visit have their own privacy policies, and we encourage you to read them.</p>
+    <p>The quote form is a similar case even though it opens on our page. It is hosted by GoHighLevel, and what you send through it is handled under GoHighLevel's privacy policy as well as this one.</p>
 
     <h2 id="ny">9. New York residents</h2>
     <p>We are based in Watervliet, NY and serve customers across the Capital Region and north to Lake George. New York law applies to how we handle your information. If you have a concern we could not resolve, you can contact the New York State Attorney General's Bureau of Internet and Technology. We would rather hear from you first, though, and will do our best to sort things out directly.</p>
 
     <h2 id="changes">10. Changes to this policy</h2>
-    <p>If we change the tools this website uses, for example a different email provider or analytics setup, we will update this page and change the effective date at the top. We will not use your information in a materially different way without telling you.</p>
+    <p>If we change the tools this website uses, for example a different form provider or analytics setup, we will update this page and change the effective date at the top. We will not use your information in a materially different way without telling you.</p>
 
     <h2 id="contact">11. Contact us</h2>
     <p>Questions about privacy, or a request to see, correct or delete your information:</p>
@@ -111,6 +110,6 @@
       <li>Phone: <a href="tel:{{site.business.phoneE164}}">{{{site.business.phoneHtml}}}</a> (residential hours {{site.business.hoursResidential}})</li>
       <li>Mail: NSA Cleaning LLC, {{site.business.address.street}}, {{site.business.address.city}}, {{site.business.address.region}} {{site.business.address.postal}}</li>
     </ul>
-    <p>See also our <a href="/terms-and-conditions">Terms &amp; Conditions</a>, or return to the <a href="/">home page</a>, our <a href="/services">services</a> or the <a href="/contact#quote">free quote form</a>.</p>
+    <p>See also our <a href="/terms-and-conditions">Terms &amp; Conditions</a>, or return to the <a href="/">home page</a>, our <a href="/services">services</a> or the <a href="{{site.quoteHref}}" data-quote-open>free quote form</a>.</p>
   </article>
 </div></section>

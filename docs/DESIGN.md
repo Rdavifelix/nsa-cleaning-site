@@ -62,7 +62,7 @@ The sprite `src/partials/icons.html` is injected **once by `src/layout.html`** (
 `.btn` + one of `.btn-primary` (blue), `.btn-ghost` (outline; becomes white outline inside `.on-dark`), `.btn-white` (on dark backgrounds). Size: `.btn-lg`. Text link: `.link-arrow`. Action rows: `.hero-cta` (heroes), `.actions` (in sections), `.cta-actions` (CTA band, centered), `.plan-actions` (cards). Every quote CTA gets `data-track="cta_quote_<where>"`.
 ```html
 <div class="hero-cta">
-  <a class="btn btn-primary btn-lg" href="/contact#quote" data-track="cta_quote_hero">Get a Free Quote</a>
+  <a class="btn btn-primary btn-lg" href="{{site.quoteHref}}" data-quote-open data-track="cta_quote_hero">Get a Free Quote</a>
   <a class="btn btn-ghost btn-lg" href="tel:{{site.business.phoneE164}}"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call&nbsp;{{{site.business.phoneHtml}}}</a>
 </div>
 <a class="link-arrow" href="/pricing">See pricing <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
@@ -108,7 +108,7 @@ Non-wide photo tiles use `sizes="(min-width: 1240px) 300px, (min-width: 600px) 5
   <article class="plan">
     <p class="plan-cad">Every week</p><h3>Weekly</h3><p>Short blurb.</p>
     <ul><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Supplies and travel included</li></ul>
-    <div class="plan-actions"><a class="btn btn-primary" href="/contact#quote" data-track="cta_quote_plan_weekly">Get a Free Quote</a><a class="plan-link" href="/recurring-cleaning">Weekly plan details</a></div>
+    <div class="plan-actions"><a class="btn btn-primary" href="{{site.quoteHref}}" data-quote-open data-track="cta_quote_plan_weekly">Get a Free Quote</a><a class="plan-link" href="/recurring-cleaning">Weekly plan details</a></div>
   </article>
   <article class="plan plan-featured on-dark">…same markup; use .btn-white…</article>
 </div>
@@ -130,7 +130,7 @@ Needs `public/main.js` (already loaded on every page). `.compare[data-compare]`:
 <div class="ba-grid">
   <div><div class="section-head"><p class="eyebrow">Real results</p><h2 id="results-title">…</h2><p>…</p></div>
     <ul class="ba-points"><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><b>Deep cleaning</b> reaches …</span></li></ul>
-    <div class="actions"><a class="btn btn-primary" href="/contact#quote" data-track="cta_quote_results">Get a Free Quote</a></div></div>
+    <div class="actions"><a class="btn btn-primary" href="{{site.quoteHref}}" data-quote-open data-track="cta_quote_results">Get a Free Quote</a></div></div>
   <div>
     <div class="compare" data-compare>
       <img src="/images/bathtub-wide-before-deep-cleaning-774.webp" srcset="/images/bathtub-wide-before-deep-cleaning-480.webp 480w, /images/bathtub-wide-before-deep-cleaning-774.webp 774w" sizes="(min-width: 1240px) 640px, (min-width: 900px) 52vw, calc(100vw - 32px)" width="774" height="719" alt="Stained fiberglass tub and shower surround before deep cleaning" loading="lazy" decoding="async">
@@ -178,21 +178,22 @@ Each `<details>` = one `<summary>` + one `<p>` (only `p` is styled). Single-colu
 <section class="section cta-band on-dark" aria-labelledby="cta-title"><div class="container">
   <h2 id="cta-title">Ready for a deep-cleaned home in Albany?</h2>
   <p>Tell us what you need and we'll reply with a free quote — no obligation, no travel fees.</p>
-  <div class="cta-actions"><a class="btn btn-white btn-lg" href="/contact#quote" data-track="cta_quote_final">Get a Free Quote</a><a class="btn btn-ghost btn-lg" href="tel:{{site.business.phoneE164}}"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call&nbsp;{{{site.business.phoneHtml}}}</a></div>
+  <div class="cta-actions"><a class="btn btn-white btn-lg" href="{{site.quoteHref}}" data-quote-open data-track="cta_quote_final">Get a Free Quote</a><a class="btn btn-ghost btn-lg" href="tel:{{site.business.phoneE164}}"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call&nbsp;{{{site.business.phoneHtml}}}</a></div>
   <p class="cta-meta">{{site.business.address.city}}, {{site.business.address.region}} · Residential {{site.business.hoursResidential}} · Commercial {{site.business.hoursCommercial}} · <a href="mailto:{{site.business.email}}">{{site.business.email}}</a></p>
 </div></section>
 ```
 
-### Quote form (only on `/` and `/contact`)
-`{{> quote-form}}` renders just the `<form data-quote-form>` (fields, honeypot, Turnstile slot, status line, fine print). The **page** supplies the card and the `#quote` anchor, and its meta must set `"turnstile": true`.
+### Quote button and modal (every page)
+There is **no form on the site**. The quote lives in the client's GoHighLevel account and opens in a modal.
+
+Every call to action is the same element, wherever it appears:
 ```html
-<div class="quote-card" id="quote">
-  <div class="quote-head"><div class="quote-badge" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg></div><div><h2>Get a free quote</h2><p>Takes about two minutes — only your name, phone, email and the service you need are required. We reply by phone or email.</p></div></div>
-  <p class="quote-trust"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><span><b>Insured</b> · {{site.business.yearsExperience}}+ years of experience · Supplies included · Travel included</span></p>
-{{> quote-form}}
-</div>
+<a class="btn btn-primary btn-lg" href="{{site.quoteHref}}" data-quote-open data-track="cta_quote_hero">Get a Free Quote</a>
 ```
-All other pages link to `/contact#quote` (header, footer and the mobile sticky bar already do this automatically off the home page).
+`site.quoteHref` is the hosted form URL when `GHL_FORM_URL` / `ghlFormUrl` is set, and `/contact` when it is not. `data-quote-open` is what `public/main.js` listens for. The modal itself is `src/partials/quote-modal.html`, injected once by the layout, so **pages add nothing**: no partial include, no `#quote` anchor, no `"turnstile": true` in the front matter.
+
+Rules for a new page: use the snippet above for every quote call to action, keep the secondary action as the phone link, and never build a `<form>` into a page. If a page needs to point at the form from body copy, use the same `href` and attribute on an inline link.
+
 
 ### Page hero (inner pages) — `.page-hero`, `.page-hero--photo`
 Compact hero on `--bg-2`: eyebrow, H1 (`<em>` colors the keyword/place), `.lead`, `.hero-cta`, optional `.hero-note` / `.chips`. Add `page-hero--photo` + a second child `.page-hero-photo` for a right-side 4:3 rounded photo (≥900px; stacks below on mobile).
@@ -202,7 +203,7 @@ Compact hero on `--bg-2`: eyebrow, H1 (`<em>` colors the keyword/place), `.lead`
     <p class="eyebrow">Residential · Albany to Lake George</p>
     <h1 id="page-title">Deep Cleaning Service in <em>Albany, NY</em></h1>
     <p class="lead">One or two plain sentences: what it is, who it's for, what's included.</p>
-    <div class="hero-cta"><a class="btn btn-primary btn-lg" href="/contact#quote" data-track="cta_quote_hero">Get a Free Quote</a><a class="btn btn-ghost btn-lg" href="tel:{{site.business.phoneE164}}"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call&nbsp;{{{site.business.phoneHtml}}}</a></div>
+    <div class="hero-cta"><a class="btn btn-primary btn-lg" href="{{site.quoteHref}}" data-quote-open data-track="cta_quote_hero">Get a Free Quote</a><a class="btn btn-ghost btn-lg" href="tel:{{site.business.phoneE164}}"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call&nbsp;{{{site.business.phoneHtml}}}</a></div>
     <p class="hero-note"><b>Insured</b> · Supplies included · No travel fees · <span lang="es">Hablamos español</span></p>
   </div>
   <div class="page-hero-photo"><img src="/images/bathroom-hex-tile-after-deep-cleaning-768.webp" srcset="/images/bathroom-hex-tile-after-deep-cleaning-480.webp 480w, /images/bathroom-hex-tile-after-deep-cleaning-768.webp 768w" sizes="(min-width: 1240px) 520px, (min-width: 900px) 42vw, calc(100vw - 32px)" width="768" height="1024" alt="Small bathroom with hex tile floor after deep cleaning" fetchpriority="high" decoding="async"></div>
@@ -235,14 +236,14 @@ No stock photos, no external images, no invented slugs.
 
 ## 3. Page recipes
 
-Filename = slug: `src/pages/deep-cleaning.html` → `/deep-cleaning` → `dist/deep-cleaning/index.html`. `404.html` → `/404` → `dist/404.html` (it already exists with a placeholder body — replace the body, keep `"noindex": true`). The path derives from the filename; never set `"path"`. Section ids + `aria-labelledby` must be unique within the page. Every page: one H1, ends with `.cta-band` (except legal), links to `/contact#quote`, `/pricing` where price is mentioned, its hub and its siblings.
+Filename = slug: `src/pages/deep-cleaning.html` → `/deep-cleaning` → `dist/deep-cleaning/index.html`. `404.html` → `/404` → `dist/404.html` (it already exists with a placeholder body — replace the body, keep `"noindex": true`). The path derives from the filename; never set `"path"`. Section ids + `aria-labelledby` must be unique within the page. Every page: one H1, ends with `.cta-band` (except legal), carries the quote CTA (`{{site.quoteHref}}` + `data-quote-open`), links to `/pricing` where price is mentioned, its hub and its siblings.
 
 ### (a) Service page — /recurring-cleaning, /deep-cleaning, /move-in-move-out-cleaning, /airbnb-cleaning, /post-construction-cleaning, /commercial-cleaning, /power-washing, /carpet-cleaning, /painting
 1. `section.page-hero.page-hero--photo` — eyebrow "Residential · Albany to Lake George" (or Commercial / Exterior), H1 = keyword + place, `.lead`, `.hero-cta`, `.hero-note`, manifest photo for that service.
 2. `section.section` "What's included" — `.section-head` + `.why-list` (tasks, `#i-check`/`#i-sparkle`) **or** `.bento` of 3–4 `.tile`s when there are sub-options (deep vs full deep; weekly / bi-weekly / monthly → use `.plans` on /recurring-cleaning).
 3. `section.section.section-alt` "Who it's for" — `.section-head.center` + `.chips`, or a short `.why-list`; commercial: `.facilities` + `.badge-247` inside a `section.section.commercial.on-dark` (copy from home).
 4. `section.section` "Real results" — `.ba-grid` + `.compare` when a before/after pair fits (deep, move-out, post-construction), otherwise `.gallery` of 2–4 real photos with captions.
-5. `section.section.section-alt` "Pricing" — `.price-note` (recurring) or `.section-head` + `<p>` "Quoted individually — free quote, supplies and travel included" + `.actions` → `/pricing` and `/contact#quote`.
+5. `section.section.section-alt` "Pricing" — `.price-note` (recurring) or `.section-head` + `<p>` "Quoted individually, free quote, supplies and travel included" + `.actions` → `/pricing` and the quote CTA.
 6. `section.section` FAQ — `.faq-grid`, 4–6 `<details>` specific to the service (CONTENT.md facts only).
 7. `section.section.cta-band.on-dark`.
 
@@ -250,7 +251,7 @@ Filename = slug: `src/pages/deep-cleaning.html` → `/deep-cleaning` → `dist/d
 1. `.page-hero` (photo optional) 2. `section.section` — `.section-head.split-head` + `.bento` with one `.tile` per child page (photo tiles for the strongest, `.tile-wide`/`.tile-lg` for the featured one, `.tile-cta` last) 3. `section.section.section-alt` — `.section-head.center` + `.why-list` (4 items) 4. `.cta-band`.
 
 ### (c) /contact
-`.page-hero` (no photo, no buttons: eyebrow, H1 "Contact NSA Cleaning — Free Cleaning Quote in Albany, NY", `.lead`), then one `section.section` with a two-column grid via page `<style>`: `.contact-grid{display:grid;gap:36px}@media(min-width:900px){.contact-grid{grid-template-columns:1.1fr .9fr;gap:56px;align-items:start}}`. Left: `.quote-card#quote` + `{{> quote-form}}` (§2). Right: a details block — `<address>` with street/city/region/postal, both phones (`phone2` appears only here and in the footer), email, hours (residential / commercial), languages, Facebook (`rel="noopener" target="_blank"`), "Serving Albany to Lake George — about 1 hour from Watervliet" + `.link-arrow` → `/service-area`. **No map iframe** (the static map image is OK). No CTA band needed (the form is the CTA).
+`.page-hero` (no photo, no buttons: eyebrow, H1 "Contact NSA Cleaning, Free Cleaning Quote in Albany, NY", `.lead`), then one `section.section` with a two-column grid via page `<style>`: `.contact-grid{display:grid;gap:36px}@media(min-width:900px){.contact-grid{grid-template-columns:1.1fr .9fr;gap:56px;align-items:start}}`. Left: the quote call to action (`.btn.btn-primary.btn-lg` with `data-quote-open`) plus a short paragraph on what happens after. Right: a details block — `<address>` with street/city/region/postal, both phones (`phone2` appears only here and in the footer), email, hours (residential / commercial), languages, Facebook (`rel="noopener" target="_blank"`), "Serving Albany to Lake George — about 1 hour from Watervliet" + `.link-arrow` → `/service-area`. **No map iframe** (the static map image is OK). Ends with a `.cta-band` carrying the same quote button.
 
 ### (d) Legal — /privacy-policy, /terms-and-conditions
 `section.section` > `.container` > `article.prose` only (H1, `.meta` effective date, H2/H3, lists, optional table). No hero, no images, no CTA band. Content: what the quote form collects and why, cookie consent (analytics only after consent), cancellation 24h / 30% fee, satisfaction guarantee per service contract, contact details.
@@ -308,9 +309,9 @@ Optional keys: `"ogImage"` (must be 1200×630 — otherwise omit), `"changefreq"
 - h1 → h2 (one per section) → h3 (cards/items). Never skip levels. `<section aria-labelledby="<h2 id>">`, or `aria-label` when there is no heading. Ids unique per page.
 
 ### Links
-- Primary CTA on every page: **Get a Free Quote** → `/contact#quote` (on `/contact` itself: `#quote`). Secondary: call button `href="tel:{{site.business.phoneE164}}"` with `{{{site.business.phoneHtml}}}` as visible text. `data-track="cta_quote_<location>"` on every quote CTA.
+- Primary CTA on every page: **Get a Free Quote** as `<a href="{{site.quoteHref}}" data-quote-open>`, which opens the GoHighLevel modal. Secondary: the phone link. Never write a `<form>` into a page and never link to `#quote`.
 - Link `/pricing` wherever a price is mentioned; link the parent hub (`/residential-cleaning` or `/services`) and 2–3 sibling services; `/service-area` when cities are listed.
-- Allowed internal paths (root-relative, no trailing slash, no `.html`): `/` `/residential-cleaning` `/recurring-cleaning` `/deep-cleaning` `/move-in-move-out-cleaning` `/airbnb-cleaning` `/post-construction-cleaning` `/commercial-cleaning` `/services` `/power-washing` `/carpet-cleaning` `/painting` `/pricing` `/service-area` `/about` `/faq` `/contact` `/thank-you` `/privacy-policy` `/terms-and-conditions`, plus `/contact#quote`, `tel:`, `mailto:{{site.business.email}}` and `{{site.business.facebook}}` (`rel="noopener" target="_blank"`). Nothing else — no external links, no `#` placeholders.
+- Allowed internal paths (root-relative, no trailing slash, no `.html`): `/` `/residential-cleaning` `/recurring-cleaning` `/deep-cleaning` `/move-in-move-out-cleaning` `/airbnb-cleaning` `/post-construction-cleaning` `/commercial-cleaning` `/services` `/power-washing` `/carpet-cleaning` `/painting` `/pricing` `/service-area` `/about` `/faq` `/contact` `/thank-you` `/privacy-policy` `/terms-and-conditions`, plus the quote CTA (`{{site.quoteHref}}` + `data-quote-open`, which resolves to the GoHighLevel URL), `tel:`, `mailto:{{site.business.email}}` and `{{site.business.facebook}}` (`rel="noopener" target="_blank"`). Nothing else — no external links, no `#` placeholders.
 
 ### Images & alt text
 - Only slugs from `raw-images/manifest.json`; never external/stock images or invented filenames. Alt = what is visible (room, surface, state: "… after deep cleaning"), specific and short, no "image of", no keyword stuffing, no people's names. Before/after pairs say "before" / "after". Decorative or repeated images: `alt=""`.

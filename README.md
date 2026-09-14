@@ -62,6 +62,7 @@ Copy `.env.example` → `.env` locally; on Vercel set them under *Settings → E
 |---|---|---|
 | `SITE_URL` | build | Public URL (canonical, sitemap, OG). Overrides `site.config.json`. |
 | `GA_MEASUREMENT_ID` | build | GA4 id (`G-XXXXXXX`). Empty = analytics off. |
+| `GHL_FORM_URL` | build (public) | Full URL of the GoHighLevel form, e.g. `https://api.leadconnectorhq.com/widget/form/<FORM_ID>`. Also settable as `ghlFormUrl` in `site.config.json`. When empty, the quote buttons fall back to linking to `/contact` and the modal is not rendered at all. |
 | `PHOTO_PLACEHOLDERS` | build | `0` hides the gray "Photo coming soon" blocks. Default (unset) shows them. Set it to `0` in Vercel before launch, once the client sends the missing photos listed in [docs/FOTOS-PEDIR.md](docs/FOTOS-PEDIR.md). |
 | `TURNSTILE_SITE_KEY` | build (public) | Renders the Turnstile widget on the form. |
 | `TURNSTILE_SECRET_KEY` | server | If set, every submission must pass Turnstile. Set `TURNSTILE_SITE_KEY` and `TURNSTILE_SECRET_KEY` together, then redeploy — the site key is baked into the HTML at build time, so a secret without a site key makes every submission fail with "Verification failed". |
@@ -70,6 +71,19 @@ Copy `.env.example` → `.env` locally; on Vercel set them under *Settings → E
 | `QUOTE_TO_EMAIL` | server | Recipient(s), default `Nsacleaningllc@gmail.com`. |
 
 Nothing secret is ever shipped to the browser: the build only bakes `SITE_URL`, `GA_MEASUREMENT_ID` and the *public* Turnstile site key.
+
+## Quote form (GoHighLevel)
+
+The site has **no native form**. Every "Get a Free Quote" button opens the client's GoHighLevel form in a modal.
+
+- Set `GHL_FORM_URL` (or `ghlFormUrl` in `site.config.json`) to the hosted form URL. Nothing else to configure.
+- Each button renders as `<a href="{{site.quoteHref}}" data-quote-open>`. With JavaScript, `public/main.js` opens the dialog and loads the form in an iframe **on first open**, so the third-party frame costs nothing on page load. Without JavaScript the same button is a plain link to the hosted form, so the call to action never dead-ends.
+- `/?quote` and `#quote` open the modal on load, which is handy for ads and email links.
+- `vercel.json` allows the GoHighLevel hosts in the `frame-src` directive of the Content Security Policy. If the client's form lives on a custom domain, add that host there too or the frame is blocked with no visible error.
+- Analytics: `main.js` fires `open_quote_form` when the modal opens. The submission itself happens inside GoHighLevel, so it is tracked there. To count it in GA4 as well, set the form's post-submit redirect to `https://<domain>/thank-you` inside GoHighLevel: the page then loads inside the modal and its own tracking runs.
+
+### What is left over from the native form
+`api/quote.js`, `api/_lib/quote-core.js`, `functions/api/quote.js`, `src/partials/quote-form.html`, `scripts/test-api.mjs` and the `/thank-you` page are **still in the repo but no longer used by any page**. They are kept as a working fallback: including `{{> quote-form}}` on a page brings the native form back, secrets and spam protection included. The Turnstile and email-provider environment variables only matter if that happens.
 
 ## Deploy (Vercel)
 

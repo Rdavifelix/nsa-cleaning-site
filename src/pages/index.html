@@ -1,6 +1,22 @@
 <!--@meta
-{ "title": "House Cleaning Services in Albany, NY | NSA Cleaning LLC", "description": "Residential & commercial cleaning from Albany to Lake George, NY. Insured team, supplies and travel included. Get a free quote from NSA Cleaning LLC today.", "schema": ["@business"], "turnstile": true, "priority": 1.0 }
+{ "title": "House Cleaning Services in Albany, NY | NSA Cleaning LLC", "description": "Residential & commercial cleaning from Albany to Lake George, NY. Insured team, supplies and travel included. Get a free quote from NSA Cleaning LLC today.", "schema": ["@business"], "priority": 1.0 }
 -->
+<style>
+/* Home hero without the embedded form: copy left, photo right, prices + steps as a full-width band. */
+.hero-aside .highlights{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(min-width:900px){
+  .hero-grid{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);grid-template-rows:auto auto;align-items:stretch;gap:40px 48px}
+  .hero-visual{grid-column:2;grid-row:1;display:flex}
+  .hero-photo{position:relative;top:auto;right:auto;width:100%;height:100%;aspect-ratio:auto;min-height:440px}
+  .hero-aside{grid-column:1/-1;grid-row:2;grid-template-columns:minmax(0,.65fr) minmax(0,2.2fr);gap:24px 40px;align-items:start;padding-top:32px;border-top:1px solid var(--line)}
+  .hero-aside .highlights{grid-column:1;grid-row:1/3;grid-template-columns:minmax(0,1fr);align-content:start}
+  .aside-title{grid-column:2;grid-row:1}
+  .steps{grid-column:2;grid-row:2;margin:0}
+}
+@media(min-width:1120px){
+  .steps{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px 32px}
+}
+</style>
 <!-- ===== HERO ===== -->
 <section class="hero" aria-labelledby="hero-title">
   <div class="container hero-grid">
@@ -15,7 +31,7 @@
         <li class="chip chip-lang" lang="pt">Falamos português</li>
       </ul>
       <div class="hero-cta">
-        <a class="btn btn-primary btn-lg" href="#quote" data-track="cta_quote_hero">Get a Free Quote</a>
+        <a class="btn btn-primary btn-lg" href="{{site.quoteHref}}" data-quote-open data-track="cta_quote_hero">Get a Free Quote</a>
         <a class="btn btn-ghost btn-lg" href="tel:{{site.business.phoneE164}}"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call&nbsp;{{{site.business.phoneHtml}}}</a>
       </div>
       <p class="hero-note"><b>Residential</b> {{site.business.hoursResidential}} · <b>Commercial</b> available {{site.business.hoursCommercial}}</p>
@@ -25,16 +41,6 @@
         <img src="/images/lakeside-cabin-deck-after-power-washing-1024.webp" srcset="/images/lakeside-cabin-deck-after-power-washing-480.webp 480w, /images/lakeside-cabin-deck-after-power-washing-800.webp 800w, /images/lakeside-cabin-deck-after-power-washing-1024.webp 1024w" sizes="(min-width: 1240px) 620px, (min-width: 900px) 50vw, calc(100vw - 32px)" width="1024" height="768" alt="Freshly power washed deck with patio furniture at a lakeside log cabin" fetchpriority="high" decoding="async">
         <span class="photo-tag">Real job · lakeside deck after power washing</span>
       </div>
-      <div class="quote-card" id="quote">
-        <div class="quote-head">
-          <div class="quote-badge" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg></div>
-          <div>
-            <h2>Get a free quote</h2>
-            <p>Takes about two minutes. All we need is your name, phone, email and the service you want, and we reply by phone or email.</p>
-          </div>
-        </div>
-{{> quote-form}}
-      </div>
     </div>
     <div class="hero-aside">
       <ul class="highlights" aria-label="Starting prices">
@@ -43,7 +49,7 @@
       </ul>
       <h2 class="aside-title">How it works</h2>
       <ol class="steps">
-        <li class="step"><span class="step-num" aria-hidden="true">1</span><p><strong>Send the form or call.</strong> Tell us the service, the property and roughly when.</p></li>
+        <li class="step"><span class="step-num" aria-hidden="true">1</span><p><strong>Ask for a free quote or call us.</strong> Tell us the service, the property and roughly when.</p></li>
         <li class="step"><span class="step-num" aria-hidden="true">2</span><p><strong>We reply by phone or email.</strong> We confirm the details and give you a clear price. Larger jobs get a walk-through.</p></li>
         <li class="step"><span class="step-num" aria-hidden="true">3</span><p><strong>We show up and clean.</strong> Uniformed, insured team with all supplies. Travel is included in your plan.</p></li>
       </ol>
@@ -140,7 +146,7 @@
         <span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#i-thumb"/></svg></span>
         <div class="tile-body"><h3>We'll recommend the right service</h3><p>Tell us about the space and we'll recommend the right service and a clear price.</p></div>
         <div class="tile-cta-actions">
-          <a class="btn btn-white" href="#quote" data-track="cta_quote_services">Get a Free Quote</a>
+          <a class="btn btn-white" href="{{site.quoteHref}}" data-quote-open data-track="cta_quote_services">Get a Free Quote</a>
           <a class="link-arrow" href="/services">See all services <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </div>
       </div>
@@ -179,7 +185,7 @@
       </div>
       <div class="hero-cta">
         <a class="btn btn-white btn-lg" href="/commercial-cleaning" data-track="cta_commercial">Commercial cleaning details</a>
-        <a class="btn btn-ghost btn-lg" href="#quote" data-track="cta_quote_commercial">Request a commercial quote</a>
+        <a class="btn btn-ghost btn-lg" href="{{site.quoteHref}}" data-quote-open data-track="cta_quote_commercial">Get a Free Quote</a>
       </div>
     </div>
     <ul class="facilities" aria-label="Facilities we clean">
@@ -246,7 +252,7 @@
           <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><b>Move-out and post-construction</b> cleans use the same detailed approach.</span></li>
         </ul>
         <div class="actions">
-          <a class="btn btn-primary" href="#quote" data-track="cta_quote_results">Get a Free Quote</a>
+          <a class="btn btn-primary" href="{{site.quoteHref}}" data-quote-open data-track="cta_quote_results">Get a Free Quote</a>
           <a class="btn btn-ghost" href="/deep-cleaning">See deep cleaning</a>
         </div>
       </div>
@@ -287,7 +293,7 @@
 {{#each site.business.serviceArea}}<li>{{this}}</li>{{/each}}
       </ul>
       <div class="actions">
-        <a class="btn btn-ghost" href="#quote" data-track="cta_quote_area">Check my address</a>
+        <a class="btn btn-ghost" href="{{site.quoteHref}}" data-quote-open data-track="cta_quote_area">Get a Free Quote</a>
         <a class="link-arrow" href="/service-area">See the full service area <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </div>
     </div>
@@ -325,7 +331,7 @@
     <h2 id="cta-title">Get a free quote for your home or business</h2>
     <p>Tell us what you need and we'll reply with a free quote. No obligation, no travel fees. <span lang="es">Hablamos español</span> · <span lang="pt">Falamos português</span>.</p>
     <div class="cta-actions">
-      <a class="btn btn-white btn-lg" href="#quote" data-track="cta_quote_final">Get a Free Quote</a>
+      <a class="btn btn-white btn-lg" href="{{site.quoteHref}}" data-quote-open data-track="cta_quote_final">Get a Free Quote</a>
       <a class="btn btn-ghost btn-lg" href="tel:{{site.business.phoneE164}}"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call&nbsp;{{{site.business.phoneHtml}}}</a>
     </div>
     <p class="cta-meta">{{site.business.address.city}}, {{site.business.address.region}} · Residential {{site.business.hoursResidential}} · Commercial {{site.business.hoursCommercial}} · <a href="mailto:{{site.business.email}}">{{site.business.email}}</a></p>

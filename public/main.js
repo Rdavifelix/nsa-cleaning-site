@@ -150,6 +150,49 @@
     });
   });
 
+  /* ---------- Quote modal (GoHighLevel form) ----------
+     Every "Get a Free Quote" button carries data-quote-open. With JavaScript it opens the
+     dialog and loads the hosted form in an iframe on first open. Without JavaScript the same
+     button stays a plain link to that hosted form, so the call to action never dead-ends. */
+  var modal = $('[data-quote-modal]');
+  if (modal) {
+    var frame = $('[data-quote-frame]', modal);
+    var loading = $('[data-quote-loading]', modal);
+    var frameLoaded = false;
+    var lastFocus = null;
+    var hideLoading = function () { if (loading) loading.hidden = true; };
+    if (frame) frame.addEventListener('load', function () { if (frameLoaded) hideLoading(); });
+
+    var openModal = function (trigger) {
+      lastFocus = trigger || d.activeElement;
+      if (!frameLoaded && frame) { frameLoaded = true; frame.src = frame.getAttribute('data-src'); w.setTimeout(hideLoading, 8000); }
+      if (typeof modal.showModal === 'function') modal.showModal(); else modal.setAttribute('open', '');
+      d.documentElement.classList.add('modal-open');
+      track('open_quote_form', { link_text: trigger ? (trigger.textContent || '').trim().slice(0, 60) : '' });
+    };
+    var closeModal = function () {
+      if (typeof modal.close === 'function') modal.close(); else modal.removeAttribute('open');
+      d.documentElement.classList.remove('modal-open');
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    };
+    d.addEventListener('click', function (e) {
+      var t = e.target;
+      if (!t || !t.closest) return;
+      var opener = t.closest('[data-quote-open]');
+      if (opener) { e.preventDefault(); openModal(opener); return; }
+      if (t.closest('[data-quote-close]')) { e.preventDefault(); closeModal(); return; }
+      if (t === modal) { // click landed on the backdrop, not on the dialog box
+        var b = modal.getBoundingClientRect();
+        if (e.clientX < b.left || e.clientX > b.right || e.clientY < b.top || e.clientY > b.bottom) closeModal();
+      }
+    });
+    modal.addEventListener('close', function () { d.documentElement.classList.remove('modal-open'); });
+    modal.addEventListener('cancel', function () { d.documentElement.classList.remove('modal-open'); });
+    if (/[?&]quote(=|&|$)/.test(location.search) || location.hash === '#quote') {
+      w.addEventListener('load', function () { openModal(null); });
+    }
+  }
+
   /* ---------- Before / after comparison slider ---------- */
   $$('[data-compare]').forEach(function (box) {
     var range = box.querySelector('input[type="range"]'), after = box.querySelector('[data-compare-after]');
