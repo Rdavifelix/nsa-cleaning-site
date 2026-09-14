@@ -11,7 +11,7 @@ html.nav-open{overflow:hidden}
 body{margin:0;font-family:var(--font);font-size:var(--step-0);line-height:1.6;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased}
 img,svg,video{display:block;max-width:100%}img{height:auto}
 h1,h2,h3,h4{margin:0;line-height:1.15;font-weight:800;letter-spacing:-.02em;color:var(--navy);text-wrap:balance}
-p{margin:0 0 1em}a{color:var(--blue-dark);text-underline-offset:.15em}ul{margin:0;padding:0;list-style:none}
+p{margin:0 0 1em}a{color:var(--blue-dark);text-underline-offset:.15em}ul,ol{margin:0;padding:0;list-style:none}
 button,input,select,textarea{font:inherit;color:inherit}
 :focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:2px}
 .container{width:100%;max-width:var(--container);margin-inline:auto;padding-inline:var(--gutter)}

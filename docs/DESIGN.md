@@ -298,6 +298,7 @@ Optional keys: `"ogImage"` (must be 1200×630 — otherwise omit), `"changefreq"
 ## 4. Rules
 
 ### Content
+- **Lists are reset globally** (`ul,ol{margin:0;padding:0;list-style:none}`), so an `<ol>` has no indent and no numbers of its own. `.steps` supplies its own numbers through `.step-num`. If you need real markers, use `.prose`, which restores `list-style` and indent for legal text.
 - Every fact, number, price, policy, city and service name comes from `docs/CONTENT.md`. The service list is closed. Don't invent response times, counts, certifications, guarantees or extra services.
 - Forbidden: star ratings, review counts, awards, "#1", "top rated", "best in Albany", "licensed", "bonded", "eco-/green-certified", "background-checked", client/cleaning counts, testimonials or quotes with names, "same-day", "24/7" for residential (24/7 is commercial only), "free travel anywhere" (it's "travel included, up to about 1 hour from Watervliet"), naming which owner is in which photo (unconfirmed — say "one of the owners").
 - **Punctuation: no em-dashes (—) and no en-dash used as punctuation.** They are the clearest tell of machine-written copy and the client asked for them to be gone. If a sentence needs one, the sentence is doing too much: split it in two, or use a comma. Do not swap the dash for a semicolon or a parenthesis, that is the same problem wearing a different hat. Hyphens inside compound words (move-in, bi-weekly, top-to-bottom, walk-through, I-87) are fine. No exclamation marks. No rhetorical questions as headings.
