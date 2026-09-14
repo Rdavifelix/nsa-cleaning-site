@@ -252,6 +252,10 @@ function build() {
       // Safe here: the site has no <pre> and no textarea with meaningful content.
       html = html.replace(/[ \t]+$/gm, '');
       html = applyBase(html, site.basePath);
+      { // guard: the client asked for nothing over-rounded (tokens are 2/3/4px)
+        const big = [...content.matchAll(/border-radius:\s*(999px|\d{2,}px|50%)/g)].map((m) => m[1]);
+        if (big.length) console.warn(`  ! ${meta.path}: ${big.length} inline border-radius over the token scale (${[...new Set(big)].join(', ')}) - use var(--r) / var(--r-lg) / var(--r-xl)`);
+      }
     } catch (e) {
       if (process.env.BUILD_TOLERANT) { console.warn('  ⚠ skipped', meta.path, '—', e.message); continue; }
       throw new Error(`${meta.path}: ${e.message}`);

@@ -22,7 +22,7 @@ Build: `node build.mjs` → `dist/`. Pages start with `<!--@meta { ...json... } 
 | `--bg` / `--bg-2` | `#F3F4F6` / `#F8FAFC` | placeholders / alt section background |
 | `--red` / `--green` | `#B91C1C` / `#166534` | form errors / success |
 | `--font` | Plus Jakarta Sans + system stack | already applied to `body` |
-| `--r` / `--r-lg` / `--r-xl` | `6px` / `10px` / `14px` | radii (buttons, inputs, chips / cards / photos+hero). Client direction: nothing over-rounded — never use 999px pills or hard-coded radii ≥ 16px; circles (50%) only for icon badges, step numbers and the slider handle. |
+| `--r` / `--r-lg` / `--r-xl` | `2px` / `3px` / `4px` | radii (buttons, inputs, chips, badges / cards / photos and hero). **Client direction: the site is deliberately square.** Never use `999px` pills, `50%` on a UI element, or a hard-coded radius of 8px or more. The only round things left are the circular logo mark and the 8px status dot in `.photo-tag`; the arrow badges, step numbers, FAQ toggles and the slider handle are all squared off. `node build.mjs` prints a warning if a page introduces an inline radius above the scale. |
 | `--shadow` / `--shadow-lg` | soft navy shadows | cards / floating cards |
 | `--container` | `1240px` | `.container` max width |
 | `--gutter` | `clamp(16px,4vw,32px)` | side padding |
