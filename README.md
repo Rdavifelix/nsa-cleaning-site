@@ -90,9 +90,9 @@ The site has **no native form**. Every "Get a Free Quote" button opens the clien
 1. Push this folder to a GitHub repo (`git add -A && git commit -m "NSA Cleaning site" && gh repo create nsa-cleaning-site --private --source . --push`).
 2. In Vercel: *Add New → Project → Import* the repo. Framework preset: **Other**. Build command and output dir are read from `vercel.json`.
 3. Add the environment variables above (at least one email provider). Redeploy.
-4. *Settings → Domains*: add `nsacleaningllc.com` (available as of 2026-09-12) and `www.nsacleaningllc.com` (redirect www → apex). Vercel issues the TLS certificate and redirects HTTP → HTTPS automatically; the `Strict-Transport-Security` header in `vercel.json` makes browsers stay on HTTPS.
-5. Set `SITE_URL=https://nsacleaningllc.com` and redeploy so canonical/sitemap URLs match the domain.
-6. Google Search Console: verify the domain, submit `https://nsacleaningllc.com/sitemap.xml`.
+4. *Settings → Domains*: add `nsacleaningllc.com` (available as of 2026-09-12) and `www.nsacleaning.com` (redirect www → apex). Vercel issues the TLS certificate and redirects HTTP → HTTPS automatically; the `Strict-Transport-Security` header in `vercel.json` makes browsers stay on HTTPS.
+5. Set `SITE_URL=https://lp.nsacleaning.com` and redeploy so canonical/sitemap URLs match the domain.
+6. Google Search Console: verify the domain, submit `https://lp.nsacleaning.com/sitemap.xml`.
 7. Google Business Profile: use the exact NAP from `site.config.json` (321 25th St, Watervliet, NY 12189 · (518) 902-1180) so it matches the site's LocalBusiness schema.
 
 ### Email provider setup

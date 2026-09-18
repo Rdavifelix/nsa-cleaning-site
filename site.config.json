@@ -1,5 +1,5 @@
 {
-  "siteUrl": "https://nsacleaningllc.com",
+  "siteUrl": "https://lp.nsacleaning.com",
   "siteName": "NSA Cleaning LLC",
   "shortName": "NSA Cleaning",
   "tagline": "Residential & Commercial Cleaning from Albany to Lake George, NY",
@@ -8,7 +8,7 @@
   "themeColor": "#0B70E0",
   "gaMeasurementId": "",
   "turnstileSiteKey": "",
-  "ghlFormUrl": "",
+  "ghlFormUrl": "https://api.thetrenchops.com/widget/form/rAdHuBM9inV1iYbzGx5u",
   "business": {
     "legalName": "NSA Cleaning LLC",
     "phone": "(518) 902-1180",
