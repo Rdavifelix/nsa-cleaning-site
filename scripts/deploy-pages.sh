@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # Builds the client preview and publishes it to the gh-pages branch.
 #
-#   scripts/deploy-pages.sh
+#   scripts/deploy-pages.sh                                   # preview at <owner>.github.io/<repo>
+#   CUSTOM_DOMAIN=lp.nsacleaning.com scripts/deploy-pages.sh  # production on the custom domain
 #
 # The preview is built with PREVIEW=1 (noindex on every page, robots.txt disallows all)
 # and BASE_PATH so it works from the /<repo> subpath on github.io.
@@ -12,12 +13,20 @@ cd "$(dirname "$0")/.."
 
 REPO_SLUG="$(git config --get remote.origin.url | sed -E 's#.*github.com[:/]([^/]+)/([^/.]+)(\.git)?#\1/\2#')"
 OWNER="${REPO_SLUG%%/*}"; REPO="${REPO_SLUG##*/}"
-BASE="${BASE_PATH:-/$REPO}"
-URL="${SITE_URL:-https://${OWNER}.github.io${BASE}}"
 OUT="$(mktemp -d)"
 
-echo "Building preview  →  $URL"
-PREVIEW=1 BASE_PATH="$BASE" SITE_URL="$URL" OUT_DIR="$OUT" node build.mjs
+if [ -n "${CUSTOM_DOMAIN:-}" ]; then
+  # Production on GitHub Pages with a custom domain: indexable, served from the root, CNAME file included.
+  URL="https://${CUSTOM_DOMAIN}"
+  echo "Building production  →  $URL"
+  BASE_PATH="" SITE_URL="$URL" OUT_DIR="$OUT" node build.mjs
+  echo "$CUSTOM_DOMAIN" > "$OUT/CNAME"
+else
+  BASE="${BASE_PATH:-/$REPO}"
+  URL="${SITE_URL:-https://${OWNER}.github.io${BASE}}"
+  echo "Building preview  →  $URL"
+  PREVIEW=1 BASE_PATH="$BASE" SITE_URL="$URL" OUT_DIR="$OUT" node build.mjs
+fi
 
 echo "Publishing to gh-pages…"
 cd "$OUT"
