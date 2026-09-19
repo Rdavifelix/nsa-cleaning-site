@@ -2,7 +2,7 @@
 # Builds the client preview and publishes it to the gh-pages branch.
 #
 #   scripts/deploy-pages.sh                                   # preview at <owner>.github.io/<repo>
-#   CUSTOM_DOMAIN=lp.nsacleaning.com scripts/deploy-pages.sh  # production on the custom domain
+#   CUSTOM_DOMAIN=lp.nsacleaningllc.com scripts/deploy-pages.sh  # production on the custom domain
 #
 # The preview is built with PREVIEW=1 (noindex on every page, robots.txt disallows all)
 # and BASE_PATH so it works from the /<repo> subpath on github.io.

@@ -9,7 +9,7 @@ const expect = (label, actual, wanted) => {
   if (!ok) failures++;
   console.log(`${ok ? '✓' : '✗'} ${label}: got ${JSON.stringify(actual)}${ok ? '' : ` (wanted ${JSON.stringify(wanted)})`}`);
 };
-const base = { 'content-type': 'application/json', host: 'lp.nsacleaning.com', origin: 'https://lp.nsacleaning.com' };
+const base = { 'content-type': 'application/json', host: 'lp.nsacleaningllc.com', origin: 'https://lp.nsacleaningllc.com' };
 const call = (body, extra = {}, ip = '1.1.1.1', env = {}) =>
   handleQuote({ method: 'POST', headers: { ...base, ...extra }, ip, bodyText: JSON.stringify(body), env });
 const fresh = () => Date.now() - 5000;
@@ -33,7 +33,7 @@ expect('GET → 405', r.status, 405);
 r = await call({ name: 'x' }, { origin: 'https://evil.example' }, '1.1.1.5');
 expect('cross-origin → 403', r.status, 403);
 
-r = await handleQuote({ method: 'POST', headers: { 'content-type': 'application/x-www-form-urlencoded', host: 'lp.nsacleaning.com' }, ip: '2.2.2.2', bodyText: 'name=Jo&email=x&_ts=' + fresh(), env: {} });
+r = await handleQuote({ method: 'POST', headers: { 'content-type': 'application/x-www-form-urlencoded', host: 'lp.nsacleaningllc.com' }, ip: '2.2.2.2', bodyText: 'name=Jo&email=x&_ts=' + fresh(), env: {} });
 expect('form-encoded invalid → 303 back to contact', r.status, 303);
 expect('redirect location', r.headers.location, '/contact?error=1#quote');
 
@@ -54,11 +54,11 @@ expect('\\r\\n and \\r normalised to \\n', v3.d.message, 'a\nb\nc');
 // Vercel adapter: a pre-parsed urlencoded body (object) must still be treated as a classic form post (303), not JSON
 const fakeRes = () => { const r = { statusCode: 0, headers: {}, body: '', setHeader(k, v) { this.headers[k] = v; }, end(b) { this.body = b || ''; } }; return r; };
 let res = fakeRes();
-await vercelHandler({ method: 'POST', headers: { 'content-type': 'application/x-www-form-urlencoded', host: 'lp.nsacleaning.com' }, socket: {}, body: { name: 'Jo', email: 'x', _ts: String(fresh()) } }, res);
+await vercelHandler({ method: 'POST', headers: { 'content-type': 'application/x-www-form-urlencoded', host: 'lp.nsacleaningllc.com' }, socket: {}, body: { name: 'Jo', email: 'x', _ts: String(fresh()) } }, res);
 expect('vercel pre-parsed form body → 303', res.statusCode, 303);
 expect('vercel pre-parsed form body → redirect location', res.headers.location, '/contact?error=1#quote');
 res = fakeRes();
-await vercelHandler({ method: 'POST', headers: { 'content-type': 'application/json', host: 'lp.nsacleaning.com' }, socket: {}, body: { name: 'Jo', email: 'x', _ts: fresh() } }, res);
+await vercelHandler({ method: 'POST', headers: { 'content-type': 'application/json', host: 'lp.nsacleaningllc.com' }, socket: {}, body: { name: 'Jo', email: 'x', _ts: fresh() } }, res);
 expect('vercel pre-parsed JSON body → 422 JSON', res.statusCode, 422);
 expect('vercel JSON reply content-type', String(res.headers['content-type']).startsWith('application/json'), true);
 
