@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 # Builds the client preview and publishes it to the gh-pages branch.
 #
-#   scripts/deploy-pages.sh                                   # preview at <owner>.github.io/<repo>
-#   CUSTOM_DOMAIN=lp.nsacleaning.com scripts/deploy-pages.sh  # production on the custom domain
+#   scripts/deploy-pages.sh                                      # preview at <owner>.github.io/<repo>
+#   CUSTOM_DOMAIN=lp.nsacleaningllc.com scripts/deploy-pages.sh  # production on the custom domain
 #
 # The preview is built with PREVIEW=1 (noindex on every page, robots.txt disallows all)
 # and BASE_PATH so it works from the /<repo> subpath on github.io.
-# The quote form is NOT connected on Pages: it shows a notice instead of posting.
-# Production (real domain, working form) is the plain `node build.mjs` deployed on Vercel.
+# With CUSTOM_DOMAIN the build is indexable, served from the root, and ships a CNAME file.
+# Production today: Rdavifelix/nsa-cleaning-site → gh-pages → lp.nsacleaningllc.com.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 

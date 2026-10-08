@@ -75,14 +75,26 @@ The site has **no forms at all**: no `<form>`, no iframe, no `/api` endpoint. Th
 - Analytics: `main.js` fires `open_chat_widget` on each quote button click. The conversation itself happens in GoHighLevel and is tracked there.
 - The widget's SMS consent text is mirrored in the Privacy Policy ("Text messages (SMS)") and the Terms, as A2P 10DLC registration requires.
 
+## Production (GitHub Pages, lp.nsacleaningllc.com)
+
+The live site is **https://lp.nsacleaningllc.com**, served by GitHub Pages from the `gh-pages` branch of `Rdavifelix/nsa-cleaning-site`. DNS (Cloudflare): `lp` CNAME → `rdavifelix.github.io`. The apex and `www` belong to a GoHighLevel site, not this repo.
+
+Deploy from a clone whose `origin` is that repo:
+
+```bash
+CUSTOM_DOMAIN=lp.nsacleaningllc.com GIT_NAME="Your Name" GIT_EMAIL="you@example.com" scripts/deploy-pages.sh
+```
+
+This builds without `PREVIEW` (indexable), at the root, writes the `CNAME` file and force-pushes `gh-pages`. GitHub Pages ignores `vercel.json`, so its security headers and CSP do not apply there.
+
 ## Deploy (Vercel)
 
 1. Push this folder to a GitHub repo (`git add -A && git commit -m "NSA Cleaning site" && gh repo create nsa-cleaning-site --private --source . --push`).
 2. In Vercel: *Add New → Project → Import* the repo. Framework preset: **Other**. Build command and output dir are read from `vercel.json`.
 3. Add the environment variables above. Redeploy.
 4. *Settings → Domains*: add `nsacleaningllc.com` (available as of 2026-09-12) and `www.nsacleaningllc.com` (redirect www → apex). Vercel issues the TLS certificate and redirects HTTP → HTTPS automatically; the `Strict-Transport-Security` header in `vercel.json` makes browsers stay on HTTPS.
-5. Set `SITE_URL=https://nsacleaningllc.com` and redeploy so canonical/sitemap URLs match the domain.
-6. Google Search Console: verify the domain, submit `https://nsacleaningllc.com/sitemap.xml`.
+5. Set `SITE_URL=https://lp.nsacleaningllc.com` and redeploy so canonical/sitemap URLs match the domain.
+6. Google Search Console: verify the domain, submit `https://lp.nsacleaningllc.com/sitemap.xml`.
 7. Google Business Profile: use the exact NAP from `site.config.json` (321 25th St, Watervliet, NY 12189 · (518) 902-1180) so it matches the site's LocalBusiness schema.
 
 ### Analytics
