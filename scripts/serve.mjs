@@ -24,7 +24,6 @@ function resolveFile(urlPath) {
   return null;
 }
 http.createServer((req, res) => {
-  if (req.url.startsWith('/api/')) { res.writeHead(501, { 'content-type': 'application/json' }); return res.end(JSON.stringify({ ok: false, error: 'API not available in static preview' })); }
   let file = resolveFile(req.url); let status = 200;
   if (!file) { status = 404; for (const r of roots) { const f = path.join(r, '404.html'); if (fs.existsSync(f)) { file = f; break; } } }
   if (!file) { res.writeHead(404); return res.end('Not found'); }

@@ -17,16 +17,15 @@ loadDotEnv(path.join(ROOT, '.env'));
 const site = JSON.parse(fs.readFileSync(path.join(ROOT, 'site.config.json'), 'utf8'));
 site.siteUrl = (process.env.SITE_URL || site.siteUrl).replace(/\/+$/, '');
 site.gaMeasurementId = process.env.GA_MEASUREMENT_ID ?? site.gaMeasurementId ?? '';
-site.turnstileSiteKey = process.env.TURNSTILE_SITE_KEY ?? site.turnstileSiteKey ?? '';
+// GoHighLevel chat widget: the site's only opt-in. Every "Get a Free Quote" button opens it;
+// until the widget has loaded (or without JavaScript) the same button links to /contact.
+site.ghlChatWidgetId = (process.env.GHL_CHAT_WIDGET_ID ?? site.ghlChatWidgetId ?? '').trim();
+site.quoteHref = '/contact';
 // Gray "photo coming soon" blocks. On by default; set PHOTO_PLACEHOLDERS=0 to hide them before launch.
-// GoHighLevel quote form. When set, every "Get a Free Quote" button opens it in a modal;
-// without JavaScript the same button is a plain link to the hosted form.
-site.ghlFormUrl = (process.env.GHL_FORM_URL ?? site.ghlFormUrl ?? '').trim();
-site.quoteHref = site.ghlFormUrl || '/contact';
 site.photoPlaceholders = process.env.PHOTO_PLACEHOLDERS !== '0';
 // Deploy to a subpath (e.g. GitHub Pages project site): BASE_PATH=/repo-name
 site.basePath = (process.env.BASE_PATH || '').replace(/\/+$/, '');
-// Preview build: noindex everywhere, robots.txt disallows all, quote form shows a notice instead of posting
+// Preview build: noindex everywhere, robots.txt disallows all
 site.preview = process.env.PREVIEW === '1';
 site.year = String(new Date().getFullYear());
 site.buildDate = new Date().toISOString().slice(0, 10);
@@ -278,9 +277,8 @@ function build() {
   fs.writeFileSync(path.join(DIST, 'sitemap.xml'), sitemap);
   fs.writeFileSync(path.join(DIST, 'robots.txt'), site.preview
     ? `# Preview build - not for indexing\nUser-agent: *\nDisallow: /\n`
-    : `User-agent: *\nAllow: /\nDisallow: /api/\n\nSitemap: ${site.siteUrl}/sitemap.xml\n`);
-  if (process.env.TURNSTILE_SECRET_KEY && !site.turnstileSiteKey) console.warn('  ⚠ TURNSTILE_SECRET_KEY is set but TURNSTILE_SITE_KEY is empty: the widget will not render and every submission will fail verification. Set both, then redeploy.');
-  console.log(`\nBuilt ${pages.length} pages → ${path.relative(ROOT, DIST)}/  (siteUrl: ${site.siteUrl}, GA: ${site.gaMeasurementId ? 'on' : 'off'}, Turnstile: ${site.turnstileSiteKey ? 'on' : 'off'})`);
+    : `User-agent: *\nAllow: /\n\nSitemap: ${site.siteUrl}/sitemap.xml\n`);
+  console.log(`\nBuilt ${pages.length} pages → ${path.relative(ROOT, DIST)}/  (siteUrl: ${site.siteUrl}, GA: ${site.gaMeasurementId ? 'on' : 'off'}, chat widget: ${site.ghlChatWidgetId ? 'on' : 'off'})`);
 }
 function loadDotEnv(file) {
   if (!fs.existsSync(file)) return;

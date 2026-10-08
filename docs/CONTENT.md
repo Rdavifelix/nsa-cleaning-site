@@ -70,8 +70,7 @@ No star ratings, review counts, awards, "#1", "top rated", "licensed", "bonded",
 - `/service-area` — "cleaning services Capital Region NY" (city list, map image, 1-hour radius)
 - `/about` — company story, team, standards, languages
 - `/faq` — FAQPage schema
-- `/contact` — quote form + phones + email + address + hours (the ONE conversion page)
-- `/thank-you` — noindex, conversion confirmation
+- `/contact` — chat + phones + email + address + hours (the ONE conversion page)
 - `/privacy-policy`, `/terms-and-conditions` — noindex not needed (index OK), lower priority
 - `/404` — custom not-found page (noindex)
 
@@ -79,10 +78,10 @@ Title format: `{Page topic} in Albany, NY | NSA Cleaning LLC` (≤ 60 chars wher
 
 ## 6. Conversion
 
-> **Update 2026-09-13:** the native form was removed. Every "Get a Free Quote" button now opens the client's **GoHighLevel** form in a modal (`GHL_FORM_URL` / `ghlFormUrl`). The field list below describes the native form, which is kept in the repo as a fallback but is not on any page. The CTA text, the phone secondary action and the sticky mobile bar are unchanged.
-ONE clear primary CTA everywhere: **"Get a Free Quote"** → `/contact#quote` (the home page also embeds the same form in its hero/first section, anchor `#quote`). Secondary CTA: **Call (518) 902-1180** (`tel:+15189021180`). Mobile: sticky bottom bar with Call + Free Quote.
-Form fields (names are fixed — the API validates them): `name`*, `email`*, `phone`*, `service`* (values: recurring, regular, deep, full-deep, move, airbnb, post-construction, commercial, power-washing, carpet, painting, other), `frequency` (one-time, weekly, biweekly, monthly, not-sure), `property_type` (apartment, house, office, clinic, restaurant, other), `address`, `city`, `preferred_date`, `message`, `consent`* (checkbox), hidden: `company_website` (honeypot — visually hidden, `tabindex=-1`, `autocomplete=off`), `_ts`, `_page`. Optional Turnstile widget: `<div class="cf-turnstile" data-sitekey="{{site.turnstileSiteKey}}"></div>` only rendered when `site.turnstileSiteKey` is set (`{{#if site.turnstileSiteKey}}`), with `<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>`.
-Each field needs a `<label>`, and an error slot `<p class="field-error" data-error-for="name" hidden></p>`; the form needs `data-quote-form`, `action="/api/quote"`, `method="post"`, and a `<p class="form-status" data-form-status aria-live="polite"></p>`.
+> **Update 2026-10-08:** the site has no forms. The GoHighLevel modal form and the native form (with `/api/quote`) were removed; the **GoHighLevel chat widget** is the only opt-in. Every "Get a Free Quote" button opens the chat (`data-quote-open`, see README → *Lead capture*).
+
+ONE clear primary CTA everywhere: **"Get a Free Quote"** → opens the chat widget (falls back to `/contact`). Secondary CTA: **Call (518) 902-1180** (`tel:+15189021180`). Mobile: sticky bottom bar with Call + Free Quote; the chat bubble sits above it.
+Copy: say "send us a message" / "the chat", never "the form".
 
 ## 7. Open questions for the client (do not guess — flagged in README)
 1. ~~Which portrait is Ronie and which is Alex~~ — **resolved 2026-09-13**: the studio portrait in the dark suit is **Ronie Bublak**; the portrait in the burgundy shirt in front of a bookshelf is **Alex Bublak**. Both are labelled "Co-owner" on /about. The third portrait (seated outdoors) was removed at the client's request. Confirm their exact job titles if they want something other than "Co-owner".
@@ -90,4 +89,4 @@ Each field needs a `<label>`, and an error slot `<p class="field-error" data-err
 3. Residential service days (Mon–Fri? weekends?). Schema currently assumes Mo–Fr 08:00–17:00.
 4. Domain: nsacleaningllc.com is available (recommended). nsacleaning.com is taken.
 5. "Pink cleaning" / "Delux cleaning and painting" notes were unclear — not used.
-6. Google Analytics 4 measurement ID and (optional) Cloudflare Turnstile keys.
+6. Google Analytics 4 measurement ID.
