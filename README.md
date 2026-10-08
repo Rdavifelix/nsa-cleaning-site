@@ -59,7 +59,7 @@ Copy `.env.example` → `.env` locally; on Vercel set them under *Settings → E
 |---|---|---|
 | `SITE_URL` | build | Public URL (canonical, sitemap, OG). Overrides `site.config.json`. |
 | `GA_MEASUREMENT_ID` | build | GA4 id (`G-XXXXXXX`). Empty = analytics off. |
-| `GHL_CHAT_WIDGET_ID` | build (public) | GoHighLevel chat widget id. Also settable as `ghlChatWidgetId` in `site.config.json` (currently `6ac7dfd40e60a54e32bc5f28`, NSA's sub-account). Empty = no widget, and the quote buttons are plain links to `/contact`. |
+| `GHL_CHAT_WIDGET_ID` | build (public) | GoHighLevel chat widget id. Also settable as `ghlChatWidgetId` in `site.config.json` (currently `6ac7e06f1cb832596cd2237d`, NSA's sub-account). Empty = no widget, and the quote buttons are plain links to `/contact`. |
 | `PHOTO_PLACEHOLDERS` | build | `0` hides the gray "Photo coming soon" blocks. Default (unset) shows them. Set it to `0` in Vercel before launch, once the client sends the missing photos listed in [docs/FOTOS-PEDIR.md](docs/FOTOS-PEDIR.md). |
 
 Nothing secret is ever shipped to the browser: there are no server-side secrets at all. The build only bakes `SITE_URL`, `GA_MEASUREMENT_ID` and the public chat widget id.
