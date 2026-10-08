@@ -149,11 +149,27 @@
     } else if ((chatWait += 250) >= 30000) w.clearInterval(chatPoll);
   }, 250);
 
-  /* ---------- Before / after comparison slider ---------- */
+  /* ---------- Before / after comparison slider ----------
+     Driven by pointer and keyboard on the box itself (role="slider"), with no <input>: the page
+     must not contain any form control next to the chat widget (A2P "multiple opt-ins" check). */
   $$('[data-compare]').forEach(function (box) {
-    var range = box.querySelector('input[type="range"]'), after = box.querySelector('[data-compare-after]');
-    if (!range || !after) return;
-    var update = function () { after.style.width = range.value + '%'; box.style.setProperty('--pos', range.value + '%'); };
-    range.addEventListener('input', update); update();
+    var after = box.querySelector('[data-compare-after]');
+    if (!after) return;
+    var pos = 50, dragging = false;
+    function set(v) {
+      pos = Math.max(0, Math.min(100, v));
+      after.style.width = pos + '%'; box.style.setProperty('--pos', pos + '%');
+      box.setAttribute('aria-valuenow', String(Math.round(pos)));
+    }
+    function fromPointer(e) { var r = box.getBoundingClientRect(); set((e.clientX - r.left) / r.width * 100); }
+    box.addEventListener('pointerdown', function (e) { dragging = true; if (box.setPointerCapture) box.setPointerCapture(e.pointerId); fromPointer(e); });
+    box.addEventListener('pointermove', function (e) { if (dragging) fromPointer(e); });
+    ['pointerup', 'pointercancel'].forEach(function (t) { box.addEventListener(t, function () { dragging = false; }); });
+    box.addEventListener('keydown', function (e) {
+      var step = { ArrowLeft: -5, ArrowDown: -5, ArrowRight: 5, ArrowUp: 5 }[e.key];
+      if (step) set(pos + step); else if (e.key === 'Home') set(0); else if (e.key === 'End') set(100); else return;
+      e.preventDefault();
+    });
+    set(50);
   });
 })();
