@@ -52,6 +52,7 @@
 {{> footer}}
 {{#if site.gaMeasurementId}}{{> cookie-banner}}{{/if}}
   <script src="/main.js" defer></script>
-{{#if site.ghlChatWidgetId}}<script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="{{site.ghlChatWidgetId}}" data-source="WEB_USER"></script>{{/if}}
+{{#if page.ghlForm}}<script src="{{site.ghlFormHost}}/js/form_embed.js"></script>
+{{else}}{{#if site.ghlChatWidgetId}}<script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="{{site.ghlChatWidgetId}}" data-source="WEB_USER"></script>{{/if}}{{/if}}
 </body>
 </html>

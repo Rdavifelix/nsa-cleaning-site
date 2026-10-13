@@ -17,8 +17,9 @@ loadDotEnv(path.join(ROOT, '.env'));
 const site = JSON.parse(fs.readFileSync(path.join(ROOT, 'site.config.json'), 'utf8'));
 site.siteUrl = (process.env.SITE_URL || site.siteUrl).replace(/\/+$/, '');
 site.gaMeasurementId = process.env.GA_MEASUREMENT_ID ?? site.gaMeasurementId ?? '';
-// GoHighLevel chat widget: the site's only opt-in. Every "Get a Free Quote" button opens it;
-// until the widget has loaded (or without JavaScript) the same button links to /contact.
+// GoHighLevel opt-ins, one per page (A2P rejects pages with two): the chat widget everywhere,
+// except pages with "ghlForm": true in their meta (/contact), which embed the GHL form instead.
+// "Get a Free Quote" opens the chat, or scrolls to the form where there is one.
 site.ghlChatWidgetId = (process.env.GHL_CHAT_WIDGET_ID ?? site.ghlChatWidgetId ?? '').trim();
 site.quoteHref = '/contact';
 // Gray "photo coming soon" blocks. On by default; set PHOTO_PLACEHOLDERS=0 to hide them before launch.

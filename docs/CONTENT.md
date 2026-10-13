@@ -4,7 +4,7 @@ All copy on the site must be consistent with this file. When in doubt, do NOT in
 
 ## 1. Business facts (verified with the client)
 - **Legal name:** NSA Cleaning LLC (use exactly this; short form "NSA Cleaning" is fine in prose)
-- **Phones:** (518) 902-1180 — primary, show everywhere · (407) 728-0523 — secondary (contact page/footer only)
+- **Phones:** (516) 440-3731 — primary, show everywhere · (407) 728-0523 — secondary (contact page/footer only)
 - **Email:** Nsacleaningllc@gmail.com
 - **Address:** 321 25th St, Watervliet, NY 12189
 - **Facebook:** https://www.facebook.com/nsacleaning (@nsacleaning). No other social profiles.
@@ -80,7 +80,7 @@ Title format: `{Page topic} in Albany, NY | NSA Cleaning LLC` (≤ 60 chars wher
 
 > **Update 2026-10-08:** the site has no forms. The GoHighLevel modal form and the native form (with `/api/quote`) were removed; the **GoHighLevel chat widget** is the only opt-in. Every "Get a Free Quote" button opens the chat (`data-quote-open`, see README → *Lead capture*).
 
-ONE clear primary CTA everywhere: **"Get a Free Quote"** → opens the chat widget (falls back to `/contact`). Secondary CTA: **Call (518) 902-1180** (`tel:+15189021180`). Mobile: sticky bottom bar with Call + Free Quote; the chat bubble sits above it.
+ONE clear primary CTA everywhere: **"Get a Free Quote"** → opens the chat widget (falls back to `/contact`). Secondary CTA: **Call (516) 440-3731** (`tel:+15164403731`). Mobile: sticky bottom bar with Call + Free Quote; the chat bubble sits above it.
 Copy: say "send us a message" / "the chat", never "the form".
 
 ## 7. Open questions for the client (do not guess — flagged in README)

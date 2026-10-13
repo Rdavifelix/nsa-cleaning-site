@@ -1,7 +1,7 @@
 <!--@meta
 { "title": "Contact & Free Quote in Albany, NY | NSA Cleaning LLC",
-  "description": "Contact NSA Cleaning LLC in Watervliet, NY. Call (518) 902-1180, email us, or request a free quote online. We reply by phone or email, Albany to Lake George.",
-  "priority": 0.9,
+  "description": "Contact NSA Cleaning LLC in Watervliet, NY. Call (516) 440-3731, email us, or request a free quote online. We reply by phone or email, Albany to Lake George.",
+  "priority": 0.9, "ghlForm": true,
   "schema": [ "@business",
     { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lp.nsacleaningllc.com/" },
@@ -9,6 +9,9 @@
     { "@context": "https://schema.org", "@type": "ContactPage", "name": "Contact NSA Cleaning LLC", "url": "https://lp.nsacleaningllc.com/contact", "about": { "@id": "https://lp.nsacleaningllc.com/#business" } } ] }
 -->
 <style>
+.quote-embed{max-width:760px;margin-inline:auto;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow-lg);overflow:hidden}
+.quote-embed iframe{display:block;width:100%;min-height:630px;border:0}
+.quote-embed-note{max-width:760px;margin:14px auto 0;font-size:.875rem;color:var(--muted);text-align:center}
 .contact-list address{font-style:normal}
 .contact-list .why-item a{font-weight:700;text-decoration:none}
 .contact-list .why-item a:hover{text-decoration:underline}
@@ -26,23 +29,57 @@
   <div>
     <p class="eyebrow">Contact · Albany to Lake George</p>
     <h1 id="page-title">Get a Free Cleaning Quote in <em>Albany, NY</em></h1>
-    <p class="lead">Open the chat and tell us the service, the property and roughly when you need it. If you would rather talk first, call or email us. Either way we reply with a clear price, no obligation, supplies and travel included.</p>
+    <p class="lead">Fill in the quote form below and tell us the service, the property and roughly when you need it. If you would rather talk first, call or email us. Either way we reply with a clear price, no obligation, supplies and travel included.</p>
     <div class="hero-cta">
       <a class="btn btn-primary btn-lg" href="{{site.quoteHref}}" data-quote-open data-track="cta_quote_hero">Get a Free Quote</a>
       <a class="btn btn-ghost btn-lg" href="tel:{{site.business.phoneE164}}"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call&nbsp;{{{site.business.phoneHtml}}}</a>
     </div>
     <p class="hero-note"><b>Insured</b> · {{site.business.yearsExperience}}+ years of experience · Supplies included · Travel included · <span lang="es">Hablamos español</span> · <span lang="pt">Falamos português</span></p>
   </div>
-  <div class="page-hero-photo"><img src="/images/nsa-cleaning-branded-company-car-1024.webp" srcset="/images/nsa-cleaning-branded-company-car-480.webp 480w, /images/nsa-cleaning-branded-company-car-800.webp 800w, /images/nsa-cleaning-branded-company-car-1024.webp 1024w" sizes="(min-width: 1240px) 520px, (min-width: 900px) 42vw, calc(100vw - 32px)" width="1024" height="1024" alt="NSA Cleaning LLC branded company SUV with the logo and the phone number (518) 902-1180" fetchpriority="high" decoding="async"></div>
+  <div class="page-hero-photo"><img src="/images/nsa-cleaning-branded-company-car-1024.webp" srcset="/images/nsa-cleaning-branded-company-car-480.webp 480w, /images/nsa-cleaning-branded-company-car-800.webp 800w, /images/nsa-cleaning-branded-company-car-1024.webp 1024w" sizes="(min-width: 1240px) 520px, (min-width: 900px) 42vw, calc(100vw - 32px)" width="1024" height="1024" alt="NSA Cleaning LLC branded company SUV with the company logo" fetchpriority="high" decoding="async"></div>
 </div></section>
+
+<!-- ===== QUOTE FORM (GoHighLevel) =====
+     This page's only opt-in: the layout skips the chat widget on pages with "ghlForm": true,
+     because A2P rejects a page that has both. -->
+<section class="section section-alt" id="quote" aria-labelledby="quote-title">
+  <div class="container">
+    <div class="section-head center">
+      <p class="eyebrow">Free quote</p>
+      <h2 id="quote-title">Request your free quote</h2>
+      <p>Takes about a minute. We reply by phone, text or email during business hours with a clear price, no obligation.</p>
+    </div>
+    <div class="quote-embed">
+      <iframe
+        src="{{site.ghlFormHost}}/widget/form/{{site.ghlFormId}}"
+        style="width:100%;height:630px;border:none;border-radius:10px"
+        id="inline-{{site.ghlFormId}}"
+        data-layout="{'id':'INLINE'}"
+        data-trigger-type="alwaysShow"
+        data-trigger-value=""
+        data-activation-type="alwaysActivated"
+        data-activation-value=""
+        data-deactivation-type="neverDeactivate"
+        data-deactivation-value=""
+        data-form-name="Website Form"
+        data-height="630"
+        data-layout-iframe-id="inline-{{site.ghlFormId}}"
+        data-form-id="{{site.ghlFormId}}"
+        data-cookie-consent="true"
+        data-cookie-consent-provider="auto"
+        title="Free cleaning quote request form"></iframe>
+    </div>
+    <p class="quote-embed-note">Prefer to talk? Call <a href="tel:{{site.business.phoneE164}}">{{{site.business.phoneHtml}}}</a> or email <a href="mailto:{{site.business.email}}">{{site.business.email}}</a>.</p>
+  </div>
+</section>
 
 <!-- ===== CONTACT DETAILS ===== -->
 <section class="section" aria-labelledby="details-title">
   <div class="container">
     <div class="section-head">
       <p class="eyebrow">Contact details</p>
-      <h2 id="details-title">Reach us by chat, phone or email</h2>
-      <p>The <b>Get a Free Quote</b> button opens a chat window on this page. Leave your name, phone and a short note about the service you want, and we reply by text, phone or email. If you would rather talk it through, both lines below reach us directly.</p>
+      <h2 id="details-title">Reach us by quote form, phone or email</h2>
+      <p>The <b>quote form</b> above asks for your name, phone and a short note about the service you want, and we reply by text, phone or email. If you would rather talk it through, both lines below reach us directly.</p>
     </div>
     <ul class="why-list contact-list" aria-labelledby="details-title">
       <li class="why-item"><span class="why-icon"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span><div><h3>Phone</h3><p>Main line: <a href="tel:{{site.business.phoneE164}}">{{{site.business.phoneHtml}}}</a></p><p>Second line: <a href="tel:{{site.business.phone2E164}}">{{{site.business.phone2Html}}}</a></p></div></li>
@@ -78,7 +115,7 @@
       <div class="section-head">
         <p class="eyebrow">Where we work</p>
         <h2 id="area-title">Albany to Lake George, about an hour from Watervliet</h2>
-        <p>These are the cities and towns we drive to from our Watervliet office. If yours is not on the list, send it in the chat or call us and we'll confirm it. Travel is included in the plan either way.</p>
+        <p>These are the cities and towns we drive to from our Watervliet office. If yours is not on the list, send it in the quote form or call us and we'll confirm it. Travel is included in the plan either way.</p>
       </div>
       <ul class="city-chips" aria-label="Cities we serve">
 {{#each site.business.serviceArea}}<li>{{this}}</li>{{/each}}
@@ -96,7 +133,7 @@
 <section class="section cta-band on-dark" aria-labelledby="cta-title">
   <div class="container">
     <h2 id="cta-title">Get a free quote for your home or business</h2>
-    <p>Send us a message or call us. We'll reply with a free quote, no obligation and no travel fees. <span lang="es">Hablamos español</span> · <span lang="pt">Falamos português</span>.</p>
+    <p>Fill in the quote form or call us. We'll reply with a free quote, no obligation and no travel fees. <span lang="es">Hablamos español</span> · <span lang="pt">Falamos português</span>.</p>
     <div class="cta-actions">
       <a class="btn btn-white btn-lg" href="{{site.quoteHref}}" data-quote-open data-track="cta_quote_final">Get a Free Quote</a>
       <a class="btn btn-ghost btn-lg" href="tel:{{site.business.phoneE164}}"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call&nbsp;{{{site.business.phoneHtml}}}</a>

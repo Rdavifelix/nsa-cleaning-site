@@ -91,10 +91,12 @@
   $$('[data-track]').forEach(function (a) { a.addEventListener('click', function () { track(a.getAttribute('data-track'), { link_text: (a.textContent || '').trim().slice(0, 60) }); }); });
 
   /* ---------- Quote buttons → GoHighLevel chat widget ----------
-     The chat widget is the site's only opt-in. Every "Get a Free Quote" button carries
-     data-quote-open and opens it. The widget script loads async, so a click that lands before
+     Every "Get a Free Quote" button carries data-quote-open and opens the chat widget. The widget script loads async, so a click that lands before
      it is ready waits a few seconds for it; if it never shows up the button falls back to its
      href (/contact). Without JavaScript the button is a plain link to /contact. */
+  /* /contact embeds the GoHighLevel form (#quote) and does not load the chat: there the
+     buttons scroll to the form instead. */
+  var quoteForm = d.getElementById('quote');
   function chatApi() {
     var lc = w.leadConnector;
     return lc && lc.chatWidget && typeof lc.chatWidget.openWidget === 'function' ? lc.chatWidget : null;
@@ -119,10 +121,15 @@
     var opener = t && t.closest && t.closest('[data-quote-open]');
     if (!opener || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
     e.preventDefault();
+    if (quoteForm) {
+      track('scroll_quote_form', { link_text: (opener.textContent || '').trim().slice(0, 60) });
+      quoteForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      return;
+    }
     track('open_chat_widget', { link_text: (opener.textContent || '').trim().slice(0, 60) });
     openChat(4000, function () { if (!samePage(opener.href)) w.location.assign(opener.href); });
   });
-  if (/[?&]quote(=|&|$)/.test(location.search) || location.hash === '#quote') {
+  if (!quoteForm && (/[?&]quote(=|&|$)/.test(location.search) || location.hash === '#quote')) {
     w.addEventListener('load', function () { openChat(10000); });
   }
 
