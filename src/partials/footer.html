@@ -10,8 +10,8 @@
       <h2 class="footer-heading">Contact</h2>
       <address>
         <a href="tel:{{site.business.phoneE164}}">{{{site.business.phoneHtml}}}</a><br>
-        <a href="tel:{{site.business.phone2E164}}">{{{site.business.phone2Html}}}</a><br>
-        <a href="mailto:{{site.business.email}}">{{site.business.email}}</a><br>
+{{#if site.business.phone2}}        <a href="tel:{{site.business.phone2E164}}">{{{site.business.phone2Html}}}</a><br>
+{{/if}}        <a href="mailto:{{site.business.email}}">{{site.business.email}}</a><br>
 {{site.business.address.street}}<br>{{site.business.address.city}}, {{site.business.address.region}} {{site.business.address.postal}}
       </address>
       <p>Residential: {{site.business.hoursResidential}}<br>Commercial: {{site.business.hoursCommercial}}</p>

@@ -1,6 +1,6 @@
 <!--@meta
 { "title": "Contact & Free Quote in Albany, NY | NSA Cleaning LLC",
-  "description": "Contact NSA Cleaning LLC in Watervliet, NY. Call (516) 440-3731, email us, or request a free quote online. We reply by phone or email, Albany to Lake George.",
+  "description": "Contact NSA Cleaning LLC in Watervliet, NY. Call (407) 728-0523, email us, or request a free quote online. We reply by phone or email, Albany to Lake George.",
   "priority": 0.9, "ghlForm": true,
   "schema": [ "@business",
     { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
@@ -82,7 +82,7 @@
       <p>The <b>quote form</b> above asks for your name, phone and a short note about the service you want, and we reply by text, phone or email. If you would rather talk it through, both lines below reach us directly.</p>
     </div>
     <ul class="why-list contact-list" aria-labelledby="details-title">
-      <li class="why-item"><span class="why-icon"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span><div><h3>Phone</h3><p>Main line: <a href="tel:{{site.business.phoneE164}}">{{{site.business.phoneHtml}}}</a></p><p>Second line: <a href="tel:{{site.business.phone2E164}}">{{{site.business.phone2Html}}}</a></p></div></li>
+      <li class="why-item"><span class="why-icon"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span><div><h3>Phone</h3><p>{{#if site.business.phone2}}Main line: {{/if}}<a href="tel:{{site.business.phoneE164}}">{{{site.business.phoneHtml}}}</a></p>{{#if site.business.phone2}}<p>Second line: <a href="tel:{{site.business.phone2E164}}">{{{site.business.phone2Html}}}</a></p>{{/if}}</div></li>
       <li class="why-item"><span class="why-icon"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></span><div><h3>Email</h3><p><a href="mailto:{{site.business.email}}">{{site.business.email}}</a></p><p>Photos of the space help us quote faster. Attach a few if you like.</p></div></li>
       <li class="why-item"><span class="why-icon"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span><div><h3>Office</h3><address><p>{{site.business.legalName}}<br>{{site.business.address.street}}<br>{{site.business.address.city}}, {{site.business.address.region}} {{site.business.address.postal}}</p></address><p>We work at your home or business. No need to visit the office.</p></div></li>
       <li class="why-item"><span class="why-icon"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg></span><div><h3>Hours</h3><p>Residential cleaning: {{site.business.hoursResidential}}</p><p>Commercial cleaning: available {{site.business.hoursCommercial}}. Nights and weekends for offices, clinics, restaurants and dealerships.</p></div></li>

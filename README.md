@@ -95,7 +95,7 @@ This builds without `PREVIEW` (indexable), at the root, writes the `CNAME` file 
 4. *Settings → Domains*: add `nsacleaningllc.com` (available as of 2026-09-12) and `www.nsacleaningllc.com` (redirect www → apex). Vercel issues the TLS certificate and redirects HTTP → HTTPS automatically; the `Strict-Transport-Security` header in `vercel.json` makes browsers stay on HTTPS.
 5. Set `SITE_URL=https://lp.nsacleaningllc.com` and redeploy so canonical/sitemap URLs match the domain.
 6. Google Search Console: verify the domain, submit `https://lp.nsacleaningllc.com/sitemap.xml`.
-7. Google Business Profile: use the exact NAP from `site.config.json` (321 25th St, Watervliet, NY 12189 · (516) 440-3731) so it matches the site's LocalBusiness schema.
+7. Google Business Profile: use the exact NAP from `site.config.json` (321 25th St, Watervliet, NY 12189 · (407) 728-0523) so it matches the site's LocalBusiness schema.
 
 ### Analytics
 Create a GA4 property, set `GA_MEASUREMENT_ID`, redeploy. The cookie banner and the footer *Cookie settings* button only render when `GA_MEASUREMENT_ID` is set. GA only loads after the visitor clicks *Accept*; *Decline* keeps the site cookie-free (and, after a previous *Accept*, disables the tag on the current page and expires the `_ga` cookies). Events sent: `click_call`, `click_email`, `cta_quote_*`, `open_chat_widget`.
