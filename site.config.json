@@ -6,6 +6,8 @@
   "defaultOgImage": "/og-image.jpg",
   "locale": "en_US",
   "themeColor": "#0B70E0",
+  "trailingSlash": true,
+  "googleSiteVerification": "",
   "gaMeasurementId": "",
   "ghlChatWidgetId": "6ac7e06f1cb832596cd2237d",
   "ghlFormHost": "https://api.thetrenchops.com",
@@ -75,7 +77,10 @@
       "Lake George"
     ],
     "phoneHtml": "(516)&nbsp;440&#8209;3731",
-    "phone2Html": "(407)&nbsp;728&#8209;0523"
+    "phone2Html": "(407)&nbsp;728&#8209;0523",
+    "county": "Albany County",
+    "googleMapsUrl": "https://maps.google.com/?cid=12610868214912534386",
+    "googleMapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2930.487625399074!2d-73.7029424!3d42.7357344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa1dab3add1f85aad%3A0xaf02cdd383204772!2sNSA%20Cleaning%20LLC!5e0!3m2!1sen!2sus!4v1793029067629!5m2!1sen!2sus"
   },
   "nav": [
     {
@@ -146,6 +151,40 @@
       "label": "FAQ",
       "href": "/faq"
     }
+  ],
+  "services": [
+    { "slug": "residential-cleaning", "label": "Residential cleaning" },
+    { "slug": "recurring-cleaning", "label": "Recurring house cleaning" },
+    { "slug": "deep-cleaning", "label": "Deep cleaning" },
+    { "slug": "move-in-move-out-cleaning", "label": "Move-in and move-out cleaning" },
+    { "slug": "airbnb-cleaning", "label": "Airbnb and rental turnover cleaning" },
+    { "slug": "post-construction-cleaning", "label": "Post-construction cleaning" },
+    { "slug": "commercial-cleaning", "label": "Commercial and office cleaning" },
+    { "slug": "power-washing", "label": "Power washing" },
+    { "slug": "carpet-cleaning", "label": "Carpet and upholstery cleaning" },
+    { "slug": "painting", "label": "Residential and commercial painting" }
+  ],
+  "cityPages": [
+    { "label": "Watervliet", "href": "/house-cleaning-watervliet-ny", "footer": true },
+    { "label": "Troy", "href": "/house-cleaning-troy-ny", "footer": true },
+    { "label": "Cohoes", "href": "/house-cleaning-cohoes-ny" },
+    { "label": "Latham", "href": "/house-cleaning-latham-ny", "footer": true },
+    { "label": "Colonie", "href": "/house-cleaning-colonie-ny" },
+    { "label": "Schenectady", "href": "/house-cleaning-schenectady-ny", "footer": true },
+    { "label": "Rensselaer", "href": "/house-cleaning-rensselaer-ny" },
+    { "label": "East Greenbush", "href": "/house-cleaning-east-greenbush-ny" },
+    { "label": "Delmar", "href": "/house-cleaning-delmar-ny" },
+    { "label": "Guilderland", "href": "/house-cleaning-guilderland-ny" },
+    { "label": "Clifton Park", "href": "/house-cleaning-clifton-park-ny", "footer": true },
+    { "label": "Halfmoon", "href": "/house-cleaning-halfmoon-ny" },
+    { "label": "Mechanicville", "href": "/house-cleaning-mechanicville-ny" },
+    { "label": "Ballston Spa", "href": "/house-cleaning-ballston-spa-ny" },
+    { "label": "Malta", "href": "/house-cleaning-malta-ny" },
+    { "label": "Saratoga Springs", "href": "/house-cleaning-saratoga-springs-ny", "footer": true },
+    { "label": "Wilton", "href": "/house-cleaning-wilton-ny" },
+    { "label": "Glens Falls", "href": "/house-cleaning-glens-falls-ny", "footer": true },
+    { "label": "Queensbury", "href": "/house-cleaning-queensbury-ny", "footer": true },
+    { "label": "Lake George", "href": "/house-cleaning-lake-george-ny" }
   ],
   "footerNav": [
     {

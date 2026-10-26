@@ -8,8 +8,13 @@
     "build": "node build.mjs",
     "dev": "node build.mjs && node scripts/serve.mjs",
     "serve": "node scripts/serve.mjs",
-    "check": "node scripts/check-links.mjs && node scripts/check-copy.mjs src",
-    "lint:copy": "node scripts/check-copy.mjs src"
+    "check": "node scripts/check-links.mjs && node scripts/check-copy.mjs src && node scripts/check-seo.mjs",
+    "lint:copy": "node scripts/check-copy.mjs src",
+    "check:seo": "node scripts/check-seo.mjs",
+    "cities": "python3 scripts/gen_cities.py",
+    "deploy": "bash scripts/deploy.sh",
+    "deploy:dry": "bash scripts/deploy.sh --dry",
+    "indexnow": "node scripts/indexnow.mjs"
   },
   "engines": {
     "node": ">=20"

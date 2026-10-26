@@ -38,7 +38,23 @@
 {{/if}}      </ul>
     </div>
   </div>
-  <div class="container footer-bottom">
+{{#if site.cityPages}}  <div class="container footer-areas">
+    <h2 class="footer-heading">Cleaning services by city</h2>
+    <ul class="footer-area-links">
+      <li><a href="/">Albany</a></li>
+{{#each site.cityPages}}{{#if this.footer}}      <li><a href="{{this.href}}">{{this.label}}</a></li>
+{{/if}}{{/each}}      <li><a href="/service-area">All 21 cities and towns</a></li>
+    </ul>
+  </div>
+{{/if}}{{#if site.business.googleMapsEmbedUrl}}  <div class="container footer-map">
+    <div class="footer-map-text">
+      <h2 class="footer-heading">Find us on Google Maps</h2>
+      <p>{{site.business.address.street}}<br>{{site.business.address.city}}, {{site.business.address.region}} {{site.business.address.postal}}</p>
+      <p><a href="{{site.business.googleMapsUrl}}" rel="noopener" target="_blank">Open our Google listing</a></p>
+    </div>
+    <iframe class="footer-map-frame" src="{{site.business.googleMapsEmbedUrl}}" title="{{site.business.legalName}} on Google Maps, Watervliet, NY" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+{{/if}}  <div class="container footer-bottom">
     <p>© {{site.year}} {{site.business.legalName}}. All rights reserved.</p>
     <p>Serving Albany to Lake George, NY · Based in {{site.business.address.city}}, {{site.business.address.region}}</p>
   </div>

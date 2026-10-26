@@ -28,6 +28,8 @@ site.photoPlaceholders = process.env.PHOTO_PLACEHOLDERS !== '0';
 site.basePath = (process.env.BASE_PATH || '').replace(/\/+$/, '');
 // Preview build: noindex everywhere, robots.txt disallows all
 site.preview = process.env.PREVIEW === '1';
+// Search Console ownership: the meta tag goes in every page's <head> once the token is set.
+site.googleSiteVerification = (process.env.GOOGLE_SITE_VERIFICATION ?? site.googleSiteVerification ?? '').trim();
 site.year = String(new Date().getFullYear());
 site.buildDate = new Date().toISOString().slice(0, 10);
 site.businessSchema = buildBusinessSchema(site);
@@ -188,16 +190,48 @@ function buildBusinessSchema(site) {
       const dayOfWeek = z ? keys.slice(keys.indexOf(a), keys.indexOf(z) + 1).map((k) => map[k]) : [map[a]];
       return { '@type': 'OpeningHoursSpecification', dayOfWeek, opens: open, closes: close };
     }),
-    sameAs: [b.facebook],
+    sameAs: [b.googleMapsUrl, b.facebook].filter(Boolean),
+    ...(b.googleMapsUrl ? { hasMap: b.googleMapsUrl } : {}),
+    // The services, listed. schema.org has no cleaning-company type, so the catalog is how the
+    // markup says which jobs this business takes, each pointing at its own page.
+    ...(Array.isArray(site.services) && site.services.length ? {
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'Cleaning services from Albany to Lake George, NY',
+        itemListElement: site.services.map((svc) => ({
+          '@type': 'Offer',
+          itemOffered: { '@type': 'Service', name: svc.label, url: site.siteUrl + slashUrl('/' + svc.slug) },
+        })),
+      },
+    } : {}),
     contactPoint: [{ '@type': 'ContactPoint', telephone: b.phoneE164, contactType: 'customer service', areaServed: 'US', availableLanguage: b.languages }],
   };
 }
 function expandSchema(schema, site, page) {
   const list = Array.isArray(schema) ? schema : schema ? [schema] : [];
   return list.map((s) => (s === '@business' ? site.businessSchema : s)).map((s) => {
-    const json = JSON.stringify(s).replace(/<\//g, '<\\/');
+    // Pages write {{siteUrl}} in their front matter, so the schema always names the host the
+    // site is built for. Hardcoding the domain is what would break the day the site moves.
+    const json = JSON.stringify(s).replace(/\{\{siteUrl\}\}/g, site.siteUrl).replace(/<\//g, '<\\/');
     return json;
   });
+}
+
+// GitHub Pages serves /about/index.html at /about/ and answers /about with a 301 to it.
+// With site.trailingSlash on, every URL the site states about itself (canonical, sitemap,
+// og:url, schema, internal links) uses the slashed form, so no signal points at a redirect.
+function slashUrl(p) {
+  return site.trailingSlash && p !== '/' && p !== '/404' && !p.endsWith('/') ? p + '/' : p;
+}
+function applyTrailingSlash(html, paths) {
+  if (!site.trailingSlash) return html;
+  const host = site.siteUrl.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  for (const p of paths) {
+    if (p === '/' || p === '/404') continue;
+    const esc = p.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    html = html.replace(new RegExp(`((?:href|content)="|"(?:@id|url|item)":"|")((?:${host})?)${esc}(?=["#?])`, 'g'), `$1$2${p}/`);
+  }
+  return html;
 }
 
 
@@ -236,10 +270,12 @@ function build() {
   });
   const seen = new Set();
   const urls = [];
+  // Longest first, so /house-cleaning-troy-ny is rewritten before a shorter path could match inside it.
+  const allPaths = pages.map((p) => p.meta.path).sort((a, b) => b.length - a.length);
   for (const { meta, body, file } of pages) {
     if (seen.has(meta.path)) throw new Error('Duplicate page path ' + meta.path);
     seen.add(meta.path);
-    const canonical = site.siteUrl + (meta.path === '/' ? '/' : meta.path);
+    const canonical = site.siteUrl + (meta.path === '/' ? '/' : slashUrl(meta.path));
     const page = {
       ...meta,
       canonical,
@@ -255,6 +291,7 @@ function build() {
       // Template tags that render to nothing leave whitespace-only lines; strip trailing spaces.
       // Safe here: the site has no <pre> and no textarea with meaningful content.
       html = html.replace(/[ \t]+$/gm, '');
+      html = applyTrailingSlash(html, allPaths);
       html = applyBase(html, site.basePath);
       { // guard: the client asked for nothing over-rounded (tokens are 2/3/4px)
         const big = [...content.matchAll(/border-radius:\s*(999px|\d{2,}px|50%)/g)].map((m) => m[1]);
@@ -279,7 +316,7 @@ function build() {
   fs.writeFileSync(path.join(DIST, 'robots.txt'), site.preview
     ? `# Preview build - not for indexing\nUser-agent: *\nDisallow: /\n`
     : `User-agent: *\nAllow: /\n\nSitemap: ${site.siteUrl}/sitemap.xml\n`);
-  console.log(`\nBuilt ${pages.length} pages → ${path.relative(ROOT, DIST)}/  (siteUrl: ${site.siteUrl}, GA: ${site.gaMeasurementId ? 'on' : 'off'}, chat widget: ${site.ghlChatWidgetId ? 'on' : 'off'})`);
+  console.log(`\nBuilt ${pages.length} pages → ${path.relative(ROOT, DIST)}/  (siteUrl: ${site.siteUrl}, GA: ${site.gaMeasurementId ? 'on' : 'off'}, chat widget: ${site.ghlChatWidgetId ? 'on' : 'off'}, Search Console tag: ${site.googleSiteVerification ? 'on' : 'off'}, trailing slash: ${site.trailingSlash ? 'on' : 'off'})`);
 }
 function loadDotEnv(file) {
   if (!fs.existsSync(file)) return;
