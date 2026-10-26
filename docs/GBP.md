@@ -6,6 +6,29 @@ Davi's Chrome as `nsacleaningllc0@gmail.com`. See `docs/SEO.md` §3 for why each
 
 ---
 
+## SUSPENDED on 2026-10-26, about an hour after the edits below
+
+Business Profile Manager shows status "Suspenso" and 0% verified; the panel says "Seu acesso foi
+suspenso porque esse perfil não segue as diretrizes". Logged-out Google Maps returns "Google Maps can't
+find NSA Cleaning LLC". The edits did go through before it (the panel shows House cleaning service,
+(516) 440-3731 and the UTM link).
+
+Most likely cause: **the profile showed a residential street address for a business that serves
+customers at their location.** OpenStreetMap tags 321 25th St, Watervliet as a residential building,
+and the Street View thumbnail on the profile is a house. That was already the case before 2026-10-26;
+changing the primary category, the primary phone and the service areas in the same hour very likely
+sent the profile to re-review, which caught it. The real reason is in the appeals tool
+(support.google.com/business/workflow/13569690), step "select the decision"; read it there first.
+
+Rules from Google's help page (answer 4569145): **an appeal can be submitted only once**; do not
+create a new profile for the business; evidence must show the same name and address as the profile
+(business registration, license, tax certificate, utility bill). If the appeal is denied, there is one
+additional review with new evidence.
+
+Do not edit the profile further until the address question below is answered.
+
+---
+
 ## 0. Applied on 2026-10-26
 
 Every edit went to Google's review ("Your edit is pending review. It may take up to one day"). Check the
