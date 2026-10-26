@@ -22,7 +22,7 @@ Every secondary category matches a page on the site (`/commercial-cleaning`, `/c
 
 | Field | Profile today | Site today | Do this |
 |---|---|---|---|
-| Phone | (407) 728-0523 | (516) 440-3731 | **Decide one public number** and use it on the profile, the site and every directory. A 518 area code is the local one; 407 is Florida and 516 is Long Island. |
+| Phone | (407) 728-0523 | (516) 440-3731 | **Decided 2026-10-26: (516) 440-3731**, the number on the site, as the profile's primary phone. (407) 728-0523 can stay as an additional phone. Use 516 in every directory from now on. |
 | Website | `https://lp.nsacleaningllc.com/` | — | Keep it, add tracking: `https://lp.nsacleaningllc.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp` |
 | Hours | Mon–Fri 8–5, Sat–Sun "Open 24 hours" | Residential 8–5, commercial 24/7 | Main hours **Mon–Fri 8 AM–5 PM**. Put the 24/7 commercial availability in *More hours* or in the description, not as "Open 24 hours" on weekends. |
 

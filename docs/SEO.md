@@ -102,9 +102,8 @@ available, and it is on the profile, not the site.
 1. **Primary category on the Google profile: Cleaners → House cleaning service.** Secondary:
    Commercial cleaning service, Janitorial service, Carpet cleaning service, Pressure washing service,
    Painter. Package in `docs/GBP.md`. Needs the profile owner's approval.
-2. **Phone NAP.** The site says (516) 440-3731 (changed on 13/10), the profile says (407) 728-0523,
-   and the original was (518) 902-1180. Google matches the phone on the profile against the site and
-   every directory. Pick one public number and put it everywhere. A 518 number is the local one.
+2. **Phone NAP. Decided 2026-10-26: (516) 440-3731 everywhere**, the number already on the site.
+   The profile still shows (407) 728-0523 until the change is applied (`docs/GBP.md` §2).
 3. **Reviews.** 3 against 16–140 for the eight businesses above. This is the gap that decides the map.
    The root domain currently hosts a 1–5 star funnel; Google's policy forbids routing only happy
    customers to the review form, and the penalty can remove existing reviews.
