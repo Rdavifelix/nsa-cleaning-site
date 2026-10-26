@@ -111,9 +111,14 @@ available, and it is on the profile, not the site.
    indexable. The site belongs there, with the funnel on a subdomain. Needs DNS access (Cloudflare,
    or GHL if the domain was bought through it). After the move: `siteUrl` in the config, a 301 from
    `lp.` and a change of address in Search Console, as was done for New Horizon.
-5. **Search Console** for `lp.nsacleaningllc.com`: verify with the meta tag after the next deploy,
-   submit the sitemap, request indexing (about 10 URLs a day). Priority order: home, troy, schenectady,
-   saratoga-springs, clifton-park, latham, glens-falls, queensbury, watervliet, colonie, then the rest.
-   Then add the property to Bing Webmaster Tools by importing from Search Console.
+5. **Search Console: done 2026-10-26.** Property `https://lp.nsacleaningllc.com/` verified by meta tag
+   (`googleSiteVerification` in the config; do not remove it) in the client's own account,
+   `nsacleaningllc0@gmail.com`. Sitemap submitted: Success, 39 URLs. Indexing requested on 26/10 for 11 URLs:
+   home (already indexed; recrawl for the new H1), troy, schenectady, saratoga-springs, clifton-park, latham,
+   glens-falls, queensbury, watervliet, colonie, ballston-spa. The daily quota ran out at mechanicville.
+   **Queue for the next days (~10/day):** mechanicville, lake-george, cohoes, rensselaer, east-greenbush,
+   delmar, guilderland, halfmoon, malta, wilton. All of them are already in the sitemap, so Google may
+   index them before they are requested. Bing Webmaster Tools (import from Search Console) not done:
+   it needs an OAuth grant; IndexNow already told Bing about the 39 URLs.
 6. **Deploy access.** Production is `Rdavifelix/nsa-cleaning-site`; the `kauankamil-rgb` account has
    read access only. Either Davi grants write access or runs `npm run deploy` himself.
