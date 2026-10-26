@@ -37,7 +37,13 @@ verified phone for it looks like a hijack or a lead-gen listing. The public resi
 second problem. A third one sits in the same policy section: the 1–5 star funnel on
 `nsacleaningllc.com` sends only happy customers to Google ("selectively solicit positive reviews").
 
-Do not edit the profile further until the phone, the address and the funnel are decided.
+**Phone reverted 2026-10-26, ~18:16 BRT** (user's call): the profile is back to exactly what it had
+before, a single phone, **(407) 728-0523**, no additional number. That is the number the profile was
+verified with and the one its SMS chat already uses (`sms:+14077280523`), so it is Ronie's own line.
+The site still shows (516) 440-3731 as primary; before the appeal, site, profile and Facebook should
+show the same number.
+
+Do not edit the profile further until the address and the funnel are decided.
 
 ---
 
@@ -50,7 +56,7 @@ public profile on 2026-10-27; if an edit was rejected, the profile manager shows
 |---|---|---|
 | Primary category | Cleaners | **House cleaning service** |
 | Additional categories | — | Janitorial service · Carpet cleaning service · Pressure washing service · Painter and Decorator. "Commercial cleaning service", "Office cleaning service" and plain "Painter" do not exist in Google's list; Janitorial service is the commercial one. |
-| Primary phone | (407) 728-0523 | **(516) 440-3731**, the site's number; (407) 728-0523 kept as additional phone |
+| Primary phone | (407) 728-0523 | (516) 440-3731 with 407 as additional; **reverted the same day to (407) 728-0523 alone** after the suspension (see above) |
 | Website | `https://lp.nsacleaningllc.com/` | `https://lp.nsacleaningllc.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp` |
 | Service areas | 20, including **Watervliet, MI** (wrong state) and no Watervliet, NY or Delmar | The 20 in §4: Watervliet, MI and Wilton removed; Watervliet, NY and Delmar added (Google lists Delmar as "Bethlehem, NY") |
 | Hours | Mon–Fri 8–5, Sat–Sun "Open 24 hours" | **Not changed.** Commercial 24/7 is verified (CONTENT.md §1), but whether residential runs on weekends is an open question (CONTENT.md §7.3). Ask Ronie before touching it. |
