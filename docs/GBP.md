@@ -1,10 +1,73 @@
 # NSA Cleaning LLC — Google Business Profile package
 
-Everything below is ready to paste. Nothing here has been applied: changing a client's public listing
-needs the owner's go-ahead. Profile CID `12610868214912534386`, owner account in Davi's Chrome as
-`nsacleaningllc0@gmail.com`. See `docs/SEO.md` §3 for why each change matters.
+The package below was approved on 2026-10-26 and applied the same day (§0 is the record of what is on
+the profile now; §1–§7 are the original package). Profile CID `12610868214912534386`, owner account in
+Davi's Chrome as `nsacleaningllc0@gmail.com`. See `docs/SEO.md` §3 for why each change matters.
 
 ---
+
+## 0. Applied on 2026-10-26
+
+Every edit went to Google's review ("Your edit is pending review. It may take up to one day"). Check the
+public profile on 2026-10-27; if an edit was rejected, the profile manager shows it as "Not approved".
+
+| Field | Before | Now |
+|---|---|---|
+| Primary category | Cleaners | **House cleaning service** |
+| Additional categories | — | Janitorial service · Carpet cleaning service · Pressure washing service · Painter and Decorator. "Commercial cleaning service", "Office cleaning service" and plain "Painter" do not exist in Google's list; Janitorial service is the commercial one. |
+| Primary phone | (407) 728-0523 | **(516) 440-3731**, the site's number; (407) 728-0523 kept as additional phone |
+| Website | `https://lp.nsacleaningllc.com/` | `https://lp.nsacleaningllc.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp` |
+| Service areas | 20, including **Watervliet, MI** (wrong state) and no Watervliet, NY or Delmar | The 20 in §4: Watervliet, MI and Wilton removed; Watervliet, NY and Delmar added (Google lists Delmar as "Bethlehem, NY") |
+| Hours | Mon–Fri 8–5, Sat–Sun "Open 24 hours" | **Not changed.** Commercial 24/7 is verified (CONTENT.md §1), but whether residential runs on weekends is an open question (CONTENT.md §7.3). Ask Ronie before touching it. |
+| Description | see below | see below (742 of 750 characters) |
+
+Description before:
+
+> NSA Cleaning LLC is a cleaning company in Watervliet, New York, serving homes and businesses from Albany to Lake George. In business since 2016, with more than 12 years of hands-on cleaning experience. Most of our week is recurring residential cleaning, weekly, bi-weekly or monthly. We also do deep cleaning, move-in and move-out cleaning, Airbnb turnovers, post-construction cleanup, deck and siding power washing, carpet cleaning and painting. For businesses we clean offices, medical clinics, hospitals, restaurants, dealerships, gyms and common areas, around your hours. Our team is insured, uniformed and trained to NSA standards. We bring all the supplies, travel is included, and we speak English, Portuguese and Spanish.
+
+Description now (the §3 text merged with the facts the old one had; "dealerships" dropped to fit 750):
+
+> NSA Cleaning LLC is a house cleaning and commercial cleaning company based in Watervliet, NY, serving Albany, Troy, Schenectady, Clifton Park, Saratoga Springs, Glens Falls, Lake George and every town within about an hour. Most of our week is recurring house cleaning, weekly, bi-weekly or monthly. We also do deep cleaning, move-in and move-out cleaning, Airbnb turnovers and post-construction cleanup. For businesses we clean offices, medical clinics, hospitals, restaurants, gyms and common areas, available 24/7. We also offer power washing, carpet cleaning and painting. Our team is insured and trained to NSA standards, we bring all the supplies, and travel is included. In business since 2016. We speak English, Spanish and Portuguese.
+
+**Services** (Google's preset names where one fits, custom names otherwise; only what the site offers):
+
+| Category | Services |
+|---|---|
+| House cleaning service | Deep clean · Moving-related cleaning · Office and workplace cleaning · Standard cleaning · Upholstery cleaning (these five were already there) · Recurring house cleaning · Airbnb and rental turnover cleaning · Post-construction cleaning |
+| Janitorial service | Office cleaning · Medical institution cleaning · Fitness centre & gym cleaning · Multi-tenant cleaning · Restaurant cleaning · Car dealership cleaning |
+| Carpet cleaning service | General carpet cleaning · Area rug cleaning · Pet stain and odour removal · Upholstery cleaning · Carpet shampoo and extraction · Stair carpet cleaning |
+| Pressure washing service | Power/pressure washing · Deck power washing · Siding power washing · Dock and patio power washing |
+| Painter and Decorator | Interior painting |
+
+Left out on purpose: exterior painting (the painting page offers it only "if it is a fit"), gutter, roof,
+window and soft-wash cleaning, steam cleaning (the site says shampoo and extraction), mattress, leather
+and drapes, school, stadium, lab and cinema cleaning.
+
+**Posts** (no phone number in any of them; "Learn more" button with `utm_campaign=gbp-post`; real NSA
+job photos pulled from the live site; scheduled ones go out at 11:00):
+
+| Date | Topic | Photo | Link |
+|---|---|---|---|
+| 2026-10-26 | Recurring plans, $160 / $195 | white kitchen, quartz island | `/recurring-cleaning/` |
+| 2026-11-02 | Move-out cleaning, Troy and Schenectady | bedroom, hardwood floor | `/move-in-move-out-cleaning/` |
+| 2026-11-09 | Commercial, 24/7 | bathroom, hex tile | `/commercial-cleaning/` |
+| 2026-11-16 | Carpet and upholstery before the holidays | living room, sectional and rug | `/carpet-cleaning/` |
+| 2026-11-23 | Rental turnovers, Saratoga Springs and Lake George | guest bedroom, towel animals | `/house-cleaning-saratoga-springs-ny/` |
+| 2026-11-30 | Deep cleaning | bathtub after deep clean | `/deep-cleaning/` |
+| 2027-04-12 | Spring power washing, decks and docks | lakeside cabin deck | `/power-washing/` |
+
+The §6 "spring power washing" post was moved to April and replaced in November by the carpet post:
+power washing in a Capital Region November is out of season. From December on, one new post a week.
+
+**Found while doing this (not changed):**
+
+- A Facebook page, "NSA cleaning Corp | Watervliet NY", ranks on page 1 for the brand and shows a
+  **third phone number, (518) 902-1180**, and the name "Corp". Same email as the profile. It needs the
+  516 number and the LLC name, or it splits the NAP the profile now carries.
+- A Yelp listing "NSA CLEANING – Ballston Spa" also ranks for the brand. Not checked whether it is
+  Ronie's.
+- The profile shows a "Book online" button; its target was not checked.
+- 3 reviews still have no reply.
 
 ## 1. Categories (the biggest single lever)
 

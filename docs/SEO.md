@@ -99,11 +99,13 @@ available, and it is on the profile, not the site.
 
 ## 6. Open, in order of impact
 
-1. **Primary category on the Google profile: Cleaners → House cleaning service.** Secondary:
-   Commercial cleaning service, Janitorial service, Carpet cleaning service, Pressure washing service,
-   Painter. Package in `docs/GBP.md`. Needs the profile owner's approval.
-2. **Phone NAP. Decided 2026-10-26: (516) 440-3731 everywhere**, the number already on the site.
-   The profile still shows (407) 728-0523 until the change is applied (`docs/GBP.md` §2).
+1. **Google profile: applied 2026-10-26** (record in `docs/GBP.md` §0): House cleaning service as
+   primary category plus four secondary, phone, UTM, description, 26 services, service areas fixed
+   (one of them was Watervliet, **MI**), 7 posts (1 live, 6 scheduled to 2027-04-12). All pending
+   Google's review on that date. Hours not changed until Ronie confirms weekend residential work.
+2. **Phone NAP. Decided 2026-10-26: (516) 440-3731 everywhere**, the number already on the site and
+   now the profile's primary phone. Still wrong elsewhere: the "NSA cleaning Corp" Facebook page shows
+   (518) 902-1180.
 3. **Reviews.** 3 against 16–140 for the eight businesses above. This is the gap that decides the map.
    The root domain currently hosts a 1–5 star funnel; Google's policy forbids routing only happy
    customers to the review form, and the penalty can remove existing reviews.
@@ -120,5 +122,5 @@ available, and it is on the profile, not the site.
    delmar, guilderland, halfmoon, malta, wilton. All of them are already in the sitemap, so Google may
    index them before they are requested. Bing Webmaster Tools (import from Search Console) not done:
    it needs an OAuth grant; IndexNow already told Bing about the 39 URLs.
-6. **Deploy access.** Production is `Rdavifelix/nsa-cleaning-site`; the `kauankamil-rgb` account has
-   read access only. Either Davi grants write access or runs `npm run deploy` himself.
+6. **Deploy access: solved 2026-10-26.** Production is `Rdavifelix/nsa-cleaning-site`; `kauankamil-rgb`
+   has write access since that day, so `npm run deploy` works from here.
