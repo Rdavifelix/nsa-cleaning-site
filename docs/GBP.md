@@ -40,8 +40,9 @@ second problem. A third one sits in the same policy section: the 1–5 star funn
 **Phone reverted 2026-10-26, ~18:16 BRT** (user's call): the profile is back to exactly what it had
 before, a single phone, **(407) 728-0523**, no additional number. That is the number the profile was
 verified with and the one its SMS chat already uses (`sms:+14077280523`), so it is Ronie's own line.
-The site still shows (516) 440-3731 as primary; before the appeal, site, profile and Facebook should
-show the same number.
+The site followed the same day (commit 75aca3f, live and checked): (407) 728-0523 is now its only
+number, on all 40 pages and in the schema, and 516 appears nowhere. Facebook still shows
+(518) 902-1180.
 
 Do not edit the profile further until the address and the funnel are decided.
 
