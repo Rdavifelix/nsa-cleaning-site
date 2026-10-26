@@ -25,7 +25,19 @@ create a new profile for the business; evidence must show the same name and addr
 (business registration, license, tax certificate, utility bill). If the appeal is denied, there is one
 additional review with new evidence.
 
-Do not edit the profile further until the address question below is answered.
+**Appeals tool, read 2026-10-26:** decision "Perfil da Empresa suspenso", reason **"Conteúdo enganoso"**
+(misleading content), appealable, nothing submitted yet.
+
+The phone change is the strongest trigger. The profile had been verified with (407) 728-0523; the edit
+made **(516) 440-3731** primary. That number came onto the site on 2026-10-13 (commit 3544acb, Davi,
+together with the GoHighLevel form and A2P), replacing the local (518) 902-1180 that Facebook still
+shows. If 516 is a GoHighLevel number, it is not "under the direct control of the business" and it
+routes calls through a third party, which is what Google's phone rule forbids; a manager swapping the
+verified phone for it looks like a hijack or a lead-gen listing. The public residential address is the
+second problem. A third one sits in the same policy section: the 1–5 star funnel on
+`nsacleaningllc.com` sends only happy customers to Google ("selectively solicit positive reviews").
+
+Do not edit the profile further until the phone, the address and the funnel are decided.
 
 ---
 
