@@ -123,8 +123,11 @@ available, and it is on the profile, not the site.
    now been requested. Before the request, 6 were "Discovered - currently not indexed" and 4 (cohoes,
    east-greenbush, delmar, guilderland) "URL is unknown to Google". Sitemap resubmitted the same day
    (it had been read that morning: Success, 39 URLs). Home, troy and schenectady inspected as
-   "URL is on Google". The Pages report was still "Processing data". Next: re-inspect in about a week
-   and re-request only the pages still not indexed. Bing Webmaster Tools (import from Search Console) not done:
+   "URL is on Google". The Pages report was still "Processing data".
+   **Inspection of all 39 URLs the same day: 29 indexed** (home, all 11 service pages, all 7
+   institutional pages, and the 10 city pages requested on 2026-10-26). The 10 pending are exactly the
+   city pages requested on 2026-10-28. Next: re-inspect those 10 in about a week and re-request only
+   the ones still not indexed. Bing Webmaster Tools (import from Search Console) not done:
    it needs an OAuth grant; IndexNow already told Bing about the 39 URLs.
 6. **Deploy access: solved 2026-10-26.** Production is `Rdavifelix/nsa-cleaning-site`; `kauankamil-rgb`
    has write access since that day, so `npm run deploy` works from here.
