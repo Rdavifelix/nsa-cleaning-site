@@ -118,9 +118,13 @@ available, and it is on the profile, not the site.
    `nsacleaningllc0@gmail.com`. Sitemap submitted: Success, 39 URLs. Indexing requested on 26/10 for 11 URLs:
    home (already indexed; recrawl for the new H1), troy, schenectady, saratoga-springs, clifton-park, latham,
    glens-falls, queensbury, watervliet, colonie, ballston-spa. The daily quota ran out at mechanicville.
-   **Queue for the next days (~10/day):** mechanicville, lake-george, cohoes, rensselaer, east-greenbush,
-   delmar, guilderland, halfmoon, malta, wilton. All of them are already in the sitemap, so Google may
-   index them before they are requested. Bing Webmaster Tools (import from Search Console) not done:
+   **2026-10-28:** indexing requested for the other 10 (mechanicville, lake-george, cohoes, rensselaer,
+   east-greenbush, delmar, guilderland, halfmoon, malta, wilton); all 20 city pages plus the home have
+   now been requested. Before the request, 6 were "Discovered - currently not indexed" and 4 (cohoes,
+   east-greenbush, delmar, guilderland) "URL is unknown to Google". Sitemap resubmitted the same day
+   (it had been read that morning: Success, 39 URLs). Home, troy and schenectady inspected as
+   "URL is on Google". The Pages report was still "Processing data". Next: re-inspect in about a week
+   and re-request only the pages still not indexed. Bing Webmaster Tools (import from Search Console) not done:
    it needs an OAuth grant; IndexNow already told Bing about the 39 URLs.
 6. **Deploy access: solved 2026-10-26.** Production is `Rdavifelix/nsa-cleaning-site`; `kauankamil-rgb`
    has write access since that day, so `npm run deploy` works from here.
