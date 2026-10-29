@@ -125,9 +125,11 @@ available, and it is on the profile, not the site.
    (it had been read that morning: Success, 39 URLs). Home, troy and schenectady inspected as
    "URL is on Google". The Pages report was still "Processing data".
    **Inspection of all 39 URLs the same day: 29 indexed** (home, all 11 service pages, all 7
-   institutional pages, and the 10 city pages requested on 2026-10-26). The 10 pending are exactly the
-   city pages requested on 2026-10-28. Next: re-inspect those 10 in about a week and re-request only
-   the ones still not indexed. Bing Webmaster Tools (import from Search Console) not done:
+   institutional pages, and the 10 city pages requested on 2026-10-26). The 10 pending were exactly the
+   city pages requested on 2026-10-28.
+   **2026-10-29: all 39 indexed.** The 10 requested the day before were all "URL is on Google".
+   From here, request indexing only for a page whose content changes, and watch Performance for
+   impressions by city query. Bing Webmaster Tools (import from Search Console) not done:
    it needs an OAuth grant; IndexNow already told Bing about the 39 URLs.
 6. **Deploy access: solved 2026-10-26.** Production is `Rdavifelix/nsa-cleaning-site`; `kauankamil-rgb`
    has write access since that day, so `npm run deploy` works from here.
