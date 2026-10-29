@@ -98,10 +98,9 @@ contain these phrases).
 **"near me" share, measured 2026-10-29** (Trends, 12 months; the root term already contains its "near
 me" searches): cleaning services 50 vs near me 8 in NY state (10 of 51 in the US), so 16–20%; house
 cleaning 23 vs 3 (13–14%); cleaning company 47 vs 6 (13–14%); commercial cleaning 38 vs 3 (8–11%).
-Most people type the term without "near me", which is why the geogrid tracks the roots. Optional test:
-add "cleaning services near me" (the largest "near me" form) to grid A for the first month and drop it
-if its heatmap matches the root's. In the SERP Tracker, "near me" goes without a city, with the
-location set to Albany; never write "near me" into the site's copy.
+Most people type the term without "near me", which is why the geogrid tracks the roots. **Decided
+2026-10-29: no "near me" keywords** in the geogrid or the SERP Tracker; the tracker only measures, it
+does not change the ranking. Never write "near me" into the site's copy.
 
 About 2,000 credits a month for the three grids. "near me" forms are not tracked separately: the geogrid
 already simulates the searcher's location, and in this DMA they are too rare for Trends to measure
