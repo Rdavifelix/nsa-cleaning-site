@@ -51,17 +51,24 @@ forms.
 **Local Dominator geogrid (Google Maps), no city in the keyword**: the grid point supplies the location.
 9x9 circular grid (64 points), 1.5 mi spacing, centered on the profile pin in Watervliet, weekly.
 
-| # | Keyword | Why |
-|---|---|---|
-| 1 | house cleaning service | Exact name of the primary category; the head term |
-| 2 | house cleaning near me | The most typed form (100–1K/mo in the DMA) |
-| 3 | maid service | 100–1K "near me"; a different pack (franchises like The Maids, Molly Maid) |
-| 4 | cleaning service | 100–1K; broad, the pack mixes residential and commercial |
-| 5 | deep cleaning service | Highest-intent residential job |
-| 6 | commercial cleaning service | Second service |
-| 7 | office cleaning service | The commercial query with the clearest buyer |
+Ranked by volume (revised 2026-10-29 with Google Trends, Albany-Schenectady-Troy DMA, last 12
+months; relative interest, "cleaning services" = 49 on Trends' 0–100 scale):
 
-About 1,800 credits a month (7 × 64 × 4). The profile was reinstated on 2026-10-29, so the grid can
+| # | Keyword | Trends | Keyword Planner | Note |
+|---|---|---|---|---|
+| 1 | cleaning services | 49 | 100–1K | The biggest root by far. Rising inside it: "commercial cleaning services near me", "professional cleaning services near me" |
+| 2 | house cleaning | 14 | 100–1K | Inside it: "professional house cleaning service" |
+| 3 | home cleaning | 12 | 10–100 | Top query inside it: "home cleaning near me" |
+| 4 | cleaning company | 9 | 10–100 | |
+| 5 | commercial cleaning | 2 | 10–100 | Low volume, highest value per job |
+| 6 | office cleaning | 2 | 10–100 | |
+
+About 1,500 credits a month (6 × 64 × 4). "near me" forms are not tracked separately: the geogrid
+already simulates the searcher's location, and in this DMA they are too rare for Trends to measure
+(0–2). Measured and dropped: maid service 0, house cleaning service 0, deep cleaning 0, residential
+cleaning 0, airbnb cleaning 0, house cleaners 1, move out cleaning 1, cleaning lady 2. "maid" (50) and
+"cleaners" (72 rescaled) are polluted by the film *The Housemaid* and by dry cleaners. Carpet cleaning
+(15) has more volume than house cleaning but is outside the two chosen services. The profile was reinstated on 2026-10-29, so the grid can
 run now; the first scan is the baseline.
 
 **Local Dominator SERP Tracker (organic), with "ny" in the keyword** ("albany" alone pulls Albany GA,
@@ -69,10 +76,10 @@ OR and WA in autocomplete). These measure the site, so they work now.
 
 | Keyword | Page that should rank |
 |---|---|
-| house cleaning albany ny | `/` |
 | cleaning services albany ny | `/` (100–1K, the biggest city query) |
-| maid service albany ny | `/` |
-| house cleaning schenectady ny | `/house-cleaning-schenectady-ny/` (cleaning services schenectady: 100–1K) |
+| house cleaning albany ny | `/` |
+| home cleaning albany ny | `/` |
+| cleaning services schenectady ny | `/house-cleaning-schenectady-ny/` (100–1K) |
 | house cleaning troy ny | `/house-cleaning-troy-ny/` |
 | house cleaning saratoga springs ny | `/house-cleaning-saratoga-springs-ny/` |
 | house cleaning clifton park ny | `/house-cleaning-clifton-park-ny/` |
