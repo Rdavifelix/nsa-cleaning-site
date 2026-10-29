@@ -54,14 +54,22 @@ forms.
 Ranked by volume (revised 2026-10-29 with Google Trends, Albany-Schenectady-Troy DMA, last 12
 months; relative interest, "cleaning services" = 49 on Trends' 0–100 scale):
 
-| # | Keyword | Trends | Keyword Planner | Note |
-|---|---|---|---|---|
-| 1 | cleaning services | 49 | 100–1K | The biggest root by far. Rising inside it: "commercial cleaning services near me", "professional cleaning services near me" |
-| 2 | house cleaning | 14 | 100–1K | Inside it: "professional house cleaning service" |
-| 3 | home cleaning | 12 | 10–100 | Top query inside it: "home cleaning near me" |
-| 4 | cleaning company | 9 | 10–100 | |
-| 5 | commercial cleaning | 2 | 10–100 | Low volume, highest value per job |
-| 6 | office cleaning | 2 | 10–100 | |
+| # | Keyword | Trends, NY state | Trends, Albany DMA (weeks at zero) | Keyword Planner, DMA | Note |
+|---|---|---|---|---|---|
+| 1 | cleaning services | 50 | 48 (13%) | 100–1K | The biggest root, about twice the next ones in both geographies. Rising inside it: "commercial cleaning services near me", "professional cleaning services near me" |
+| 2 | house cleaning | 23 | 17 (53%) | 100–1K | Tied with 3 and 4 at state level |
+| 3 | home cleaning | 22 | 10 (68%) | 10–100 | Top query inside it: "home cleaning near me" |
+| 4 | cleaning company | 21 | 8 (74%) | 10–100 | |
+| 5 | commercial cleaning | 17 | 3 (87%) | 10–100 | Close to house cleaning at state level; the DMA figure is low because most weeks are below Trends' threshold |
+| 6 | office cleaning | 13 | 2 (91%) | 10–100 | |
+
+**How sure this is:** the Albany DMA is too small for Trends: most weeks are zero for everything but
+"cleaning services", so the DMA averages only rank #1 reliably. The NY-state run (no zero weeks for
+any of these) gives stable proportions and is the one to trust for #2–#6, assuming Albany searches
+like the rest of the state. Neither source gives absolute monthly numbers; for those, use Keyword
+Planner in an Ads account with spend, or a paid volume API (DataForSEO). State level also confirms the
+drops: maid service 3, house cleaning services 5, house cleaning near me 3 (the broad roots already
+contain these phrases).
 
 About 1,500 credits a month (6 × 64 × 4). "near me" forms are not tracked separately: the geogrid
 already simulates the searcher's location, and in this DMA they are too rare for Trends to measure
