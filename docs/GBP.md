@@ -16,6 +16,43 @@ Rules after a reinstatement: no edits to name, address, phone, categories or web
 days, and then one at a time, days apart. Replies to reviews and the posts already scheduled are fine.
 No new posts needed before December: the queue runs weekly to 30 Nov.
 
+## Posts: 3 a week (Mon, Wed, Fri at 11:00), set up 2026-10-29
+
+Real NSA photos from the live site, "Learn more" to the matching page with `utm_campaign=gbp-post`,
+no phone numbers, only verified facts (distances from `scripts/gen_cities.py`, prices and policies
+from CONTENT.md). Scheduled through 2026-12-04; the next batch goes in monthly, with Ronie's new photos.
+
+| Date | Topic | Link |
+|---|---|---|
+| Fri 30 Oct | Weekend house cleaning (Sat and Sun) | `/recurring-cleaning/` |
+| Mon 2 Nov | Move-out cleaning, Troy and Schenectady | `/move-in-move-out-cleaning/` |
+| Wed 4 Nov | Owners Ronie and Alex, since 2016 | `/about/` |
+| Fri 6 Nov | House cleaning in Troy, 4 minutes away | `/house-cleaning-troy-ny/` |
+| Mon 9 Nov | Commercial cleaning, 24/7 | `/commercial-cleaning/` |
+| Wed 11 Nov | Interior painting with masking | `/painting/` |
+| Fri 13 Nov | House cleaning in Schenectady | `/house-cleaning-schenectady-ny/` |
+| Mon 16 Nov | Carpet and upholstery before the holidays | `/carpet-cleaning/` |
+| Wed 18 Nov | Deep clean before Thanksgiving | `/deep-cleaning/` |
+| Fri 20 Nov | English, Spanish, Portuguese | `/about/` |
+| Mon 23 Nov | Rental turnovers, Saratoga Springs and Lake George | `/house-cleaning-saratoga-springs-ny/` |
+| Wed 25 Nov | House cleaning in Clifton Park and Halfmoon | `/house-cleaning-clifton-park-ny/` |
+| Fri 27 Nov | After the holiday guests leave | `/recurring-cleaning/` |
+| Mon 30 Nov | Deep cleaning | `/deep-cleaning/` |
+| Wed 2 Dec | What every cleaning includes | `/pricing/` |
+| Fri 4 Dec | House cleaning in Glens Falls and Queensbury | `/house-cleaning-glens-falls-ny/` |
+| Mon 12 Apr 2027 | Spring power washing | `/power-washing/` |
+
+## Review replies, 2026-10-29
+
+All 3 reviews (Christa Hyland, Douglas Gomes, Julio CR Paulla, all 5 stars, about two weeks old)
+answered as the business, signed "The NSA Cleaning team": thanks by name, tied to what each one wrote,
+with the service in natural words ("recurring house cleaning", "local cleaning company", "keeping your
+home clean"). No links, phone numbers, discounts or invented cities.
+
+Found the same day: a **Yelp listing "NSA CLEANING – Ballston Spa"** with (518) 902-1180 and a 1.0
+rating from 1 review. Same phone as the Facebook page, so most likely Ronie's; it needs to be claimed
+and corrected to NSA Cleaning LLC, (407) 728-0523, Watervliet.
+
 ## SUSPENDED on 2026-10-26, about an hour after the edits below
 
 Business Profile Manager shows status "Suspenso" and 0% verified; the panel says "Seu acesso foi
