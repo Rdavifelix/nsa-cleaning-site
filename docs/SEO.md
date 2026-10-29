@@ -61,8 +61,8 @@ forms.
 | 6 | commercial cleaning service | Second service |
 | 7 | office cleaning service | The commercial query with the clearest buyer |
 
-About 1,800 credits a month (7 × 64 × 4). **While the profile is suspended the grid can only show
-"not found"**: set the campaign up, but schedule it weekly only after reinstatement.
+About 1,800 credits a month (7 × 64 × 4). The profile was reinstated on 2026-10-29, so the grid can
+run now; the first scan is the baseline.
 
 **Local Dominator SERP Tracker (organic), with "ny" in the keyword** ("albany" alone pulls Albany GA,
 OR and WA in autocomplete). These measure the site, so they work now.

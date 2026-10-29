@@ -6,6 +6,16 @@ Davi's Chrome as `nsacleaningllc0@gmail.com`. See `docs/SEO.md` §3 for why each
 
 ---
 
+## Back on 2026-10-29
+
+Business Profile Manager: "Verified", 100%. Logged-out Google Maps shows the listing again with
+primary category **House cleaning service**, phone +1 407-728-0523, the site link and the 2026-10-26
+post. All 6 scheduled posts survived (2, 9, 16, 23, 30 Nov and 12 Apr). The address is still public.
+
+Rules after a reinstatement: no edits to name, address, phone, categories or website for at least 30
+days, and then one at a time, days apart. Replies to reviews and the posts already scheduled are fine.
+No new posts needed before December: the queue runs weekly to 30 Nov.
+
 ## SUSPENDED on 2026-10-26, about an hour after the edits below
 
 Business Profile Manager shows status "Suspenso" and 0% verified; the panel says "Seu acesso foi
