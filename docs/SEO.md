@@ -43,6 +43,46 @@ clinics and hospitals are the work Ronie prefers (CONTENT.md §1).
 
 Autocomplete also surfaced competitor brand searches: "pink cleaning", "acts cleaning", "maid spotless".
 
+### Keywords to track (decided 2026-10-29)
+
+Focus: **house cleaning**, then **commercial cleaning**. Two different tools, two different keyword
+forms.
+
+**Local Dominator geogrid (Google Maps), no city in the keyword**: the grid point supplies the location.
+9x9 circular grid (64 points), 1.5 mi spacing, centered on the profile pin in Watervliet, weekly.
+
+| # | Keyword | Why |
+|---|---|---|
+| 1 | house cleaning service | Exact name of the primary category; the head term |
+| 2 | house cleaning near me | The most typed form (100–1K/mo in the DMA) |
+| 3 | maid service | 100–1K "near me"; a different pack (franchises like The Maids, Molly Maid) |
+| 4 | cleaning service | 100–1K; broad, the pack mixes residential and commercial |
+| 5 | deep cleaning service | Highest-intent residential job |
+| 6 | commercial cleaning service | Second service |
+| 7 | office cleaning service | The commercial query with the clearest buyer |
+
+About 1,800 credits a month (7 × 64 × 4). **While the profile is suspended the grid can only show
+"not found"**: set the campaign up, but schedule it weekly only after reinstatement.
+
+**Local Dominator SERP Tracker (organic), with "ny" in the keyword** ("albany" alone pulls Albany GA,
+OR and WA in autocomplete). These measure the site, so they work now.
+
+| Keyword | Page that should rank |
+|---|---|
+| house cleaning albany ny | `/` |
+| cleaning services albany ny | `/` (100–1K, the biggest city query) |
+| maid service albany ny | `/` |
+| house cleaning schenectady ny | `/house-cleaning-schenectady-ny/` (cleaning services schenectady: 100–1K) |
+| house cleaning troy ny | `/house-cleaning-troy-ny/` |
+| house cleaning saratoga springs ny | `/house-cleaning-saratoga-springs-ny/` |
+| house cleaning clifton park ny | `/house-cleaning-clifton-park-ny/` |
+| house cleaning latham ny | `/house-cleaning-latham-ny/` |
+| commercial cleaning albany ny | `/commercial-cleaning/` |
+| office cleaning albany ny | `/commercial-cleaning/` |
+
+Not tracked on purpose: carpet cleaning (1K–10K but national chains, not the focus), "house washing"
+(that is exterior power washing), anything with "jobs" (job seekers).
+
 ## 3. Competition (Google Maps, "house cleaning service Albany NY")
 
 | Business | Primary category | Rating | Reviews |
