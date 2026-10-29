@@ -48,11 +48,35 @@ Autocomplete also surfaced competitor brand searches: "pink cleaning", "acts cle
 Focus: **house cleaning**, then **commercial cleaning**. Two different tools, two different keyword
 forms.
 
-**Local Dominator geogrid (Google Maps), no city in the keyword**: the grid point supplies the location.
-9x9 circular grid (64 points), 1.5 mi spacing, centered on the profile pin in Watervliet, weekly.
+**The whole service area, in three zones.** The volume research covers it: the Albany-Schenectady-Troy
+DMA includes Saratoga and Warren counties (Saratoga Springs, Glens Falls, Queensbury, Lake George), plus
+counties Ronie does not serve (Columbia, Greene, Fulton, Montgomery, Schoharie, Washington, Hamilton,
+Berkshire MA, Bennington VT), so DMA volumes overstate his market but the proportions hold. Trends has
+too little data to split it by city; the city split comes from Keyword Planner (§2) and population.
+Road miles from the profile pin, from `scripts/gen_cities.py`:
 
-Ranked by volume (revised 2026-10-29 with Google Trends, Albany-Schenectady-Troy DMA, last 12
-months; relative interest, "cleaning services" = 49 on Trends' 0–100 scale):
+| Zone | Cities (road miles) | People | City queries with volume (Keyword Planner) |
+|---|---|---|---|
+| 1. Capital Region core | Watervliet, Troy 1, Latham 3, Cohoes 3, Albany ~7, Rensselaer 8, Colonie 9, Halfmoon 9, East Greenbush 11, Clifton Park 12, Delmar 13, Schenectady 14, Guilderland 14 | about 500,000 | cleaning services albany, cleaning services schenectady (100–1K); house cleaning albany, troy, schenectady, clifton park, latham; cleaning services troy, clifton park (10–100) |
+| 2. Saratoga | Mechanicville 15, Malta 20, Ballston Spa 24, Saratoga Springs 28, Wilton 37 | about 75,000 | house cleaning saratoga springs, ballston spa, mechanicville; cleaning services saratoga springs (10–100); malta and wilton 0–10 |
+| 3. North | Glens Falls 46, Queensbury 50, Lake George 54 | about 45,000 | house cleaning glens falls, queensbury, lake george; cleaning services glens falls (10–100) |
+
+**Local Dominator geogrid (Google Maps), no city in the keyword**: the grid point supplies the location.
+The grid can be dragged to a new center and single points switched off (water, forest).
+
+| Grid | Center | Size | Frequency | Credits/month (6 keywords) |
+|---|---|---|---|---|
+| A. Core | Profile pin, Watervliet | 9x9 circle (64 points), 3.5 mi spacing, about 14 mi radius | weekly | 1,536 |
+| B. Saratoga | Saratoga Springs | 7x7 circle (39 points), 3 mi spacing | monthly | 234 |
+| C. North | Queensbury | 7x7 circle (39 points), 3 mi spacing | monthly | 234 |
+
+Expect B and C to show little at first: Maps weighs the distance to the pin heavily, and Saratoga is
+28 miles from it, Lake George 54. Those zones are won first in organic, by the city pages, and by
+reviews from customers there. Do not add addresses there to fix it: an address where nobody receives
+customers is the kind of thing that got the profile suspended.
+
+Keywords ranked by volume (revised 2026-10-29 with Google Trends, last 12 months, relative interest
+on Trends' 0–100 scale):
 
 | # | Keyword | Trends, NY state | Trends, Albany DMA (weeks at zero) | Keyword Planner, DMA | Note |
 |---|---|---|---|---|---|
@@ -71,7 +95,7 @@ Planner in an Ads account with spend, or a paid volume API (DataForSEO). State l
 drops: maid service 3, house cleaning services 5, house cleaning near me 3 (the broad roots already
 contain these phrases).
 
-About 1,500 credits a month (6 × 64 × 4). "near me" forms are not tracked separately: the geogrid
+About 2,000 credits a month for the three grids. "near me" forms are not tracked separately: the geogrid
 already simulates the searcher's location, and in this DMA they are too rare for Trends to measure
 (0–2). Measured and dropped: maid service 0, house cleaning service 0, deep cleaning 0, residential
 cleaning 0, airbnb cleaning 0, house cleaners 1, move out cleaning 1, cleaning lady 2. "maid" (50) and
@@ -82,18 +106,29 @@ run now; the first scan is the baseline.
 **Local Dominator SERP Tracker (organic), with "ny" in the keyword** ("albany" alone pulls Albany GA,
 OR and WA in autocomplete). These measure the site, so they work now.
 
-| Keyword | Page that should rank |
-|---|---|
-| cleaning services albany ny | `/` (100–1K, the biggest city query) |
-| house cleaning albany ny | `/` |
-| home cleaning albany ny | `/` |
-| cleaning services schenectady ny | `/house-cleaning-schenectady-ny/` (100–1K) |
-| house cleaning troy ny | `/house-cleaning-troy-ny/` |
-| house cleaning saratoga springs ny | `/house-cleaning-saratoga-springs-ny/` |
-| house cleaning clifton park ny | `/house-cleaning-clifton-park-ny/` |
-| house cleaning latham ny | `/house-cleaning-latham-ny/` |
-| commercial cleaning albany ny | `/commercial-cleaning/` |
-| office cleaning albany ny | `/commercial-cleaning/` |
+| Zone | Keyword | Page that should rank |
+|---|---|---|
+| 1 | cleaning services albany ny | `/` (100–1K, the biggest city query) |
+| 1 | house cleaning albany ny | `/` |
+| 1 | home cleaning albany ny | `/` |
+| 1 | commercial cleaning albany ny | `/commercial-cleaning/` |
+| 1 | office cleaning albany ny | `/commercial-cleaning/` |
+| 1 | cleaning services schenectady ny | `/house-cleaning-schenectady-ny/` (100–1K) |
+| 1 | house cleaning schenectady ny | `/house-cleaning-schenectady-ny/` |
+| 1 | house cleaning troy ny | `/house-cleaning-troy-ny/` |
+| 1 | house cleaning clifton park ny | `/house-cleaning-clifton-park-ny/` |
+| 1 | house cleaning latham ny | `/house-cleaning-latham-ny/` |
+| 2 | cleaning services saratoga springs ny | `/house-cleaning-saratoga-springs-ny/` |
+| 2 | house cleaning saratoga springs ny | `/house-cleaning-saratoga-springs-ny/` |
+| 2 | house cleaning ballston spa ny | `/house-cleaning-ballston-spa-ny/` |
+| 3 | cleaning services glens falls ny | `/house-cleaning-glens-falls-ny/` |
+| 3 | house cleaning glens falls ny | `/house-cleaning-glens-falls-ny/` |
+| 3 | house cleaning queensbury ny | `/house-cleaning-queensbury-ny/` |
+| 3 | house cleaning lake george ny | `/house-cleaning-lake-george-ny/` |
+
+17 keywords, about 270 credits a month weekly. The other towns (Cohoes, Colonie, Rensselaer, East
+Greenbush, Delmar, Guilderland, Halfmoon, Mechanicville, Malta, Wilton, Watervliet) have too little
+city-named volume to track one by one; Search Console shows their impressions.
 
 Not tracked on purpose: carpet cleaning (1K–10K but national chains, not the focus), "house washing"
 (that is exterior power washing), anything with "jobs" (job seekers).
