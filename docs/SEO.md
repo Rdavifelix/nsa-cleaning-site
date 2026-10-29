@@ -186,6 +186,21 @@ available, and it is on the profile, not the site.
   parity, JSON-LD, FAQ parity, map on city pages); `scripts/deploy.sh` (refuses to publish a preview
   build to the live domain); `scripts/indexnow.mjs` with the key in `public/`.
 
+### On-page pass and speed (2026-10-29)
+
+- Home: "house cleaning" was absent from the body and "cleaning company" from the page; now an H2
+  ("House cleaning in Albany: weekly, bi-weekly and monthly plans"), the plans text, the recurring tile
+  ("home cleaning") and the about text ("a local cleaning company") carry them.
+- Commercial page: title "Commercial & Office Cleaning, Albany NY", description with "commercial
+  cleaning, office cleaning and janitorial services", H2 "Office cleaning and janitorial services for
+  every kind of facility" ("Janitorial service" is a profile category; the page never said it).
+- Home and commercial page re-submitted in Search Console the same day.
+- Speed: PageSpeed Insights mobile on the live home: performance 82, accessibility 100, best practices
+  100, SEO 100; FCP 2.3 s, LCP 4.3 s, TBT 0, CLS 0. Lighthouse run from the Mac swings between 70 and
+  100 on every page (Troy too), so use PageSpeed Insights for numbers. The hero preload now carries
+  `media="(min-width: 900px)"`. Remaining gains: cache headers (GitHub Pages sets 10 minutes; needs
+  Cloudflare in front of `lp.`) and loading the GoHighLevel chat after the first interaction.
+
 ## 5. Decisions taken, and reversible
 
 | Decision | Why | To undo |
