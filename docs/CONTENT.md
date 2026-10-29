@@ -86,7 +86,7 @@ Copy: say "send us a message" / "the chat", never "the form".
 ## 7. Open questions for the client (do not guess — flagged in README)
 1. ~~Which portrait is Ronie and which is Alex~~ — **resolved 2026-09-13**: the studio portrait in the dark suit is **Ronie Bublak**; the portrait in the burgundy shirt in front of a bookshelf is **Alex Bublak**. Both are labelled "Co-owner" on /about. The third portrait (seated outdoors) was removed at the client's request. Confirm their exact job titles if they want something other than "Co-owner".
 2. Referral offer exact terms ("50% for referral" — 50% off next cleaning? for whom?).
-3. Residential service days (Mon–Fri? weekends?). Schema currently assumes Mo–Fr 08:00–17:00.
+3. Residential service days: **answered 2026-10-29: residential cleaning also runs Saturday and Sunday.** Still open: are weekend hours the same 8:00 AM – 5:00 PM? Until confirmed, the schema keeps Mo–Fr 08:00–17:00 and the Google profile keeps its hours (profile edits wait until 2026-11-29).
 4. Domain: nsacleaningllc.com is available (recommended). nsacleaning.com is taken.
 5. "Pink cleaning" / "Delux cleaning and painting" notes were unclear — not used.
 6. Google Analytics 4 measurement ID.
