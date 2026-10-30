@@ -7,14 +7,13 @@
 Precisa do segno (pip install segno). Saida em docs/review-kit/. Nada disso entra no site:
 e material para imprimir e mandar por mensagem.
 
-Dois destinos, os dois permitidos pelo Google:
+Dois destinos:
 
-  google.*  aponta direto para a caixa de avaliacao do Google. Um passo a menos, converte mais.
-  site.*    aponta para /leave-a-review, a pagina que oferece as duas opcoes lado a lado
-            (avaliacao publica no Google ou retorno privado ao Ronie), sem perguntar a nota.
-
-Ao contrario da New Horizon, aqui nao existe seletor de estrelas: o perfil foi suspenso em
-26/10/2026 e o Google proibe filtrar quem chega ao formulario de avaliacao pela nota.
+  google.*  aponta direto para a caixa de avaliacao do Google. E o caminho que o Google
+            permite sem ressalva, e o que mais converte, porque tem um passo a menos.
+  site.*    aponta para /leave-a-review, a pagina com o seletor de estrelas: 5 vai para o
+            Google, 1 a 4 para um recado privado ao Ronie. Esse filtro e proibido pelo Google
+            (decisao registrada em docs/GBP.md, 30/10/2026); o perfil ja foi suspenso uma vez.
 """
 import json, pathlib, re, sys, subprocess
 import segno
@@ -26,7 +25,7 @@ b = cfg['business']
 
 ALVOS = {
     'google': (b['googleReviewUrl'], 'direto na caixa de avaliacao do Google'),
-    'site':   (cfg['siteUrl'] + '/leave-a-review/', 'na pagina do site, com as duas opcoes'),
+    'site':   (cfg['siteUrl'] + '/leave-a-review/', 'na pagina do site, com o seletor de estrelas'),
 }
 
 CARTAO = """<!doctype html>

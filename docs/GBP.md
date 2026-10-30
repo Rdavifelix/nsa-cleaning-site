@@ -25,10 +25,20 @@ review form for NSA Cleaning LLC directly. The Place ID is derived from the prof
 first.
 
 **Review page and printed kit (2026-10-30):** `https://lp.nsacleaningllc.com/leave-a-review/`, a bare
-landing page (no nav, no chat, noindex, out of the sitemap) with two routes side by side for every
-customer: "Write a Google review" and "Tell Ronie directly" (call, text or email). Same format as New
-Horizon's page, without its star filter. `scripts/review-kit.py` writes the QR codes and a 3.5 x 2 in
-card for the Google link and for the page to `docs/review-kit/` (card PDFs included).
+landing page (no nav, no chat, noindex, out of the sitemap) that asks for a star rating first:
+**5 opens the Google review form, 1 to 4 open a private note** to Ronie. The note has no backend: it
+opens the customer's own email app, addressed to the owners, with the rating and the message filled in.
+
+**This is review gating, chosen knowingly.** Google's policy forbids discouraging negative reviews or
+selectively soliciting positive ones, and the penalty can include unpublishing existing reviews; the
+profile had been suspended on 2026-10-26 for "misleading content" and reinstated on 2026-10-29. The
+risk was explained on 2026-10-30 with a lower-risk alternative (every rating sees both routes) and the
+user chose the filter. The compliant version (both routes for everyone, no rating question) is commit
+d47921e if the decision is reversed. A version where the private form discarded the note was declined:
+the customer would be told the note went to Ronie when it did not.
+
+`scripts/review-kit.py` writes the QR codes and a 3.5 x 2 in card for the Google link and for the page
+to `docs/review-kit/` (card PDFs included). The Google QR skips the filter entirely.
 
 ## Posts: 3 a week (Mon, Wed, Fri at 11:00), set up 2026-10-29
 

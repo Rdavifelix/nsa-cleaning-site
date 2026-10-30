@@ -156,6 +156,37 @@
     } else if ((chatWait += 250) >= 30000) w.clearInterval(chatPoll);
   }, 250);
 
+  /* ---------- /leave-a-review: star picker and private note ----------
+     5 is a plain link to the Google review form. 1-4 open the private note in place (without
+     JavaScript they reach it through ?r=N#private and :target). The note has no backend: it
+     opens the customer's email app addressed to the owners, so nothing is sent from the site. */
+  var picker = $('[data-rating-picker]'), panel = $('#private');
+  if (picker && panel) {
+    var field = panel.querySelector('[data-rating-field]'), echo = panel.querySelector('[data-rating-echo]');
+    var open = function (n) {
+      field.value = n + ' of 5';
+      echo.textContent = 'You picked ' + n + ' of 5.'; echo.hidden = false;
+      $$('[data-rating]', picker).forEach(function (a) { a.setAttribute('aria-current', a.getAttribute('data-rating') === String(n) ? 'true' : 'false'); });
+      panel.classList.add('is-open');
+      panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      var h = panel.querySelector('h2'); if (h) h.focus({ preventScroll: true });
+    };
+    $$('[data-rating]', picker).forEach(function (a) {
+      a.addEventListener('click', function (e) { e.preventDefault(); open(a.getAttribute('data-rating')); });
+    });
+    var r = /[?&]r=([1-4])\b/.exec(w.location.search); if (r) open(r[1]);
+    var form = panel.querySelector('[data-feedback-form]');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var v = function (n) { return (form.elements[n].value || '').trim(); };
+      var subject = 'Feedback from the review page (' + (field.value || 'no rating') + ')';
+      var body = 'Rating: ' + (field.value || '-') + '\nName: ' + v('name') + '\nContact: ' + v('contact') + '\n\n' + v('message');
+      w.location.href = 'mailto:' + form.getAttribute('data-to') + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+      var note = form.querySelector('[data-feedback-note]');
+      if (note) note.textContent = 'Your email app should now be open with the note ready. Press send there and it goes to the owners.';
+    });
+  }
+
   /* ---------- Before / after comparison slider ----------
      Driven by pointer and keyboard on the box itself (role="slider"), with no <input>: the page
      must not contain any form control next to the chat widget (A2P "multiple opt-ins" check). */

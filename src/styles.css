@@ -385,16 +385,28 @@ html,body{overflow-x:clip}
 .lp-foot{padding:26px var(--gutter);border-top:1px solid var(--line);background:var(--bg-2);text-align:center;font-size:.8125rem;color:var(--muted)}
 .lp-foot p{margin:0 0 4px}.lp-foot a{color:var(--muted)}
 @media(max-width:899px){body.page-bare{padding-bottom:0}}
-/* /leave-a-review: Google button first and centered; the private route below, open to everyone */
+/* /leave-a-review: star picker up top; 5 opens Google, 1-4 open the private note below */
 .review-hero .container,.review-private .container{max-width:46rem;text-align:center}
 .review-hero{padding-block:clamp(28px,4vw,48px)}
 .review-hero .container{display:block}
 .review-hero h1{font-size:var(--step-3);margin-bottom:12px}
-.review-hero .eyebrow{justify-content:center}
 .review-hero .lead{margin-inline:auto}
-.review-cta{display:inline-flex;margin-top:22px}
-.review-note{margin:14px 0 0;font-size:.875rem;color:var(--muted)}
+.rating-picker{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;max-width:40rem;margin:24px auto 0;padding:0;list-style:none}
+.rating-picker a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:96px;padding:12px 4px;border:1px solid var(--line-2);border-radius:var(--r);background:#fff;color:var(--muted);text-decoration:none;transition:border-color .12s,background-color .12s,color .12s}
+.rating-picker a:hover,.rating-picker a:focus-visible,.rating-picker a[aria-current="true"]{border-color:var(--blue);background:var(--tint);color:var(--blue-dark)}
+.rating-picker .icon{width:17px;height:17px;fill:currentColor;stroke:none}
+.rating-stars{display:flex;gap:1px;justify-content:center;flex-wrap:nowrap;color:#F5B301}
+.rating-num{font-size:1.125rem;font-weight:800;color:var(--navy)}
+.review-private{display:none}
+.review-private:target,.review-private.is-open{display:block}
 .review-private h2{font-size:1.375rem;margin:0 0 10px}
-.review-private p{margin:0 auto 20px;color:var(--ink-2);max-width:52ch}
-.review-private .review-note{margin-top:16px;color:var(--muted)}
-.review-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.review-private p{margin:0 auto 16px;color:var(--ink-2);max-width:52ch}
+.review-rated{font-weight:700;color:var(--navy)}
+.feedback-form{display:grid;gap:14px;max-width:32rem;margin:8px auto 0;text-align:left}
+.feedback-form label{display:grid;gap:6px;font-weight:600;color:var(--navy);font-size:.9375rem}
+.feedback-form input,.feedback-form textarea{width:100%;padding:12px 14px;border:1px solid var(--line-2);border-radius:var(--r);font:inherit;font-weight:400;color:var(--ink);background:#fff}
+.feedback-form input:focus,.feedback-form textarea:focus{outline:2px solid var(--blue);outline-offset:1px;border-color:var(--blue)}
+.feedback-form .btn{justify-self:start}
+.review-note{margin:14px 0 0;font-size:.875rem;color:var(--muted)}
+.feedback-form .review-note{margin:0}
+@media(max-width:639px){.rating-picker{gap:5px}.rating-picker a{min-height:84px;padding:10px 2px}.rating-picker .icon{width:10px;height:10px}}

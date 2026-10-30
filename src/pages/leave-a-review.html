@@ -1,29 +1,40 @@
 <!--@meta
 { "title": "Leave a Review | NSA Cleaning LLC",
-  "description": "Tell us how your cleaning went at NSA Cleaning LLC. Post a public review on Google at any rating, or send the owners private feedback instead.",
+  "description": "Tell us how your cleaning went at NSA Cleaning LLC. Pick how many stars the cleaning deserves and we will take it from there, in a minute or less.",
   "noindex": true,
   "bare": true,
   "bodyClass": "page-bare"
 }
 -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="i-rating-star" viewBox="0 0 24 24"><path d="M12 2.6l2.85 6.05 6.65.8-4.9 4.55 1.28 6.6L12 17.3l-5.88 3.3 1.28-6.6-4.9-4.55 6.65-.8z"/></symbol></svg>
 <section class="page-hero review-hero">
   <div class="container">
     <p class="eyebrow">Your feedback</p>
     <h1 id="page-title">How did your cleaning go?</h1>
-    <p class="lead">A short review on Google takes a minute and helps other families from Albany to Lake George choose a cleaning company.</p>
-    <a class="btn btn-primary btn-lg review-cta" href="{{site.business.googleReviewUrl}}" rel="noopener" target="_blank" data-track="cta_write_google_review">Write a Google review<svg class="icon" aria-hidden="true"><use href="#i-arrow-ne"/></svg></a>
-    <p class="review-note">Any star rating, in your own words. Opens Google in a new tab; you will need to be signed in to a Google account.</p>
+    <p class="lead">Tap how many stars your cleaning deserves. It takes a minute or less.</p>
+    <ul class="rating-picker" data-rating-picker aria-label="Rate your cleaning from 1 to 5">
+      <li><a href="?r=1#private" data-rating="1" aria-label="1 of 5"><span class="rating-stars" aria-hidden="true"><svg class="icon"><use href="#i-rating-star"/></svg></span><span class="rating-num">1</span></a></li>
+      <li><a href="?r=2#private" data-rating="2" aria-label="2 of 5"><span class="rating-stars" aria-hidden="true"><svg class="icon"><use href="#i-rating-star"/></svg><svg class="icon"><use href="#i-rating-star"/></svg></span><span class="rating-num">2</span></a></li>
+      <li><a href="?r=3#private" data-rating="3" aria-label="3 of 5"><span class="rating-stars" aria-hidden="true"><svg class="icon"><use href="#i-rating-star"/></svg><svg class="icon"><use href="#i-rating-star"/></svg><svg class="icon"><use href="#i-rating-star"/></svg></span><span class="rating-num">3</span></a></li>
+      <li><a href="?r=4#private" data-rating="4" aria-label="4 of 5"><span class="rating-stars" aria-hidden="true"><svg class="icon"><use href="#i-rating-star"/></svg><svg class="icon"><use href="#i-rating-star"/></svg><svg class="icon"><use href="#i-rating-star"/></svg><svg class="icon"><use href="#i-rating-star"/></svg></span><span class="rating-num">4</span></a></li>
+      <li><a href="{{site.business.googleReviewUrl}}" rel="noopener" target="_blank" data-track="cta_write_google_review" aria-label="5 of 5, opens Google"><span class="rating-stars" aria-hidden="true"><svg class="icon"><use href="#i-rating-star"/></svg><svg class="icon"><use href="#i-rating-star"/></svg><svg class="icon"><use href="#i-rating-star"/></svg><svg class="icon"><use href="#i-rating-star"/></svg><svg class="icon"><use href="#i-rating-star"/></svg></span><span class="rating-num">5</span></a></li>
+    </ul>
   </div>
 </section>
 
-<section class="section review-private" aria-labelledby="private-title">
+<section class="section review-private" id="private" aria-labelledby="private-title">
   <div class="container">
-    <h2 id="private-title">Rather tell {{site.business.ownerFirstName}} directly?</h2>
-    <p>If something went wrong, or you want it put right before you say anything publicly, call, text or email us. It goes to the owners and nowhere else, and you are still free to post a public review whenever you want.</p>
-    <div class="review-actions">
-      <a class="btn btn-ghost btn-lg" href="tel:{{site.business.phoneE164}}" data-track="cta_private_feedback_call"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call or text {{{site.business.phoneHtml}}}</a>
-      <a class="btn btn-ghost btn-lg" href="mailto:{{site.business.email}}?subject=Feedback%20about%20my%20cleaning" data-track="cta_private_feedback_email"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>Email us</a>
-    </div>
-    <p class="review-note">English, Spanish or Portuguese. <span lang="es">Hablamos español</span> · <span lang="pt">Falamos português</span>.</p>
+    <h2 id="private-title" tabindex="-1">Tell {{site.business.ownerFirstName}} what went wrong</h2>
+    <p>Thank you for telling us. {{site.business.ownerFirstName}} reads every note and will get back to you to make it right.</p>
+    <p class="review-rated" data-rating-echo hidden></p>
+    <form class="feedback-form" data-feedback-form data-to="{{site.business.email}}" action="mailto:{{site.business.email}}?subject=Feedback%20from%20the%20review%20page" method="post" enctype="text/plain">
+      <input type="hidden" name="rating" value="" data-rating-field>
+      <label>Your name<input type="text" name="name" autocomplete="name" required></label>
+      <label>Email or phone, so we can reply<input type="text" name="contact" autocomplete="email" required></label>
+      <label>What happened?<textarea name="message" rows="5" required></textarea></label>
+      <button class="btn btn-primary btn-lg" type="submit" data-track="cta_private_feedback_send">Send to {{site.business.ownerFirstName}}</button>
+      <p class="review-note" data-feedback-note>Opens your email app with your note ready; press send there.</p>
+    </form>
+    <p class="review-note">Rather talk? Call or text <a href="tel:{{site.business.phoneE164}}" data-track="cta_private_feedback_call">{{{site.business.phoneHtml}}}</a>. English, Spanish or Portuguese.</p>
   </div>
 </section>
