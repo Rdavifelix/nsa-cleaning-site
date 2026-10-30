@@ -377,3 +377,20 @@ html,body{overflow-x:clip}
   .price-note .prices{width:100%;justify-content:center;gap:32px}
   .price-note .prices>div{text-align:center}
 }
+
+/* Bare landing pages (front matter "bare": true): brand + phone bar, one-line footer */
+.lp-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:16px var(--gutter);border-bottom:1px solid var(--line);background:#fff}
+.lp-phone{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-weight:700;color:var(--navy);text-decoration:none;white-space:nowrap}
+.lp-phone:hover{color:var(--blue)}
+.lp-foot{padding:26px var(--gutter);border-top:1px solid var(--line);background:var(--bg-2);text-align:center;font-size:.8125rem;color:var(--muted)}
+.lp-foot p{margin:0 0 4px}.lp-foot a{color:var(--muted)}
+@media(max-width:899px){body.page-bare{padding-bottom:0}}
+/* /leave-a-review: both routes side by side, open to everyone */
+.review-paths{display:grid;gap:8px}
+.review-path{display:flex;flex-direction:column;padding:26px 0 24px;border-top:1px solid var(--line)}
+.review-path h2{font-size:1.375rem;margin:0 0 8px}
+.review-path p{margin:0 0 18px;color:var(--ink-2);max-width:52ch}
+.review-path .btn{align-self:flex-start}
+.review-path .btn+.btn{margin-top:10px}
+.review-note{margin:14px 0 0;font-size:.875rem;color:var(--muted)}
+@media(min-width:900px){.review-paths{grid-template-columns:1fr 1fr;gap:8px 56px}}

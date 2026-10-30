@@ -1,0 +1,36 @@
+<!--@meta
+{ "title": "Leave a Review | NSA Cleaning LLC",
+  "description": "Tell us how your cleaning went at NSA Cleaning LLC. Post a public review on Google at any rating, or send the owners private feedback instead.",
+  "noindex": true,
+  "bare": true,
+  "bodyClass": "page-bare"
+}
+-->
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Your feedback</p>
+    <h1 id="page-title">How did your cleaning go?</h1>
+    <p class="lead">Either way you tell us, it helps. Post it publicly on Google, or send it straight to {{site.business.ownerFirstName}} if you would rather we fix something first. Both options are open to everyone, whatever your rating.</p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="paths-title">
+  <div class="container">
+    <h2 id="paths-title" class="visually-hidden">Two ways to leave feedback</h2>
+    <div class="review-paths">
+      <div class="review-path">
+        <h2>Post a public review on Google</h2>
+        <p>It takes a minute and helps other families and businesses from Albany to Lake George choose a cleaning company. Write whatever reflects your experience, at any star rating.</p>
+        <a class="btn btn-primary btn-lg" href="{{site.business.googleReviewUrl}}" rel="noopener" target="_blank" data-track="cta_write_google_review">Write a Google review<svg class="icon" aria-hidden="true"><use href="#i-arrow-ne"/></svg></a>
+        <p class="review-note">Opens Google in a new tab. You will need to be signed in to a Google account.</p>
+      </div>
+      <div class="review-path">
+        <h2>Tell {{site.business.ownerFirstName}} directly</h2>
+        <p>If something went wrong, or you want it put right before you say anything publicly, call, text or email us. It goes to the owners and nowhere else, and you are still free to post a public review whenever you want.</p>
+        <a class="btn btn-ghost btn-lg" href="tel:{{site.business.phoneE164}}" data-track="cta_private_feedback_call"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call or text {{{site.business.phoneHtml}}}</a>
+        <a class="btn btn-ghost btn-lg" href="mailto:{{site.business.email}}?subject=Feedback%20about%20my%20cleaning" data-track="cta_private_feedback_email"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>Email us</a>
+        <p class="review-note">English, Spanish or Portuguese. <span lang="es">Hablamos español</span> · <span lang="pt">Falamos português</span>.</p>
+      </div>
+    </div>
+  </div>
+</section>
