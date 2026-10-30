@@ -16,6 +16,14 @@ Rules after a reinstatement: no edits to name, address, phone, categories or web
 days, and then one at a time, days apart. Replies to reviews and the posts already scheduled are fine.
 No new posts needed before December: the queue runs weekly to 30 Nov.
 
+## Review link
+
+`https://search.google.com/local/writereview?placeid=ChIJrVr40a2z2qERckcgg9PNAq8` opens the Google
+review form for NSA Cleaning LLC directly. The Place ID is derived from the profile's feature id
+`0xa1dab3add1f85aad:0xaf02cdd383204772` (the one in the site's map embed) and was checked on
+2026-10-30: Maps resolves it to that profile. Send it to every customer, without asking for a rating
+first.
+
 ## Posts: 3 a week (Mon, Wed, Fri at 11:00), set up 2026-10-29
 
 Real NSA photos from the live site, "Learn more" to the matching page with `utm_campaign=gbp-post`,
