@@ -73,6 +73,14 @@ answered as the business, signed "The NSA Cleaning team": thanks by name, tied t
 with the service in natural words ("recurring house cleaning", "local cleaning company", "keeping your
 home clean"). No links, phone numbers, discounts or invented cities.
 
+**2026-10-30, 4 new reviews answered** in Ronie's voice, signed "Ronie, owner of NSA Cleaning":
+Larry Isenberg (Airbnb in Upstate New York, four years of turnovers), Jamie Amadon (rating only,
+standard cleaning), David Fitzgibbons (on time, flexible with schedule changes, thorough), Brian
+Selchick (rating only, standard cleaning and deep clean). Each reply only uses the service and place
+the reviewer wrote or tagged; no links, phone numbers, offers or invented cities. Profile total: 7
+reviews, all 5 stars, all answered. Four arrived within about eight hours: keep asking every customer,
+but spread the requests out, since bursts are what Google's review filter watches for.
+
 Found the same day: a **Yelp listing "NSA CLEANING – Ballston Spa"** with (518) 902-1180 and a 1.0
 rating from 1 review. Same phone as the Facebook page, so most likely Ronie's; it needs to be claimed
 and corrected to NSA Cleaning LLC, (407) 728-0523, Watervliet.
