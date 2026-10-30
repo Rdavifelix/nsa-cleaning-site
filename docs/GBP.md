@@ -24,6 +24,12 @@ review form for NSA Cleaning LLC directly. The Place ID is derived from the prof
 2026-10-30: Maps resolves it to that profile. Send it to every customer, without asking for a rating
 first.
 
+**Review page and printed kit (2026-10-30):** `https://lp.nsacleaningllc.com/leave-a-review/`, a bare
+landing page (no nav, no chat, noindex, out of the sitemap) with two routes side by side for every
+customer: "Write a Google review" and "Tell Ronie directly" (call, text or email). Same format as New
+Horizon's page, without its star filter. `scripts/review-kit.py` writes the QR codes and a 3.5 x 2 in
+card for the Google link and for the page to `docs/review-kit/` (card PDFs included).
+
 ## Posts: 3 a week (Mon, Wed, Fri at 11:00), set up 2026-10-29
 
 Real NSA photos from the live site, "Learn more" to the matching page with `utm_campaign=gbp-post`,
