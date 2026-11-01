@@ -81,6 +81,11 @@ the reviewer wrote or tagged; no links, phone numbers, offers or invented cities
 reviews, all 5 stars, all answered. Four arrived within about eight hours: keep asking every customer,
 but spread the requests out, since bursts are what Google's review filter watches for.
 
+**2026-11-01, 2 more answered**, same voice and rules: Michael Feuer ("Best cleaning company in the
+Capital Region"; the reply echoes "Capital Region" without repeating "best") and Christina Lowes (home,
+businesses and Airbnb for years, tagged office and standard cleaning). Profile total: 9 reviews, all 5
+stars, all answered; 6 of them came in between 30/10 and 01/11.
+
 Found the same day: a **Yelp listing "NSA CLEANING – Ballston Spa"** with (518) 902-1180 and a 1.0
 rating from 1 review. Same phone as the Facebook page, so most likely Ronie's; it needs to be claimed
 and corrected to NSA Cleaning LLC, (407) 728-0523, Watervliet.
