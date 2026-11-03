@@ -86,6 +86,11 @@ Capital Region"; the reply echoes "Capital Region" without repeating "best") and
 businesses and Airbnb for years, tagged office and standard cleaning). Profile total: 9 reviews, all 5
 stars, all answered; 6 of them came in between 30/10 and 01/11.
 
+**2026-11-03, 2 more answered**, same voice and rules: Rodrigo Schneider (standard cleaning, attention
+to detail; he also wrote "organic, eco-friendly products", which CONTENT.md does not confirm, so the
+reply does not repeat it) and Genevieve McCauley (efficient, flexible, friendly staff). Profile total:
+11 reviews, all 5 stars, all answered; 8 of them came in between 30/10 and 03/11.
+
 Found the same day: a **Yelp listing "NSA CLEANING – Ballston Spa"** with (518) 902-1180 and a 1.0
 rating from 1 review. Same phone as the Facebook page, so most likely Ronie's; it needs to be claimed
 and corrected to NSA Cleaning LLC, (407) 728-0523, Watervliet.
