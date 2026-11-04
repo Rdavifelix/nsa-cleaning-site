@@ -91,6 +91,11 @@ to detail; he also wrote "organic, eco-friendly products", which CONTENT.md does
 reply does not repeat it) and Genevieve McCauley (efficient, flexible, friendly staff). Profile total:
 11 reviews, all 5 stars, all answered; 8 of them came in between 30/10 and 03/11.
 
+**2026-11-04, 2 more answered**, same voice and rules: Joan Wang (no text, tagged standard cleaning and
+reasonable price) and Phylise Banner (stars only, so the reply invents no detail). Marissa Barlaz
+(03/11) was already answered from the profile by someone else, signed by Ronie and naming Albany; left
+as is. Profile total: 14 reviews, all 5 stars, all answered; 11 of them came in between 30/10 and 04/11.
+
 Found the same day: a **Yelp listing "NSA CLEANING – Ballston Spa"** with (518) 902-1180 and a 1.0
 rating from 1 review. Same phone as the Facebook page, so most likely Ronie's; it needs to be claimed
 and corrected to NSA Cleaning LLC, (407) 728-0523, Watervliet.
