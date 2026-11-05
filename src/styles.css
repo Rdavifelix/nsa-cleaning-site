@@ -261,9 +261,9 @@ button,input,select,textarea{font:inherit;color:inherit}
 @media(min-width:900px){.mobile-cta{display:none}}
 .cookie-banner{position:fixed;left:var(--gutter);right:var(--gutter);bottom:calc(76px + env(safe-area-inset-bottom));z-index:95;max-width:520px;margin-inline:auto;padding:10px 12px;border-radius:var(--r-lg);background:#fff;border:1px solid var(--line);box-shadow:var(--shadow-lg);font-size:.8125rem}
 .cookie-banner p{margin:0 0 8px;color:var(--ink-2)}
-.cookie-actions{display:flex;gap:10px;justify-content:flex-end}
+.cookie-actions{display:flex;gap:10px;justify-content:flex-start} /* left, clear of the chat bubble in the right corner */
 .cookie-actions .btn{min-height:40px;padding:.4em 1em;font-size:.875rem}
-@media(min-width:900px){.cookie-banner{left:0;right:0;bottom:0;max-width:none;margin:0;display:flex;align-items:center;gap:24px;padding:8px var(--gutter);border-radius:0;border-width:1px 0 0;font-size:.9rem}.cookie-banner p{margin:0;flex:1}}
+@media(min-width:900px){.cookie-banner{left:0;right:0;bottom:0;max-width:none;margin:0;display:flex;align-items:center;gap:24px;padding:8px 104px 8px var(--gutter);border-radius:0;border-width:1px 0 0;font-size:.9rem}.cookie-banner p{margin:0;flex:1}}
 .cookie-banner[hidden]{display:none} /* display:flex above would otherwise beat the hidden attribute */
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
 
