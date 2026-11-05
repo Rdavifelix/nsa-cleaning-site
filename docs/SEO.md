@@ -245,3 +245,15 @@ available, and it is on the profile, not the site.
    it needs an OAuth grant; IndexNow already told Bing about the 39 URLs.
 6. **Deploy access: solved 2026-10-26.** Production is `Rdavifelix/nsa-cleaning-site`; `kauankamil-rgb`
    has write access since that day, so `npm run deploy` works from here.
+
+## Measurement
+
+Set up 2026-11-05. GA4 account "NSA Cleaning LLC" on nsacleaningllc0@gmail.com (account 414927858,
+property 562595102, web stream 16279799458, measurement ID G-YRM725Y0T4). Optional data sharing with
+Google left off.
+
+- GA4 loads only after "Accept" on the cookie banner, as the privacy policy says, so visits are undercounted.
+- Events already wired in `public/main.js`: click_call, click_email, cta_quote_*.
+- Form sends are not measured: the form is a cross-domain GoHighLevel iframe and there is no thank-you page.
+- Search terms: Search Console for the site, the profile's Performance report for the profile.
+- Calls: the profile only counts taps on its Call button; the site only counts clicks on tel links.
