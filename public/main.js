@@ -59,7 +59,8 @@
   function track(name, params) { if (gaLoaded) gtag('event', name, params || {}); }
 
   /* ---------- Cookie consent banner ---------- */
-  var banner = $('[data-cookie-banner]');
+  /* div: the GoHighLevel loader injects a <script> into <head> that carries this attribute too */
+  var banner = $('div[data-cookie-banner]');
   function showBanner() { if (banner) { banner.hidden = false; banner.setAttribute('aria-hidden', 'false'); } }
   function hideBanner() { if (banner) { banner.hidden = true; banner.setAttribute('aria-hidden', 'true'); } }
   function revokeGA() {
