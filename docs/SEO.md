@@ -243,6 +243,10 @@ available, and it is on the profile, not the site.
    From here, request indexing only for a page whose content changes, and watch Performance for
    impressions by city query. Bing Webmaster Tools (import from Search Console) not done:
    it needs an OAuth grant; IndexNow already told Bing about the 39 URLs.
+   **2026-11-08:** the Pages (page indexing) report still says "Processing data, please check again in
+   a day or so", 13 days after the property was created; that is the report lagging, not the pages. URL
+   Inspection the same day: home, troy, wilton, delmar and commercial-cleaning all "URL is on Google /
+   Page is indexed". Sitemap last read 06/11: Success, 39 discovered.
 6. **Deploy access: solved 2026-10-26.** Production is `Rdavifelix/nsa-cleaning-site`; `kauankamil-rgb`
    has write access since that day, so `npm run deploy` works from here.
 
@@ -252,7 +256,10 @@ Set up 2026-11-05. GA4 account "NSA Cleaning LLC" on nsacleaningllc0@gmail.com (
 property 562595102, web stream 16279799458, measurement ID G-YRM725Y0T4). Optional data sharing with
 Google left off.
 
-- GA4 loads only after "Accept" on the cookie banner, as the privacy policy says, so visits are undercounted.
+- GA4 loads by default since 2026-11-11 (opt-out): before that it waited for "Accept" on a cookie banner, and in
+  the week of 04–10/11 it recorded only our own 2 test sessions while the profile and Search Console showed real
+  visits. It does not load if the visitor chose "Turn off analytics" under Cookie settings in the footer, or sends
+  Global Privacy Control. The privacy policy says the same (effective 2026-11-11).
 - Events already wired in `public/main.js`: click_call, click_email, cta_quote_*.
 - Form sends are not measured: the form is a cross-domain GoHighLevel iframe and there is no thank-you page.
 - Search terms: Search Console for the site, the profile's Performance report for the profile.

@@ -96,6 +96,22 @@ reasonable price) and Phylise Banner (stars only, so the reply invents no detail
 (03/11) was already answered from the profile by someone else, signed by Ronie and naming Albany; left
 as is. Profile total: 14 reviews, all 5 stars, all answered; 11 of them came in between 30/10 and 04/11.
 
+**2026-11-06, 2 more answered**, same voice and rules: Leticia Sena (customer for years, tagged deep
+clean) and Elismar Silva (stars only, tagged office cleaning and great price, so the reply adds no
+other detail). No city named in either: neither review gives one. Both showed "pending, up to 10
+minutes" when sent. Profile total: 16 reviews, all 5 stars, all answered; 13 of them came in between
+30/10 and 06/11, well above the 2 to 3 a week in the plan.
+
+**2026-11-08, 1 more answered**: Karen McDermott (home cleaning, three kids, "such a nice refresh";
+no city given). The Elismar and Leticia replies from 06/11 are live. Profile total: 17 reviews, all 5
+stars, all answered. In the panel the Reply button's reported position was ~90 px off the drawn one;
+clicking the button element found next to Cancel worked where a mouse click at its box did not.
+
+**2026-11-11, 2 more answered**: Anita Phillips (many years, flexible with special requests, reliable
+and trustworthy; no service tag) and Susan Bobbett (several years, tagged standard cleaning, flexible
+schedule, easy to communicate). No city in either review, so none in the replies. Both pending when
+sent. Profile total: 19 reviews, all 5 stars, all answered.
+
 Found the same day: a **Yelp listing "NSA CLEANING – Ballston Spa"** with (518) 902-1180 and a 1.0
 rating from 1 review. Same phone as the Facebook page, so most likely Ronie's; it needs to be claimed
 and corrected to NSA Cleaning LLC, (407) 728-0523, Watervliet.
