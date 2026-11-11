@@ -41,7 +41,7 @@
     onScroll(); w.addEventListener('scroll', onScroll, { passive: true });
   }
 
-  /* ---------- Analytics (GA4) gated by cookie consent ---------- */
+  /* ---------- Analytics (GA4): on by default, off if the visitor opts out or sends Global Privacy Control ---------- */
   var gaId = (d.querySelector('meta[name="ga-id"]') || {}).content || '';
   var gaLoaded = false;
   w.dataLayer = w.dataLayer || [];
@@ -78,13 +78,15 @@
   function applyConsent(value) {
     store(CONSENT_KEY, value);
     hideBanner();
-    if (value === 'granted') loadGA(); else revokeGA();
+    if (value !== 'granted') { revokeGA(); return; }
+    if (gaLoaded) { w['ga-disable-' + gaId] = false; gtag('consent', 'update', { analytics_storage: 'granted' }); }
+    else loadGA();
   }
   var saved = read(CONSENT_KEY);
-  if (saved === 'granted') loadGA();
-  else if (saved !== 'denied' && gaId) showBanner();
+  var gpc = w.navigator && w.navigator.globalPrivacyControl === true;
+  if (saved !== 'denied' && !gpc) loadGA();
   $$('[data-consent]').forEach(function (b) { b.addEventListener('click', function () { applyConsent(b.getAttribute('data-consent') === 'accept' ? 'granted' : 'denied'); }); });
-  $$('[data-open-cookie-settings]').forEach(function (b) { b.addEventListener('click', function (e) { e.preventDefault(); store(CONSENT_KEY, undefined); showBanner(); }); });
+  $$('[data-open-cookie-settings]').forEach(function (b) { b.addEventListener('click', function (e) { e.preventDefault(); showBanner(); }); });
 
   /* ---------- Click tracking for calls / emails / CTAs ---------- */
   $$('a[href^="tel:"]').forEach(function (a) { a.addEventListener('click', function () { track('click_call', { link_url: a.href }); }); });
