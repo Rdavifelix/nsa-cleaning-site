@@ -116,6 +116,30 @@ Found the same day: a **Yelp listing "NSA CLEANING – Ballston Spa"** with (518
 rating from 1 review. Same phone as the Facebook page, so most likely Ronie's; it needs to be claimed
 and corrected to NSA Cleaning LLC, (407) 728-0523, Watervliet.
 
+**2026-11-12, 5 more answered**: Geanderson Silva (tagged power washing, moving-related cleaning,
+carpet cleaning and deep clean, great price), Blair Raymond (bi-weekly for five years, standard and
+deep clean, a Bernese Mountain Dog), Lauren Cotter (standard cleaning, punctual and thorough), Lori
+Selchick (standard and moving-related cleaning, four of Lori's children also use NSA) and Rowan McLear
+(text only, "left our place spotless"). Every tagged service is on the site, so the replies name them;
+no city in any review, so none in the replies. All five pending when sent; checked after a reload,
+one reply each. Profile total: 24 reviews, all 5 stars, all answered. The five arrived within about
+four hours on 11/11, the fastest burst so far.
+
+**2026-11-12, cover photo added** (the profile had none): `raw-images/WhatsApp Image 2026-09-12 at
+6.59.21 PM (4).jpeg`, the white kitchen with the quartz island (1024x768, uploaded as
+`nsa-cleaning-kitchen-cover.jpg`), a real NSA job that matches the primary category House cleaning
+service. Shown as PENDING right after upload, while Google reviews it. Nothing else on the profile was
+touched. The current logo still carries the old phone (518) 902-1180 and the Gmail address, which
+disagrees with the profile phone (407) 728-0523; a logo without contact details is the next photo
+change, on another day. That logo was made the same day from the client's original
+(`~/Downloads/Fotos NSA - Ronie/WhatsApp Image 2026-09-12 at 6.59.19 PM.jpeg`, 1254 px): the email
+and phone rows were painted over with the panel's own white and the star ornament was moved up to
+the middle of the panel; nothing outside the white panel changed. Files:
+`~/Downloads/NSA-logo-sem-contato.png` and `.jpg`. Not uploaded yet. The site's
+`public/images/logo-nsa-cleaning-640.png` also still shows the old phone. Upload note: in Playwright extension mode `setInputFiles` and the file chooser
+are refused ("Not allowed"); assigning a `File` built in the page to the input through `DataTransfer`
+worked.
+
 ## SUSPENDED on 2026-10-26, about an hour after the edits below
 
 Business Profile Manager shows status "Suspenso" and 0% verified; the panel says "Seu acesso foi

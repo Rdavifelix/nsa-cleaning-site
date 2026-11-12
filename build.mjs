@@ -161,6 +161,48 @@ function readPage(file) {
   meta.pageStyles = styles.length ? `<style>${styles.join('\n')}</style>` : '';
   return { meta, body, file };
 }
+// /llms.txt: plain facts and links for AI assistants (llmstxt.org format), built from the same config
+// as the pages so the numbers never drift. Nothing here that the pages don't already say.
+function buildLlmsTxt(site) {
+  const b = site.business;
+  const u = (p) => site.siteUrl + slashUrl(p);
+  const lines = [
+    `# ${b.legalName}`,
+    '',
+    `> ${b.legalName} is an insured house and commercial cleaning company at ${b.address.street}, ${b.address.city}, ${b.address.region} ${b.address.postal}, serving New York's Capital Region from Albany to Lake George since ${b.foundingYear}. Phone ${b.phone}. Run by ${b.owners.join(' and ')}.`,
+    '',
+    `- Also known as: ${site.shortName}`,
+    `- Phone: ${b.phone}`,
+    `- Email: ${b.email}`,
+    `- Website: ${site.siteUrl}/`,
+    `- Google Business Profile: ${b.googleMapsUrl}`,
+    `- Facebook: ${b.facebook}`,
+    `- Hours: residential ${b.hoursResidential}, Monday to Friday; commercial ${b.hoursCommercial}`,
+    `- Languages: ${b.languages.join(', ')}`,
+    `- Prices: recurring house cleaning from $${b.priceApartmentFrom} per visit for apartments and $${b.priceHouseFrom} for houses; supplies and travel included; every other service gets a free quote`,
+    `- Service area: ${b.serviceArea.join(', ')} (NY), up to about ${b.maxTravelMinutes} minutes from ${b.address.city}`,
+    `- Not to be confused with NSA Cleaning Services LLC, a separate company in Illinois and Wisconsin.`,
+    '',
+    '## Services',
+    '',
+    ...site.services.map((s) => `- [${s.label}](${u('/' + s.slug)})`),
+    '',
+    '## Service areas',
+    '',
+    `- [House cleaning in Albany, NY](${site.siteUrl}/)`,
+    ...site.cityPages.map((c) => `- [House cleaning in ${c.label}, NY](${u(c.href)})`),
+    '',
+    '## About, prices and questions',
+    '',
+    `- [About ${b.legalName}](${u('/about')})`,
+    `- [Pricing](${u('/pricing')})`,
+    `- [FAQ](${u('/faq')})`,
+    `- [Service area map](${u('/service-area')})`,
+    `- [Contact and free quote](${u('/contact')})`,
+    '',
+  ];
+  return lines.join('\n');
+}
 function buildBusinessSchema(site) {
   const b = site.business;
   return {
@@ -170,6 +212,9 @@ function buildBusinessSchema(site) {
     '@id': site.siteUrl + '/#business',
     name: b.legalName,
     legalName: b.legalName,
+    alternateName: site.shortName,
+    // Says where this NSA is. AI answers mixed it up with same-name cleaners in other states (2026-11-12).
+    disambiguatingDescription: `House and commercial cleaning company based in ${b.address.city}, New York, serving the Capital Region from Albany to Lake George since ${b.foundingYear}.`,
     url: site.siteUrl + '/',
     logo: site.siteUrl + '/images/logo-nsa-cleaning-640.png',
     image: site.siteUrl + site.defaultOgImage,
@@ -316,6 +361,7 @@ function build() {
   fs.writeFileSync(path.join(DIST, 'robots.txt'), site.preview
     ? `# Preview build - not for indexing\nUser-agent: *\nDisallow: /\n`
     : `User-agent: *\nAllow: /\n\nSitemap: ${site.siteUrl}/sitemap.xml\n`);
+  if (!site.preview) fs.writeFileSync(path.join(DIST, 'llms.txt'), buildLlmsTxt(site));
   console.log(`\nBuilt ${pages.length} pages → ${path.relative(ROOT, DIST)}/  (siteUrl: ${site.siteUrl}, GA: ${site.gaMeasurementId ? 'on' : 'off'}, chat widget: ${site.ghlChatWidgetId ? 'on' : 'off'}, Search Console tag: ${site.googleSiteVerification ? 'on' : 'off'}, trailing slash: ${site.trailingSlash ? 'on' : 'off'})`);
 }
 function loadDotEnv(file) {
