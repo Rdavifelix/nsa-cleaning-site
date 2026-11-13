@@ -94,3 +94,17 @@ call and is not required for any of the above.
 
 Same five prompts in the three assistants once a month, next on 2026-12-12. Log the result under a new
 date heading here.
+
+## 2026-11-13
+
+- Bing Maps does not know the business: "NSA Cleaning LLC Watervliet NY" resolves to the city of
+  Watervliet only. Bing Places (step 1) is still the first thing to do.
+- `facebook.com/nsacleaning` shows "this content isn't available" to a logged-out visitor, and the
+  Google snippet reads like a personal profile ("Lives in Watervliet, New York · Self-Employed at NSA
+  Cleaning LLC"), not a business Page. A personal profile is not a citation the assistants can read;
+  a proper Facebook Page with the data above is what step 3 needs.
+- The cover photo uploaded on 12/11 still shows PENDING the next day.
+- Same day, after the user allowed it: `npm run deploy` published commit b4d9cb1 (`/llms.txt` answers
+  200, the home page schema carries `alternateName` and `disambiguatingDescription`; IndexNow accepted
+  39 URLs), and the clean logo (`~/Downloads/NSA-logo-sem-contato.png`, sent as a 1024 px JPG) replaced
+  the old one on the Google profile, with no PENDING badge.

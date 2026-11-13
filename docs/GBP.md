@@ -140,6 +140,12 @@ the middle of the panel; nothing outside the white panel changed. Files:
 are refused ("Not allowed"); assigning a `File` built in the page to the input through `DataTransfer`
 worked.
 
+**2026-11-13, 1 more answered and the logo replaced**: Maria Lucia Da Silva Gomes (first review on
+her account, tagged office and workplace cleaning, great price; text pasted under an "English:" label).
+Reply names the office cleaning; pending when sent, one reply after a reload. Profile total: 25
+reviews, all 5 stars, all answered. The clean logo (no email, no 518 number) went up the same day and
+shows without a PENDING badge; the 12/11 cover is still PENDING.
+
 ## SUSPENDED on 2026-10-26, about an hour after the edits below
 
 Business Profile Manager shows status "Suspenso" and 0% verified; the panel says "Seu acesso foi
